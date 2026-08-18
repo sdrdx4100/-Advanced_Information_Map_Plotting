@@ -1,8 +1,10 @@
 # 道路勾配データパイプライン（試作）
 
-東名・新東名（御殿場JCT〜浜松いなさJCT）の道路縦断勾配を計算し、Webマップ用の
-GeoJSONを生成するオフラインパイプライン。`app/`側のWeb UIとは切り離して実行し、
-出力した静的GeoJSONを `public/data/` にコピーしてフロントから読み込む構成。
+高速道路の道路縦断勾配を計算し、Webマップ用のGeoJSONを生成するオフライン
+パイプライン。`app/`側のWeb UIとは切り離して実行し、出力した静的GeoJSONを
+`public/data/` にコピーしてフロントから読み込む構成。
+
+対象路線は `fetch_osm.py` の `ROUTE_DEFS` に登録制。現在: 東名・新東名・新名神。
 
 ## データソースと、要件書の想定からの変更点
 
@@ -12,9 +14,10 @@ GeoJSONを生成するオフラインパイプライン。`app/`側のWeb UIと�
 
 - GSIの「高さ付き道路中心線」は全国整備が確認できず、対象区間のカバレッジが不明。
 - 国交省の全国道路基盤地図データベースはバルクAPIでの取得可否が未確認（要調査）。
-- OSMは東名・新東名の本線について `ref=E1`/`E1A`、`oneway`、`tunnel`/`bridge`
-  （トンネル名・橋梁名付き）、IC/JCT/SA/PA名称まで実データを持っており、即座に
-  スクリプトから取得できることを確認済み。
+- OSMは各路線の本線について `name`、`oneway`、`tunnel`/`bridge`（トンネル名・
+  橋梁名付き）、IC/JCT/SA/PA名称まで実データを持っており、即座にスクリプトから
+  取得できることを確認済み。ルート判定は`ref`ではなく`name`で行う（東名/名神が
+  ともに`ref=E1`、新東名/新名神がともに`ref=E1A`のため、ref単独では区別できない）。
 
 本番運用では国交省データが使えるならそちらを優先すべきだが、試作としては
 OSMの方が現実的だった。公開時はOSMのODbLライセンス表記が必要。
@@ -27,38 +30,62 @@ OSMの方が現実的だった。公開時はOSMのODbLライセンス表記が�
 ## 処理フロー
 
 ```
-fetch_osm.py       OSM Overpass API から東名/新東名の way（ジオメトリ+タグ）と
-                    IC/JCT/SA/PAノードを取得し data/raw/ にキャッシュ
+fetch_osm.py       OSM Overpass API から各路線の way（ジオメトリ+タグ）と
+                    IC/JCT/SA/PAノードを路線ごとのbboxで取得し data/raw/ にキャッシュ
        ↓
 build_pipeline.py
-  1. 上り/下り判定      端点とGotemba JCTとの測地距離を比較するヒューリスティック
-                        （oneway=yesの場合、way構築順=交通の流れというOSM標準に依拠）
+  1. 上り/下り判定      端点と東京方面基準点(TOKYO_WARD_REF)との測地距離を比較する
+                        ヒューリスティック（oneway=yesの場合、way構築順=交通の
+                        流れというOSM標準に依拠。東京中心の放射状ネットワーク
+                        なら路線がどこにあっても1点の基準で判定可能）
   2. way同士のスティッチ  共有ノードIDでway群を最長の連続ポリラインに接続
   3. 25m等間隔リサンプル  測地距離（pyproj.Geod）で等間隔化、構造タグ(トンネル/
                         橋梁/normal)を各点に引き継ぐ
   4. 標高取得           "normal"点のみGSI DEMタイルをサンプリング（トンネル上の
                         山の標高を拾わないよう、tunnel/bridge点は最初からDEM
                         を参照しない）
-  5. ノイズ除去         normal点の標高列に移動中央値(5点=125m窓)を適用
-  6. トンネル/橋梁補間   前後のnormal点(平滑化後)から線形補間、quality="estimated"
-                        でフラグ
+  5. ノイズ除去         (a) Hampel法によるdespike（225m窓、局所中央値から
+                        8m以上・MAD5倍以上外れた点を除去）
+                        (b) トンネル/橋梁の前後200m（ポータルバッファ）を
+                        normal点でも標高アンカーから除外。ポータル付近は
+                        地形が急に立ち上がり、DEMが道路ではなく斜面を
+                        拾うため
+  6. 除外点の補間        前後の信頼できるnormal点(平滑化後)から線形補間、
+                        quality="estimated"でフラグ
   7. 100m単位で勾配計算  25m点4つ分(100m)の始点・終点標高差 ÷ 実測地距離
   8. IC/JCT紐付け        各セグメントの中間点に最も近い前後の施設名を付与
-  9. 異常値チェック      |勾配|>7%のセグメントをqc_report.jsonにフラグ（削除は
-                        しない。目視確認用）
+  9. 異常値チェック      |勾配|>7%のセグメントはquality="estimated"に強制格下げ
+                        しqc_report.jsonにも記録（削除はしない。目視確認用）
        ↓
 data/output/
-  road-segments.geojson  100m区間ごとのLineString + grade/elevation/quality/structure
-  facilities.geojson     IC/JCT/SA/PA名称+座標
-  qc_report.json         ルート別最大勾配・平均勾配・異常値リスト
+  road-segments-{route}-{window}.geojson  路線ごと・窓サイズ(50/100/250m)ごとの
+                                           100m単位LineString + grade/elevation/
+                                           quality/structure
+  facilities-{route}.geojson              路線ごとのIC/JCT/SA/PA名称+座標
+  profiles-{route}-{window}.json          路線ごとの縦断プロファイル(距離×標高/勾配)
+  qc_report-{window}.json                 窓サイズごとの路線別最大勾配・平均勾配・異常値リスト
+  routes.json                             フロント向けの路線一覧（key・色）
 ```
+
+出力を路線ごとに分けているのは、フロントが選択中の路線だけをfetchできるように
+するため（全路線を毎回まとめて読み込むとGeoJSONが線形に重くなる）。
 
 ## 既知の制約（試作段階）
 
 - **道路中心線自体の高さ情報は未使用**（未入手のため）。全区間がDEM由来
-  （`quality: "measured"`）またはトンネル/橋梁補間（`quality: "estimated"`）。
-  要件書の「道路中心線に高さがあれば優先」は本番で国交省/GSIデータが取得でき
-  次第、対応する。
+  （`quality: "measured"`）またはトンネル/橋梁補間・異常値補正
+  （`quality: "estimated"`）。要件書の「道路中心線に高さがあれば優先」は
+  本番で国交省/GSIデータが取得でき次第、対応する。
+- **険しい地形の路線ほど残存異常値が多い**。新名神の宝塚北SA〜神戸JCT
+  （六甲山系）では、despike・ポータルバッファを適用しても100m窓で
+  最大47%という値が残った。調査の結果これはノイズではなく、DEMが
+  実際の地形起伏（自然地形は数百mで20〜30m上下する）をそのまま反映した
+  ものだった。道路自体は切土・盛土で緩和された勾配のはずだが、道路
+  中心線の高さデータがない現状ではこの乖離を区別できない。異常値検知
+  (7%超→estimated格下げ)で「実測」と偽って見せることは防いでいるが、
+  平均勾配・最大勾配の統計値そのものは地形の険しさに応じて路線ごとに
+  ばらつく。東名・新東名（比較的平坦な静岡沿岸区間）は残存異常値が
+  全体の0.5%程度だったのに対し、新名神は同じ設定で約5%（100m窓）。
 - 上り/下り判定はヒューリスティック。OSMの`oneway`の向きがまれに逆転している
   区間があれば誤判定しうる（QC推奨: 既知IC間の距離・順序との突合）。
 - IC/JCT名の紐付けは最近傍スナップ（250m以内）。分岐・合流部やSA/PAが複数
@@ -69,10 +96,28 @@ data/output/
   OSM+DEMベースで動くMVPを作り、後で国交省/GSIソースに差し替え可能な設計に
   してある（`build_pipeline.py`のway読み込み部分を差し替えるだけで済む構成）。
 
+## 路線を追加するには
+
+1. `fetch_osm.py` の `ROUTE_DEFS` に `{osm_name, bbox, color}` を追加
+   （`osm_name`はOSMの`name`タグと完全一致させる。`bbox`は路線の実際の
+   マッピング範囲を軽く覆う程度でよい。広すぎるとOverpassのタイムアウト
+   リスクが上がる）
+2. `.venv/Scripts/python.exe fetch_osm.py` でデータ取得
+3. `.venv/Scripts/python.exe build_pipeline.py`（`GRADE_WINDOW_M`環境変数で
+   50/100/250を切り替えて3回）で `data/output/` に生成
+4. `public/data/` に出力をコピー
+
+東京中心の放射状路線（東名・中央道・東北道など）は上り/下り判定の基準点を
+そのまま流用できる。環状路線（圏央道など）や東京を基準にしない路線
+（山陽道など）は`TOKYO_WARD_REF`だけでは判定が崩れる可能性があるため、
+別途検証が必要。
+
 ## 実行方法
 
 ```bash
 cd pipeline
-.venv/Scripts/python.exe fetch_osm.py      # 初回のみ（Overpass APIキャッシュ）
-.venv/Scripts/python.exe build_pipeline.py # data/output/ に生成
+.venv/Scripts/python.exe fetch_osm.py                        # 初回のみ（Overpass APIキャッシュ）
+GRADE_WINDOW_M=50  .venv/Scripts/python.exe build_pipeline.py
+GRADE_WINDOW_M=100 .venv/Scripts/python.exe build_pipeline.py
+GRADE_WINDOW_M=250 .venv/Scripts/python.exe build_pipeline.py
 ```

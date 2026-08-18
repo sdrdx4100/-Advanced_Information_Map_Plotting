@@ -27,6 +27,20 @@
         "max_abs_grade": 27.08,
         "mean_abs_grade": 1.15
       }
+    },
+    "新名神": {
+      "下り": {
+        "segment_count": 1110,
+        "max_grade": 32.39,
+        "max_abs_grade": 32.39,
+        "mean_abs_grade": 1.92
+      },
+      "上り": {
+        "segment_count": 1110,
+        "max_grade": -47.02,
+        "max_abs_grade": 47.02,
+        "mean_abs_grade": 1.78
+      }
     }
   },
   "anomalies": [
@@ -197,13 +211,790 @@
       "structure": "normal",
       "from": null,
       "to": "浜松いなさJCT"
+    },
+    {
+      "id": "新名神-下り-0-14",
+      "grade": -9.13,
+      "structure": "normal",
+      "from": null,
+      "to": "茨木千提寺IC"
+    },
+    {
+      "id": "新名神-下り-0-87",
+      "grade": -10.13,
+      "structure": "normal",
+      "from": null,
+      "to": "茨木千提寺IC"
+    },
+    {
+      "id": "新名神-下り-0-88",
+      "grade": 22.77,
+      "structure": "normal",
+      "from": null,
+      "to": "茨木千提寺IC"
+    },
+    {
+      "id": "新名神-下り-0-89",
+      "grade": 7.52,
+      "structure": "normal",
+      "from": null,
+      "to": "茨木千提寺IC"
+    },
+    {
+      "id": "新名神-下り-0-93",
+      "grade": 32.35,
+      "structure": "normal",
+      "from": null,
+      "to": "茨木千提寺IC"
+    },
+    {
+      "id": "新名神-下り-0-94",
+      "grade": -13.81,
+      "structure": "normal",
+      "from": "茨木千提寺IC",
+      "to": "茨木千提寺IC/PA"
+    },
+    {
+      "id": "新名神-下り-0-95",
+      "grade": -13.46,
+      "structure": "normal",
+      "from": "茨木千提寺IC/PA",
+      "to": "茨木千提寺PA"
+    },
+    {
+      "id": "新名神-下り-0-98",
+      "grade": -9.64,
+      "structure": "normal",
+      "from": "茨木千提寺PA",
+      "to": "箕面とどろみIC"
+    },
+    {
+      "id": "新名神-下り-0-99",
+      "grade": 20.91,
+      "structure": "normal",
+      "from": "茨木千提寺PA",
+      "to": "箕面とどろみIC"
+    },
+    {
+      "id": "新名神-下り-0-100",
+      "grade": -7.44,
+      "structure": "normal",
+      "from": "茨木千提寺PA",
+      "to": "箕面とどろみIC"
+    },
+    {
+      "id": "新名神-下り-0-102",
+      "grade": 20.02,
+      "structure": "normal",
+      "from": "茨木千提寺PA",
+      "to": "箕面とどろみIC"
+    },
+    {
+      "id": "新名神-下り-0-317",
+      "grade": 13.37,
+      "structure": "normal",
+      "from": "川西IC",
+      "to": "宝塚北SA"
+    },
+    {
+      "id": "新名神-下り-0-318",
+      "grade": 9.48,
+      "structure": "normal",
+      "from": "川西IC",
+      "to": "宝塚北SA"
+    },
+    {
+      "id": "新名神-下り-0-319",
+      "grade": 19.09,
+      "structure": "normal",
+      "from": "宝塚北SA/スマートIC",
+      "to": "神戸JCT"
+    },
+    {
+      "id": "新名神-下り-0-321",
+      "grade": -8.02,
+      "structure": "normal",
+      "from": "宝塚北SA/スマートIC",
+      "to": "神戸JCT"
+    },
+    {
+      "id": "新名神-下り-0-322",
+      "grade": 26.49,
+      "structure": "normal",
+      "from": "宝塚北SA/スマートIC",
+      "to": "神戸JCT"
+    },
+    {
+      "id": "新名神-下り-0-324",
+      "grade": -22.88,
+      "structure": "normal",
+      "from": "宝塚北SA/スマートIC",
+      "to": "神戸JCT"
+    },
+    {
+      "id": "新名神-下り-0-325",
+      "grade": -8.55,
+      "structure": "normal",
+      "from": "宝塚北SA/スマートIC",
+      "to": "神戸JCT"
+    },
+    {
+      "id": "新名神-下り-0-326",
+      "grade": 23.39,
+      "structure": "normal",
+      "from": "宝塚北SA/スマートIC",
+      "to": "神戸JCT"
+    },
+    {
+      "id": "新名神-下り-0-338",
+      "grade": -10.06,
+      "structure": "normal",
+      "from": "宝塚北SA/スマートIC",
+      "to": "神戸JCT"
+    },
+    {
+      "id": "新名神-下り-0-340",
+      "grade": -15.46,
+      "structure": "normal",
+      "from": "宝塚北SA/スマートIC",
+      "to": "神戸JCT"
+    },
+    {
+      "id": "新名神-下り-0-341",
+      "grade": -26.43,
+      "structure": "normal",
+      "from": "宝塚北SA/スマートIC",
+      "to": "神戸JCT"
+    },
+    {
+      "id": "新名神-下り-0-342",
+      "grade": -29.1,
+      "structure": "normal",
+      "from": "宝塚北SA/スマートIC",
+      "to": "神戸JCT"
+    },
+    {
+      "id": "新名神-下り-0-343",
+      "grade": 8.91,
+      "structure": "normal",
+      "from": "宝塚北SA/スマートIC",
+      "to": "神戸JCT"
+    },
+    {
+      "id": "新名神-下り-0-344",
+      "grade": -14.61,
+      "structure": "normal",
+      "from": "宝塚北SA/スマートIC",
+      "to": "神戸JCT"
+    },
+    {
+      "id": "新名神-下り-0-345",
+      "grade": -11.14,
+      "structure": "normal",
+      "from": "宝塚北SA/スマートIC",
+      "to": "神戸JCT"
+    },
+    {
+      "id": "新名神-下り-0-359",
+      "grade": 14.3,
+      "structure": "normal",
+      "from": "宝塚北SA/スマートIC",
+      "to": "神戸JCT"
+    },
+    {
+      "id": "新名神-下り-0-361",
+      "grade": -10.94,
+      "structure": "normal",
+      "from": "宝塚北SA/スマートIC",
+      "to": "神戸JCT"
+    },
+    {
+      "id": "新名神-下り-0-362",
+      "grade": -17.15,
+      "structure": "normal",
+      "from": "宝塚北SA/スマートIC",
+      "to": "神戸JCT"
+    },
+    {
+      "id": "新名神-下り-0-363",
+      "grade": -21.28,
+      "structure": "normal",
+      "from": "宝塚北SA/スマートIC",
+      "to": "神戸JCT"
+    },
+    {
+      "id": "新名神-下り-0-364",
+      "grade": 7.63,
+      "structure": "normal",
+      "from": "宝塚北SA/スマートIC",
+      "to": "神戸JCT"
+    },
+    {
+      "id": "新名神-下り-0-365",
+      "grade": 24.64,
+      "structure": "normal",
+      "from": "宝塚北SA/スマートIC",
+      "to": "神戸JCT"
+    },
+    {
+      "id": "新名神-下り-0-367",
+      "grade": -27.57,
+      "structure": "normal",
+      "from": "宝塚北SA/スマートIC",
+      "to": "神戸JCT"
+    },
+    {
+      "id": "新名神-下り-0-368",
+      "grade": 11.68,
+      "structure": "normal",
+      "from": "宝塚北SA/スマートIC",
+      "to": "神戸JCT"
+    },
+    {
+      "id": "新名神-下り-0-369",
+      "grade": -22.14,
+      "structure": "normal",
+      "from": "宝塚北SA/スマートIC",
+      "to": "神戸JCT"
+    },
+    {
+      "id": "新名神-下り-2-4",
+      "grade": 12.69,
+      "structure": "normal",
+      "from": "四日市JCT",
+      "to": "新四日市JCT"
+    },
+    {
+      "id": "新名神-下り-2-5",
+      "grade": 13.17,
+      "structure": "normal",
+      "from": "四日市JCT",
+      "to": "新四日市JCT"
+    },
+    {
+      "id": "新名神-下り-2-7",
+      "grade": -7.02,
+      "structure": "normal",
+      "from": "四日市JCT",
+      "to": "新四日市JCT"
+    },
+    {
+      "id": "新名神-下り-2-9",
+      "grade": 9.27,
+      "structure": "normal",
+      "from": "四日市JCT",
+      "to": "新四日市JCT"
+    },
+    {
+      "id": "新名神-下り-2-10",
+      "grade": 20.71,
+      "structure": "normal",
+      "from": "四日市JCT",
+      "to": "新四日市JCT"
+    },
+    {
+      "id": "新名神-下り-2-17",
+      "grade": -18.9,
+      "structure": "normal",
+      "from": "四日市JCT",
+      "to": "新四日市JCT"
+    },
+    {
+      "id": "新名神-下り-2-19",
+      "grade": 18.23,
+      "structure": "normal",
+      "from": "四日市JCT",
+      "to": "新四日市JCT"
+    },
+    {
+      "id": "新名神-下り-2-21",
+      "grade": -10.82,
+      "structure": "normal",
+      "from": "四日市JCT",
+      "to": "新四日市JCT"
+    },
+    {
+      "id": "新名神-下り-2-47",
+      "grade": -13.41,
+      "structure": "normal",
+      "from": "新四日市JCT",
+      "to": "菰野IC"
+    },
+    {
+      "id": "新名神-下り-2-162",
+      "grade": 14.67,
+      "structure": "normal",
+      "from": "菰野IC",
+      "to": "鈴鹿PA/スマートIC"
+    },
+    {
+      "id": "新名神-下り-2-169",
+      "grade": 32.39,
+      "structure": "normal",
+      "from": "菰野IC",
+      "to": "鈴鹿PA/スマートIC"
+    },
+    {
+      "id": "新名神-下り-2-173",
+      "grade": -12.91,
+      "structure": "normal",
+      "from": "菰野IC",
+      "to": "鈴鹿PA/スマートIC"
+    },
+    {
+      "id": "新名神-下り-2-174",
+      "grade": -8.13,
+      "structure": "normal",
+      "from": "菰野IC",
+      "to": "鈴鹿PA/スマートIC"
+    },
+    {
+      "id": "新名神-下り-2-175",
+      "grade": 12.83,
+      "structure": "normal",
+      "from": "菰野IC",
+      "to": "鈴鹿PA/スマートIC"
+    },
+    {
+      "id": "新名神-下り-2-186",
+      "grade": 15.79,
+      "structure": "normal",
+      "from": "菰野IC",
+      "to": "鈴鹿PA/スマートIC"
+    },
+    {
+      "id": "新名神-下り-2-187",
+      "grade": 15.22,
+      "structure": "normal",
+      "from": "菰野IC",
+      "to": "鈴鹿PA/スマートIC"
+    },
+    {
+      "id": "新名神-下り-2-188",
+      "grade": -18.3,
+      "structure": "normal",
+      "from": "菰野IC",
+      "to": "鈴鹿PA/スマートIC"
+    },
+    {
+      "id": "新名神-下り-2-189",
+      "grade": -12.5,
+      "structure": "normal",
+      "from": "菰野IC",
+      "to": "鈴鹿PA/スマートIC"
+    },
+    {
+      "id": "新名神-下り-2-190",
+      "grade": -8.77,
+      "structure": "normal",
+      "from": "菰野IC",
+      "to": "鈴鹿PA/スマートIC"
+    },
+    {
+      "id": "新名神-上り-0-501",
+      "grade": 17.51,
+      "structure": "normal",
+      "from": "鈴鹿PA",
+      "to": "菰野IC"
+    },
+    {
+      "id": "新名神-上り-0-503",
+      "grade": -19.47,
+      "structure": "normal",
+      "from": "鈴鹿PA",
+      "to": "菰野IC"
+    },
+    {
+      "id": "新名神-上り-0-527",
+      "grade": -7.77,
+      "structure": "normal",
+      "from": "鈴鹿PA",
+      "to": "菰野IC"
+    },
+    {
+      "id": "新名神-上り-0-530",
+      "grade": -8.5,
+      "structure": "normal",
+      "from": "鈴鹿PA",
+      "to": "菰野IC"
+    },
+    {
+      "id": "新名神-上り-0-670",
+      "grade": -14.07,
+      "structure": "normal",
+      "from": "新四日市JCT",
+      "to": "四日市JCT"
+    },
+    {
+      "id": "新名神-上り-0-671",
+      "grade": -11.64,
+      "structure": "normal",
+      "from": "新四日市JCT",
+      "to": "四日市JCT"
+    },
+    {
+      "id": "新名神-上り-0-672",
+      "grade": 16.89,
+      "structure": "normal",
+      "from": "新四日市JCT",
+      "to": "四日市JCT"
+    },
+    {
+      "id": "新名神-上り-0-682",
+      "grade": 8.23,
+      "structure": "normal",
+      "from": "新四日市JCT",
+      "to": "四日市JCT"
+    },
+    {
+      "id": "新名神-上り-0-684",
+      "grade": -18.36,
+      "structure": "normal",
+      "from": "新四日市JCT",
+      "to": "四日市JCT"
+    },
+    {
+      "id": "新名神-上り-0-685",
+      "grade": -7.33,
+      "structure": "normal",
+      "from": "新四日市JCT",
+      "to": "四日市JCT"
+    },
+    {
+      "id": "新名神-上り-1-1",
+      "grade": -7.13,
+      "structure": "normal",
+      "from": "神戸JCT",
+      "to": "宝塚北SA/スマートIC"
+    },
+    {
+      "id": "新名神-上り-1-31",
+      "grade": -7.95,
+      "structure": "normal",
+      "from": "神戸JCT",
+      "to": "宝塚北SA/スマートIC"
+    },
+    {
+      "id": "新名神-上り-1-32",
+      "grade": -29.83,
+      "structure": "normal",
+      "from": "神戸JCT",
+      "to": "宝塚北SA/スマートIC"
+    },
+    {
+      "id": "新名神-上り-1-34",
+      "grade": 31.36,
+      "structure": "normal",
+      "from": "神戸JCT",
+      "to": "宝塚北SA/スマートIC"
+    },
+    {
+      "id": "新名神-上り-1-35",
+      "grade": 20.95,
+      "structure": "normal",
+      "from": "神戸JCT",
+      "to": "宝塚北SA/スマートIC"
+    },
+    {
+      "id": "新名神-上り-1-38",
+      "grade": -12.12,
+      "structure": "normal",
+      "from": "神戸JCT",
+      "to": "宝塚北SA/スマートIC"
+    },
+    {
+      "id": "新名神-上り-1-39",
+      "grade": -8.52,
+      "structure": "normal",
+      "from": "神戸JCT",
+      "to": "宝塚北SA/スマートIC"
+    },
+    {
+      "id": "新名神-上り-1-49",
+      "grade": -47.02,
+      "structure": "normal",
+      "from": "神戸JCT",
+      "to": "宝塚北SA/スマートIC"
+    },
+    {
+      "id": "新名神-上り-1-50",
+      "grade": -19.95,
+      "structure": "normal",
+      "from": "神戸JCT",
+      "to": "宝塚北SA/スマートIC"
+    },
+    {
+      "id": "新名神-上り-1-51",
+      "grade": 15.64,
+      "structure": "normal",
+      "from": "神戸JCT",
+      "to": "宝塚北SA/スマートIC"
+    },
+    {
+      "id": "新名神-上り-1-53",
+      "grade": 7.85,
+      "structure": "normal",
+      "from": "神戸JCT",
+      "to": "宝塚北SA/スマートIC"
+    },
+    {
+      "id": "新名神-上り-1-54",
+      "grade": 8.08,
+      "structure": "normal",
+      "from": "神戸JCT",
+      "to": "宝塚北SA/スマートIC"
+    },
+    {
+      "id": "新名神-上り-1-55",
+      "grade": 8.08,
+      "structure": "bridge",
+      "from": "神戸JCT",
+      "to": "宝塚北SA/スマートIC"
+    },
+    {
+      "id": "新名神-上り-1-56",
+      "grade": 8.08,
+      "structure": "bridge",
+      "from": "神戸JCT",
+      "to": "宝塚北SA/スマートIC"
+    },
+    {
+      "id": "新名神-上り-1-57",
+      "grade": 8.08,
+      "structure": "bridge",
+      "from": "神戸JCT",
+      "to": "宝塚北SA/スマートIC"
+    },
+    {
+      "id": "新名神-上り-1-58",
+      "grade": 8.08,
+      "structure": "bridge",
+      "from": "神戸JCT",
+      "to": "宝塚北SA/スマートIC"
+    },
+    {
+      "id": "新名神-上り-1-59",
+      "grade": 8.08,
+      "structure": "bridge",
+      "from": "神戸JCT",
+      "to": "宝塚北SA/スマートIC"
+    },
+    {
+      "id": "新名神-上り-1-60",
+      "grade": 8.08,
+      "structure": "normal",
+      "from": "神戸JCT",
+      "to": "宝塚北SA/スマートIC"
+    },
+    {
+      "id": "新名神-上り-1-66",
+      "grade": -7.59,
+      "structure": "normal",
+      "from": "神戸JCT",
+      "to": "宝塚北SA/スマートIC"
+    },
+    {
+      "id": "新名神-上り-1-67",
+      "grade": -7.59,
+      "structure": "bridge",
+      "from": "神戸JCT",
+      "to": "宝塚北SA/スマートIC"
+    },
+    {
+      "id": "新名神-上り-1-68",
+      "grade": -7.59,
+      "structure": "bridge",
+      "from": "神戸JCT",
+      "to": "宝塚北SA/スマートIC"
+    },
+    {
+      "id": "新名神-上り-1-69",
+      "grade": -7.59,
+      "structure": "bridge",
+      "from": "神戸JCT",
+      "to": "宝塚北SA/スマートIC"
+    },
+    {
+      "id": "新名神-上り-1-70",
+      "grade": -7.59,
+      "structure": "normal",
+      "from": "神戸JCT",
+      "to": "宝塚北SA/スマートIC"
+    },
+    {
+      "id": "新名神-上り-1-72",
+      "grade": 20.73,
+      "structure": "normal",
+      "from": "神戸JCT",
+      "to": "宝塚北SA/スマートIC"
+    },
+    {
+      "id": "新名神-上り-1-73",
+      "grade": 8.96,
+      "structure": "normal",
+      "from": "神戸JCT",
+      "to": "宝塚北SA/スマートIC"
+    },
+    {
+      "id": "新名神-上り-1-74",
+      "grade": -12.74,
+      "structure": "normal",
+      "from": "神戸JCT",
+      "to": "宝塚北SA/スマートIC"
+    },
+    {
+      "id": "新名神-上り-1-75",
+      "grade": -14.22,
+      "structure": "normal",
+      "from": "神戸JCT",
+      "to": "宝塚北SA/スマートIC"
+    },
+    {
+      "id": "新名神-上り-1-77",
+      "grade": -10.59,
+      "structure": "normal",
+      "from": "神戸JCT",
+      "to": "宝塚北SA/スマートIC"
+    },
+    {
+      "id": "新名神-上り-1-78",
+      "grade": -16.64,
+      "structure": "normal",
+      "from": "宝塚北SA",
+      "to": "川西IC"
+    },
+    {
+      "id": "新名神-上り-1-79",
+      "grade": -17.11,
+      "structure": "normal",
+      "from": "宝塚北SA",
+      "to": "川西IC"
+    },
+    {
+      "id": "新名神-上り-1-81",
+      "grade": 12.57,
+      "structure": "normal",
+      "from": "宝塚北SA",
+      "to": "川西IC"
+    },
+    {
+      "id": "新名神-上り-1-82",
+      "grade": 9.67,
+      "structure": "normal",
+      "from": "宝塚北SA",
+      "to": "川西IC"
+    },
+    {
+      "id": "新名神-上り-2-75",
+      "grade": -14.1,
+      "structure": "normal",
+      "from": "箕面とどろみIC",
+      "to": "茨木千提寺PA"
+    },
+    {
+      "id": "新名神-上り-2-78",
+      "grade": -18.03,
+      "structure": "normal",
+      "from": "箕面とどろみIC",
+      "to": "茨木千提寺PA"
+    },
+    {
+      "id": "新名神-上り-2-79",
+      "grade": 9.93,
+      "structure": "normal",
+      "from": "箕面とどろみIC",
+      "to": "茨木千提寺PA"
+    },
+    {
+      "id": "新名神-上り-2-80",
+      "grade": -8.89,
+      "structure": "normal",
+      "from": "箕面とどろみIC",
+      "to": "茨木千提寺PA"
+    },
+    {
+      "id": "新名神-上り-2-82",
+      "grade": 18.15,
+      "structure": "normal",
+      "from": "茨木千提寺IC/PA",
+      "to": "茨木千提寺IC"
+    },
+    {
+      "id": "新名神-上り-2-84",
+      "grade": -23.74,
+      "structure": "normal",
+      "from": "茨木千提寺IC",
+      "to": null
+    },
+    {
+      "id": "新名神-上り-2-86",
+      "grade": -9.76,
+      "structure": "normal",
+      "from": "茨木千提寺IC",
+      "to": null
+    },
+    {
+      "id": "新名神-上り-2-87",
+      "grade": -7.91,
+      "structure": "normal",
+      "from": "茨木千提寺IC",
+      "to": null
+    },
+    {
+      "id": "新名神-上り-2-88",
+      "grade": -8.23,
+      "structure": "normal",
+      "from": "茨木千提寺IC",
+      "to": null
+    },
+    {
+      "id": "新名神-上り-2-89",
+      "grade": -21.22,
+      "structure": "normal",
+      "from": "茨木千提寺IC",
+      "to": null
+    },
+    {
+      "id": "新名神-上り-2-90",
+      "grade": 16.73,
+      "structure": "normal",
+      "from": "茨木千提寺IC",
+      "to": null
+    },
+    {
+      "id": "新名神-上り-2-164",
+      "grade": -7.86,
+      "structure": "normal",
+      "from": "茨木千提寺IC",
+      "to": null
+    },
+    {
+      "id": "新名神-上り-2-165",
+      "grade": 7.31,
+      "structure": "normal",
+      "from": "茨木千提寺IC",
+      "to": null
+    },
+    {
+      "id": "新名神-上り-2-166",
+      "grade": 25.09,
+      "structure": "normal",
+      "from": "茨木千提寺IC",
+      "to": null
+    },
+    {
+      "id": "新名神-上り-2-167",
+      "grade": 7.36,
+      "structure": "normal",
+      "from": "茨木千提寺IC",
+      "to": null
     }
   ],
-  "despiked_points": 14,
+  "despiked_points": 22,
   "reference_check": {
     "東名": {
       "published_max_grade_pct": "4%級",
-      "computed_max_abs_grade": {
+      "computed": {
         "下り": {
           "segment_count": 984,
           "max_grade": 6.72,
@@ -219,8 +1010,8 @@
       }
     },
     "新東名": {
-      "published_max_grade_pct_shizuoka": "約2%",
-      "computed_max_abs_grade": {
+      "published_max_grade_pct": "静岡区間で約2%",
+      "computed": {
         "下り": {
           "segment_count": 1245,
           "max_grade": -33.89,
@@ -232,6 +1023,23 @@
           "max_grade": 27.08,
           "max_abs_grade": 27.08,
           "mean_abs_grade": 1.15
+        }
+      }
+    },
+    "新名神": {
+      "published_max_grade_pct": "未確認",
+      "computed": {
+        "下り": {
+          "segment_count": 1110,
+          "max_grade": 32.39,
+          "max_abs_grade": 32.39,
+          "mean_abs_grade": 1.92
+        },
+        "上り": {
+          "segment_count": 1110,
+          "max_grade": -47.02,
+          "max_abs_grade": 47.02,
+          "mean_abs_grade": 1.78
         }
       }
     }

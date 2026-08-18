@@ -17,6 +17,7 @@ from pyproj import Geod
 
 sys.path.insert(0, os.path.dirname(__file__))
 from gsi_dem import sample_elevation  # noqa: E402
+from fetch_osm import ROUTE_DEFS, fetch_facilities  # noqa: E402
 
 GEOD = Geod(ellps="WGS84")
 HERE = os.path.dirname(__file__)
@@ -37,10 +38,14 @@ PORTAL_BUFFER_M = 200.0  # normal-tagged points this close to a tunnel/bridge ar
 # excluded as elevation anchors too: ground rises fast right at a portal cut or
 # an embankment approach, and that climb is real but not the road's own profile.
 
-# Known reference points to establish 上り(toward Tokyo)/下り(away) direction.
-GOTEMBA_JCT = (138.9407, 35.2861)  # lon, lat
+# Reference point to establish 上り(toward Tokyo)/下り(away) direction: for any
+# route that's part of Japan's Tokyo-centered expressway network (which is
+# effectively all of them, even ones nowhere near Gotemba), geodesic distance
+# to a fixed Tokyo-ward point monotonically increases as you move away from
+# Tokyo along the route, so one reference point works network-wide.
+TOKYO_WARD_REF = (138.9407, 35.2861)  # Gotemba JCT
 
-ROUTES = {"東名": "E1", "新東名": "E1A"}
+ROUTES = list(ROUTE_DEFS.keys())
 
 FACILITY_KIND_PATTERNS = [
     ("JCT", ["JCT", "ジャンクション"]),
@@ -57,7 +62,7 @@ def geod_dist(lon1, lat1, lon2, lat2):
 
 
 def load_ways(name):
-    with open(os.path.join(RAW_DIR, f"ways_{name}.json"), "r", encoding="utf-8") as f:
+    with open(os.path.join(RAW_DIR, f"ways_{ROUTE_DEFS[name]['slug']}.json"), "r", encoding="utf-8") as f:
         data = json.load(f)
     ways = []
     for el in data["elements"]:
@@ -71,8 +76,8 @@ def load_ways(name):
         tags = el.get("tags", {})
         structure = "tunnel" if tags.get("tunnel") else "bridge" if tags.get("bridge") else "normal"
         structure_name = tags.get("tunnel:name") or tags.get("bridge:name")
-        d_start = geod_dist(geom[0][0], geom[0][1], *GOTEMBA_JCT)
-        d_end = geod_dist(geom[-1][0], geom[-1][1], *GOTEMBA_JCT)
+        d_start = geod_dist(geom[0][0], geom[0][1], *TOKYO_WARD_REF)
+        d_end = geod_dist(geom[-1][0], geom[-1][1], *TOKYO_WARD_REF)
         # oneway traffic flows node[0] -> node[-1] by OSM convention; heading toward
         # Gotemba (Tokyo side) = 上り, heading away = 下り.
         direction = "上り" if d_end < d_start else "下り"
@@ -305,9 +310,8 @@ def classify_facility(name):
     return "OTHER"
 
 
-def load_facilities():
-    with open(os.path.join(RAW_DIR, "facilities.json"), "r", encoding="utf-8") as f:
-        data = json.load(f)
+def load_facilities(bbox):
+    data = fetch_facilities(bbox)  # cache-only in practice; fetch_osm.py pre-populates it
     raw = []
     for el in data["elements"]:
         tags = el.get("tags", {})
@@ -445,23 +449,27 @@ def build_segments(route, direction, points, assigned_facilities, chain_rank):
 def main():
     all_segments = []
     all_points_by_key = {}
-    matched_facility_names = set()
+    matched_facility_names_by_route = defaultdict(set)
     qc = {"routes": {}, "anomalies": []}
 
-    for route, ref in ROUTES.items():
+    fac_cache = {}
+
+    for route in ROUTES:
         ways = load_ways(route)
         by_dir = defaultdict(list)
         for w in ways:
             by_dir[w["direction"]].append(w)
+
+        bbox = ROUTE_DEFS[route]["bbox"]
+        if bbox not in fac_cache:
+            fac_cache[bbox] = load_facilities(bbox)
+        facilities = fac_cache[bbox]
 
         for direction, dir_ways in by_dir.items():
             chains = stitch_chains(dir_ways)
             chains.sort(key=len, reverse=True)
             print(f"[{route}/{direction}] {len(dir_ways)} ways -> {len(chains)} chain(s), "
                   f"largest {len(chains[0])} pts", flush=True)
-
-            facilities = load_facilities() if "_fac_cache" not in globals() else _fac_cache
-            globals()["_fac_cache"] = facilities
 
             chain_all_segments = []
             grades_this_dir = []
@@ -477,7 +485,7 @@ def main():
                 qc.setdefault("despiked_points", 0)
                 qc["despiked_points"] += n_despiked
                 assigned = assign_facility_chainage(pts, facilities)
-                matched_facility_names.update((a["name"], a["kind"]) for a in assigned)
+                matched_facility_names_by_route[route].update((a["name"], a["kind"]) for a in assigned)
                 segs = build_segments(route, direction, pts, assigned, chain_rank)
                 chain_all_segments.extend(segs)
                 grades_this_dir.extend([s["grade"] for s in segs])
@@ -500,52 +508,65 @@ def main():
                          "from": s["from"], "to": s["to"]}
                     )
 
-    # known published reference values (NEXCO) for sanity comparison
+    # known published reference values (NEXCO) for sanity comparison, where we
+    # have one; routes without a citation just get the computed figures.
+    published_refs = {"東名": "4%級", "新東名": "静岡区間で約2%"}
     qc["reference_check"] = {
-        "東名": {"published_max_grade_pct": "4%級", "computed_max_abs_grade": qc["routes"].get("東名", {})},
-        "新東名": {"published_max_grade_pct_shizuoka": "約2%", "computed_max_abs_grade": qc["routes"].get("新東名", {})},
+        route: {"published_max_grade_pct": published_refs.get(route, "未確認"), "computed": qc["routes"].get(route, {})}
+        for route in ROUTES
     }
 
-    segments_fc = {
-        "type": "FeatureCollection",
-        "features": [
-            {
-                "type": "Feature",
-                "properties": {k: v for k, v in s.items() if k != "coordinates"},
-                "geometry": {"type": "LineString", "coordinates": s["coordinates"]},
-            }
-            for s in all_segments
-        ],
-    }
-    with open(os.path.join(OUT_DIR, f"road-segments{OUT_SUFFIX}.geojson"), "w", encoding="utf-8") as f:
-        json.dump(segments_fc, f, ensure_ascii=False)
+    # Segments and facilities are written per route (not one combined file) so
+    # the frontend can fetch only the routes the user has selected instead of
+    # downloading the whole network on first load.
+    segments_by_route = defaultdict(list)
+    for s in all_segments:
+        segments_by_route[s["route"]].append(s)
 
-    # Only keep facilities that actually snapped onto a Tomei/Shin-Tomei chain
-    # (assign_facility_chainage checked real proximity to resampled road
-    # points); the raw bbox query also picks up junctions on unrelated roads
-    # (e.g. the Chuo expressway near Iida) that happen to fall inside the box.
-    facilities = globals().get("_fac_cache") or load_facilities()
-    facilities = [f for f in facilities if (f["name"], f["kind"]) in matched_facility_names]
-    facilities_fc = {
-        "type": "FeatureCollection",
-        "features": [
-            {
-                "type": "Feature",
-                "properties": {"name": f["name"], "kind": f["kind"]},
-                "geometry": {"type": "Point", "coordinates": [f["lon"], f["lat"]]},
-            }
-            for f in facilities
-        ],
-    }
-    with open(os.path.join(OUT_DIR, "facilities.geojson"), "w", encoding="utf-8") as f:
-        json.dump(facilities_fc, f, ensure_ascii=False)
+    for route in ROUTES:
+        segments_fc = {
+            "type": "FeatureCollection",
+            "features": [
+                {
+                    "type": "Feature",
+                    "properties": {k: v for k, v in s.items() if k != "coordinates"},
+                    "geometry": {"type": "LineString", "coordinates": s["coordinates"]},
+                }
+                for s in segments_by_route.get(route, [])
+            ],
+        }
+        slug = ROUTE_DEFS[route]["slug"]
+        with open(os.path.join(OUT_DIR, f"road-segments-{slug}{OUT_SUFFIX}.geojson"), "w", encoding="utf-8") as f:
+            json.dump(segments_fc, f, ensure_ascii=False)
+
+        # Only keep facilities that actually snapped onto this route's chains
+        # (assign_facility_chainage checked real proximity to resampled road
+        # points); the raw bbox query also picks up junctions on unrelated
+        # roads (e.g. the Chuo expressway near Iida) inside the same box.
+        bbox = ROUTE_DEFS[route]["bbox"]
+        route_facilities = [
+            f for f in fac_cache[bbox] if (f["name"], f["kind"]) in matched_facility_names_by_route[route]
+        ]
+        facilities_fc = {
+            "type": "FeatureCollection",
+            "features": [
+                {
+                    "type": "Feature",
+                    "properties": {"name": f["name"], "kind": f["kind"]},
+                    "geometry": {"type": "Point", "coordinates": [f["lon"], f["lat"]]},
+                }
+                for f in route_facilities
+            ],
+        }
+        with open(os.path.join(OUT_DIR, f"facilities-{slug}.geojson"), "w", encoding="utf-8") as f:
+            json.dump(facilities_fc, f, ensure_ascii=False)
 
     with open(os.path.join(OUT_DIR, f"qc_report{OUT_SUFFIX}.json"), "w", encoding="utf-8") as f:
         json.dump(qc, f, ensure_ascii=False, indent=2)
 
     # Corridor profile (elevation + grade vs. distance) for the main chain of
     # each route+direction, used by the frontend's bottom profile panel.
-    profiles = {}
+    profiles_by_route = defaultdict(dict)
     for (route, direction, chain_rank), pts in all_points_by_key.items():
         if chain_rank != 0:
             continue
@@ -557,7 +578,7 @@ def main():
             grades.append(round((p1["elevation"] - p0["elevation"]) / horiz * 100.0, 2) if horiz > 0 else 0.0)
         elevations = [round(p["elevation"], 1) for p in pts]
         ascent = float(np.sum(np.diff(elevations).clip(min=0)))
-        profiles[f"{route}_{direction}"] = {
+        profiles_by_route[route][f"{route}_{direction}"] = {
             "route": route,
             "direction": direction,
             "length_km": round(pts[-1]["cum_dist"] / 1000.0, 1),
@@ -570,11 +591,31 @@ def main():
                 max((abs(g) for g in grades if abs(g) <= ANOMALY_THRESHOLD_PCT), default=0.0), 2
             ),
         }
-    with open(os.path.join(OUT_DIR, f"profiles{OUT_SUFFIX}.json"), "w", encoding="utf-8") as f:
-        json.dump(profiles, f, ensure_ascii=False)
+    for route in ROUTES:
+        slug = ROUTE_DEFS[route]["slug"]
+        with open(os.path.join(OUT_DIR, f"profiles-{slug}{OUT_SUFFIX}.json"), "w", encoding="utf-8") as f:
+            json.dump(profiles_by_route.get(route, {}), f, ensure_ascii=False)
+
+    # Route manifest: tells the frontend what's fetchable (and under what
+    # filename slug/color) without hardcoding route names at build time.
+    with open(os.path.join(OUT_DIR, "routes.json"), "w", encoding="utf-8") as f:
+        json.dump(
+            [
+                {
+                    "key": route,
+                    "slug": ROUTE_DEFS[route]["slug"],
+                    "color": ROUTE_DEFS[route].get("color", "#297a58"),
+                    "default": ROUTE_DEFS[route].get("default", False),
+                }
+                for route in ROUTES
+            ],
+            f, ensure_ascii=False, indent=2,
+        )
 
     print(f"\nTotal segments: {len(all_segments)}")
-    print(f"Facilities: {len(facilities)}")
+    for route in ROUTES:
+        print(f"  {route}: {len(segments_by_route.get(route, []))} segments, "
+              f"{len(matched_facility_names_by_route[route])} facilities")
     print(f"Anomalies (>|{ANOMALY_THRESHOLD_PCT}%|): {len(qc['anomalies'])}")
     print("QC summary:", json.dumps(qc["routes"], ensure_ascii=False, indent=2))
 

@@ -1,17 +1,18 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
-import { AttributionControl, Map as MapLibreMap, NavigationControl, Popup, type GeoJSONSource } from "maplibre-gl";
+import { AttributionControl, LngLatBounds, Map as MapLibreMap, NavigationControl, Popup, type GeoJSONSource } from "maplibre-gl";
 import "maplibre-gl/dist/maplibre-gl.css";
 
-type RouteName = "東名" | "新東名";
 type Direction = "上り" | "下り";
 type Quality = "measured" | "estimated";
 type Structure = "normal" | "bridge" | "tunnel";
 type WindowSize = 50 | 100 | 250;
 
+type RouteInfo = { key: string; slug: string; color: string; default: boolean };
+
 type RoadSegment = {
-  id: string; route: RouteName; direction: Direction; from: string | null; to: string | null;
+  id: string; route: string; direction: Direction; from: string | null; to: string | null;
   grade: number; elevation_start: number; elevation_end: number; quality: Quality;
   structure: Structure; chain_rank: number; anomaly: boolean;
   cum_dist_start: number; cum_dist_end: number;
@@ -21,7 +22,7 @@ type RoadSegment = {
 type Facility = { name: string; kind: string; coords: [number, number] };
 
 type RouteProfile = {
-  route: RouteName; direction: Direction; length_km: number;
+  route: string; direction: Direction; length_km: number;
   elevation_m: number[]; grade_pct: number[];
   max_elevation_m: number; min_elevation_m: number;
   total_ascent_m: number; max_abs_grade_pct: number;
@@ -62,8 +63,8 @@ function downsample(arr: number[], maxPoints: number) {
   const step = arr.length / maxPoints;
   return Array.from({ length: maxPoints }, (_, i) => arr[Math.floor(i * step)]);
 }
-function RouteIcon({ route }: { route: RouteName }) {
-  return <span className={`route-mark ${route === "東名" ? "tomei" : "shintomei"}`}>{route === "東名" ? "E1" : "E1A"}</span>;
+function RouteIcon({ route, color }: { route: string; color: string }) {
+  return <span className="route-mark" style={{ background: color }}>{route.slice(0, 2)}</span>;
 }
 
 async function loadGeoJSON<T>(url: string): Promise<T> {
@@ -75,67 +76,122 @@ export function RoadGradientMap() {
   const mapNode = useRef<HTMLDivElement>(null);
   const mapRef = useRef<MapLibreMap | null>(null);
   const segmentsRef = useRef<RoadSegment[]>([]);
+  const fetchedSegmentKeysRef = useRef<Set<string>>(new Set());
+  const fetchedFacilityKeysRef = useRef<Set<string>>(new Set());
 
-  const [routeFilter, setRouteFilter] = useState<"両方" | RouteName>("両方");
+  const [routes, setRoutes] = useState<RouteInfo[]>([]);
+  const [selectedRoutes, setSelectedRoutes] = useState<Set<string>>(new Set());
   const [direction, setDirection] = useState<"両方" | Direction>("両方");
   const [threshold, setThreshold] = useState(0);
   const [windowSize, setWindowSize] = useState<WindowSize>(100);
-  const [segments, setSegments] = useState<RoadSegment[]>([]);
-  const [facilities, setFacilities] = useState<Facility[]>([]);
-  const [profiles, setProfiles] = useState<Record<string, RouteProfile>>({});
-  const [loading, setLoading] = useState(true);
+  const [segmentsByRoute, setSegmentsByRoute] = useState<Record<string, RoadSegment[]>>({});
+  const [profilesByRoute, setProfilesByRoute] = useState<Record<string, RouteProfile>>({});
+  const [facilitiesByRoute, setFacilitiesByRoute] = useState<Record<string, Facility[]>>({});
+  const [loadingRoutes, setLoadingRoutes] = useState<Set<string>>(new Set());
   const [mapReady, setMapReady] = useState(false);
   const [selected, setSelected] = useState<RoadSegment | null>(null);
   const [profileMode, setProfileMode] = useState<"elevation" | "grade">("elevation");
   const [panelOpen, setPanelOpen] = useState(true);
 
+  const segments = useMemo(
+    () => [...selectedRoutes].flatMap((key) => segmentsByRoute[key] ?? []),
+    [selectedRoutes, segmentsByRoute],
+  );
+  const facilities = useMemo(
+    () => [...selectedRoutes].flatMap((key) => facilitiesByRoute[key] ?? []),
+    [selectedRoutes, facilitiesByRoute],
+  );
   const filtered = useMemo(
     () =>
       segments.filter(
-        (item) =>
-          (routeFilter === "両方" || item.route === routeFilter) &&
-          (direction === "両方" || item.direction === direction) &&
-          Math.abs(item.grade) >= threshold,
+        (item) => (direction === "両方" || item.direction === direction) && Math.abs(item.grade) >= threshold,
       ),
-    [segments, routeFilter, direction, threshold],
+    [segments, direction, threshold],
   );
 
   useEffect(() => {
     segmentsRef.current = segments;
   }, [segments]);
 
-  // facilities load once; segments/profiles reload whenever the gradient window changes
+  // Route manifest loads once; it drives which per-route files exist to fetch
+  // and which routes are visible on first load (a route not marked "default"
+  // stays unfetched — and costs nothing — until the user selects it).
   useEffect(() => {
-    loadGeoJSON<{ features: { properties: { name: string; kind: string }; geometry: { coordinates: [number, number] } }[] }>(
-      "/data/facilities.geojson",
-    ).then((fc) => {
-      setFacilities(fc.features.map((f) => ({ name: f.properties.name, kind: f.properties.kind, coords: f.geometry.coordinates })));
+    loadGeoJSON<RouteInfo[]>("/data/routes.json").then((list) => {
+      setRoutes(list);
+      setSelectedRoutes(new Set(list.filter((r) => r.default).map((r) => r.key)));
     });
   }, []);
 
+  // Fetch segments/profiles for any selected route not yet loaded at the
+  // current gradient window, and facilities for any selected route not yet
+  // loaded at all (facilities don't depend on window size).
   useEffect(() => {
-    setLoading(true);
-    Promise.all([
-      loadGeoJSON<{ features: { properties: Omit<RoadSegment, "coordinates">; geometry: { coordinates: [number, number][] } }[] }>(
-        `/data/road-segments-${windowSize}.geojson`,
-      ),
-      loadGeoJSON<Record<string, RouteProfile>>(`/data/profiles-${windowSize}.json`),
-    ]).then(([segFc, profileData]) => {
-      const loaded = segFc.features.map((f) => ({ ...f.properties, coordinates: f.geometry.coordinates }));
-      setSegments(loaded);
-      setProfiles(profileData);
-      setSelected((prev) => {
-        if (prev) {
-          const near = loaded
-            .filter((s) => s.route === prev.route && s.direction === prev.direction)
-            .sort((a, b) => Math.abs(a.cum_dist_start - prev.cum_dist_start) - Math.abs(b.cum_dist_start - prev.cum_dist_start))[0];
-          if (near) return near;
+    if (routes.length === 0) return;
+    const toFetch = [...selectedRoutes].filter(
+      (key) => !fetchedSegmentKeysRef.current.has(`${key}::${windowSize}`),
+    );
+    if (toFetch.length === 0) return;
+    setLoadingRoutes((prev) => new Set([...prev, ...toFetch]));
+
+    Promise.all(
+      toFetch.map(async (key) => {
+        const info = routes.find((r) => r.key === key);
+        if (!info) return;
+        fetchedSegmentKeysRef.current.add(`${key}::${windowSize}`);
+
+        const [segFc, profileData] = await Promise.all([
+          loadGeoJSON<{ features: { properties: Omit<RoadSegment, "coordinates">; geometry: { coordinates: [number, number][] } }[] }>(
+            `/data/road-segments-${info.slug}-${windowSize}.geojson`,
+          ),
+          loadGeoJSON<Record<string, RouteProfile>>(`/data/profiles-${info.slug}-${windowSize}.json`),
+        ]);
+        const loaded = segFc.features.map((f) => ({ ...f.properties, coordinates: f.geometry.coordinates }));
+        setSegmentsByRoute((prev) => ({ ...prev, [key]: loaded }));
+        setProfilesByRoute((prev) => ({ ...prev, ...profileData }));
+
+        if (!fetchedFacilityKeysRef.current.has(key)) {
+          fetchedFacilityKeysRef.current.add(key);
+          const facFc = await loadGeoJSON<{ features: { properties: { name: string; kind: string }; geometry: { coordinates: [number, number] } }[] }>(
+            `/data/facilities-${info.slug}.geojson`,
+          );
+          setFacilitiesByRoute((prev) => ({
+            ...prev,
+            [key]: facFc.features.map((f) => ({ name: f.properties.name, kind: f.properties.kind, coords: f.geometry.coordinates })),
+          }));
         }
-        return loaded.find((s) => s.route === "新東名" && s.direction === "上り" && s.quality === "measured" && !s.anomaly) ?? loaded[0] ?? null;
+
+        setLoadingRoutes((prev) => {
+          const next = new Set(prev);
+          next.delete(key);
+          return next;
+        });
+      }),
+    ).then(() => {
+      setSelected((prev) => {
+        if (prev && selectedRoutes.has(prev.route)) return prev;
+        const pool = [...selectedRoutes].flatMap((key) => segmentsByRoute[key] ?? []);
+        return pool.find((s) => s.quality === "measured" && !s.anomaly) ?? pool[0] ?? null;
       });
-      setLoading(false);
     });
-  }, [windowSize]);
+  }, [selectedRoutes, windowSize, routes]);
+
+  // Clear the detail card if its route gets toggled off.
+  useEffect(() => {
+    if (selected && !selectedRoutes.has(selected.route)) setSelected(null);
+  }, [selectedRoutes, selected]);
+
+  function toggleRoute(key: string) {
+    setSelectedRoutes((prev) => {
+      const next = new Set(prev);
+      if (next.has(key)) {
+        if (next.size > 1) next.delete(key); // keep at least one route visible
+      } else {
+        next.add(key);
+      }
+      return next;
+    });
+  }
 
   useEffect(() => {
     if (!mapNode.current || mapRef.current) return;
@@ -200,7 +256,29 @@ export function RoadGradientMap() {
     (map.getSource("facilities") as GeoJSONSource).setData(facilityFeatureCollection(facilities));
   }, [facilities, mapReady]);
 
-  const profile = selected ? profiles[`${selected.route}_${selected.direction}`] : undefined;
+  // Refit the view whenever which routes are selected changes (not on window
+  // size or filter tweaks) — some routes (e.g. 新名神, near Kobe) are far
+  // outside the initial Shizuoka-centered view, so without this toggling one
+  // on would draw it entirely off-screen with no visual sign anything changed.
+  const lastFitSignatureRef = useRef("");
+  useEffect(() => {
+    const map = mapRef.current;
+    if (!map || !mapReady) return;
+    const signature = [...selectedRoutes].sort().join(",");
+    if (signature === lastFitSignatureRef.current) return;
+    if (![...selectedRoutes].every((key) => (segmentsByRoute[key]?.length ?? 0) > 0)) return;
+    lastFitSignatureRef.current = signature;
+    const bounds = new LngLatBounds();
+    for (const key of selectedRoutes) {
+      for (const s of segmentsByRoute[key] ?? []) {
+        for (const c of s.coordinates) bounds.extend(c as [number, number]);
+      }
+    }
+    if (!bounds.isEmpty()) map.fitBounds(bounds, { padding: 60, maxZoom: 10, duration: 800 });
+  }, [selectedRoutes, segmentsByRoute, mapReady]);
+
+  const routeColor = (key: string) => routes.find((r) => r.key === key)?.color ?? "#297a58";
+  const profile = selected ? profilesByRoute[`${selected.route}_${selected.direction}`] : undefined;
   const routeProfile = profile ? downsample(profile.elevation_m, 400) : [];
   const gradeProfile = profile ? downsample(profile.grade_pct, 300) : [];
   const estimatedShare = useMemo(() => {
@@ -209,36 +287,57 @@ export function RoadGradientMap() {
     if (inDir.length === 0) return 0;
     return Math.round((inDir.filter((s) => s.quality === "estimated").length / inDir.length) * 100);
   }, [segments, selected]);
+  const anyLoading = loadingRoutes.size > 0;
 
   return (
     <main className="app-shell">
       <header className="topbar">
-        <div className="brand"><div className="brand-icon" aria-hidden="true"><span /></div><div><h1>ROAD SLOPE</h1><p>東名・新東名 道路勾配マップ</p></div></div>
-        <div className="status-pill"><span className="status-dot" /> 静岡区間 <b>PROTOTYPE</b></div>
+        <div className="brand"><div className="brand-icon" aria-hidden="true"><span /></div><div><h1>ROAD SLOPE</h1><p>高速道路 道路勾配マップ</p></div></div>
+        <div className="status-pill"><span className="status-dot" /> {selectedRoutes.size}路線表示中 <b>PROTOTYPE</b></div>
         <button className="icon-button" aria-label="情報">i</button>
       </header>
       <section className="workspace">
         <aside className={`sidebar ${panelOpen ? "open" : ""}`}>
           <div className="sidebar-head"><span>表示条件</span><button onClick={() => setPanelOpen(false)} aria-label="パネルを閉じる">×</button></div>
-          <div className="control-group"><label>路線</label><div className="segmented three">{(["両方", "東名", "新東名"] as const).map((item) => <button key={item} className={routeFilter === item ? "active" : ""} onClick={() => setRouteFilter(item)}>{item}</button>)}</div></div>
+          <div className="control-group">
+            <label>路線（クリックで切り替え）</label>
+            <div className="segmented" style={{ gridTemplateColumns: `repeat(${Math.max(routes.length, 1)}, 1fr)` }}>
+              {routes.map((r) => (
+                <button key={r.key} className={selectedRoutes.has(r.key) ? "active" : ""} onClick={() => toggleRoute(r.key)}>
+                  {r.key}{loadingRoutes.has(r.key) ? "…" : ""}
+                </button>
+              ))}
+            </div>
+          </div>
           <div className="route-summary">
-            <div><RouteIcon route="東名" /><span><b>東名高速道路</b><small>OSM連結区間 約{profiles["東名_上り"]?.length_km ?? "—"}km（全区間の一部）</small></span></div>
-            <div><RouteIcon route="新東名" /><span><b>新東名高速道路</b><small>OSM連結区間 約{profiles["新東名_上り"]?.length_km ?? "—"}km</small></span></div>
+            {routes.map((r) => (
+              <div key={r.key}>
+                <RouteIcon route={r.key} color={r.color} />
+                <span>
+                  <b>{r.key}高速道路</b>
+                  <small>
+                    {selectedRoutes.has(r.key)
+                      ? `OSM連結区間 約${profilesByRoute[`${r.key}_上り`]?.length_km ?? "—"}km`
+                      : "非表示（クリックで読み込み）"}
+                  </small>
+                </span>
+              </div>
+            ))}
           </div>
           <div className="control-group"><label>方向</label><div className="segmented three">{(["両方", "上り", "下り"] as const).map((item) => <button key={item} className={direction === item ? "active" : ""} onClick={() => setDirection(item)}>{item === "上り" ? "上り ↗" : item === "下り" ? "下り ↙" : item}</button>)}</div></div>
           <div className="control-group range-control"><label><span>勾配しきい値</span><strong>{threshold === 0 ? "すべて表示" : `${threshold}% 以上`}</strong></label><input aria-label="勾配しきい値" type="range" min="0" max="4" step="1" value={threshold} onChange={(e) => setThreshold(Number(e.target.value))} /><div className="ticks"><span>0%</span><span>1</span><span>2</span><span>3</span><span>4%+</span></div></div>
           <div className="control-group"><label>計算区間</label><div className="segmented three">{([50, 100, 250] as const).map((size) => <button key={size} className={windowSize === size ? "active" : ""} onClick={() => setWindowSize(size)}>{size}m</button>)}</div><p className="hint">25m間隔の標高点から移動平均との差を算出</p></div>
           <div className="legend-block"><label>勾配</label>{[["0 — 1%", "緩い", "#2aa7a1"], ["1 — 2%", "やや勾配", "#88be5c"], ["2 — 3%", "勾配あり", "#f0b53c"], ["3 — 4%", "急", "#f2763d"], ["4%以上", "非常に急", "#e34444"]].map(([range, name, color]) => <div className="legend-row" key={range}><span className="legend-line" style={{ background: color }} /><b>{range}</b><small>{name}</small></div>)}</div>
-          <div className="data-note"><span>◆</span><p><b>データソースについて</b><br />OpenStreetMapの道路線形 + 国土地理院DEMから算出。道路中心線自体の高さデータは未統合（試作段階）。トンネル・橋梁とその前後は前後端点から補間した推定値です。</p></div>
+          <div className="data-note"><span>◆</span><p><b>データソースについて</b><br />OpenStreetMapの道路線形 + 国土地理院DEMから算出。道路中心線自体の高さデータは未統合（試作段階）。トンネル・橋梁とその前後、および物理的にあり得ない値は前後端点から補間した推定値です。選択した路線のデータのみ取得します。</p></div>
         </aside>
         <div className="map-area">
-          <div ref={mapNode} className="map" aria-label="東名・新東名の道路勾配地図" />
+          <div ref={mapNode} className="map" aria-label="道路勾配地図" />
           {!panelOpen && <button className="open-panel" onClick={() => setPanelOpen(true)}>☰ 表示条件</button>}
-          <div className="map-caption"><span className="pulse" /> {loading ? "読み込み中…" : `${filtered.length} 区間を表示中`} <em>•</em> 道路をクリックして詳細</div>
+          <div className="map-caption"><span className="pulse" /> {anyLoading ? "読み込み中…" : `${filtered.length} 区間を表示中`} <em>•</em> 道路をクリックして詳細</div>
           {selected && (
             <article className="segment-card">
               <button className="card-close" aria-label="詳細を閉じる" onClick={() => setSelected(null)}>×</button>
-              <div className="segment-title"><RouteIcon route={selected.route} /><div><small>{selected.route}高速道路・{selected.direction}</small><h2>{selected.from ?? "—"} <span>→</span> {selected.to ?? "—"}</h2></div></div>
+              <div className="segment-title"><RouteIcon route={selected.route} color={routeColor(selected.route)} /><div><small>{selected.route}高速道路・{selected.direction}</small><h2>{selected.from ?? "—"} <span>→</span> {selected.to ?? "—"}</h2></div></div>
               <div className="metric-grid">
                 <div><small>平均勾配</small><strong style={{ color: gradeColor(selected.grade) }}>{selected.grade > 0 ? "+" : ""}{selected.grade.toFixed(1)}<span>%</span></strong><em>{selected.grade >= 0 ? "上り勾配" : "下り勾配"}</em></div>
                 <div><small>道路標高</small><strong>{selected.elevation_start.toFixed(0)}<span>m</span> <i>→</i> {selected.elevation_end.toFixed(0)}<span>m</span></strong><em>{windowSize}m 区間</em></div>
@@ -254,7 +353,7 @@ export function RoadGradientMap() {
       </section>
       <section className="profile-panel">
         <div className="profile-head">
-          <div><RouteIcon route={selected?.route ?? "東名"} /><span><b>{selected?.route ?? "—"}高速道路・{selected?.direction ?? ""}</b><small>{profile ? `OSM連結区間 約${profile.length_km}km` : "区間を選択してください"}</small></span></div>
+          <div><RouteIcon route={selected?.route ?? routes[0]?.key ?? "—"} color={selected ? routeColor(selected.route) : routes[0]?.color ?? "#297a58"} /><span><b>{selected?.route ?? "—"}高速道路・{selected?.direction ?? ""}</b><small>{profile ? `OSM連結区間 約${profile.length_km}km` : "区間を選択してください"}</small></span></div>
           <div className="segmented profile-toggle"><button className={profileMode === "elevation" ? "active" : ""} onClick={() => setProfileMode("elevation")}>標高プロファイル</button><button className={profileMode === "grade" ? "active" : ""} onClick={() => setProfileMode("grade")}>勾配グラフ</button></div>
         </div>
         {routeProfile.length > 1 ? (
