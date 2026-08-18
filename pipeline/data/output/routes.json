@@ -19,5 +19,75 @@
     "color": "#6a358d",
     "group": "NEXCO西日本",
     "default": false
+  },
+  {
+    "key": "東北道",
+    "slug": "tohoku",
+    "color": "#358d6a",
+    "group": "NEXCO東日本",
+    "default": false
+  },
+  {
+    "key": "常磐道",
+    "slug": "joban",
+    "color": "#8d3554",
+    "group": "NEXCO東日本",
+    "default": false
+  },
+  {
+    "key": "関越道",
+    "slug": "kanetsu",
+    "color": "#8d6835",
+    "group": "NEXCO東日本",
+    "default": false
+  },
+  {
+    "key": "東関東道",
+    "slug": "higashi-kanto",
+    "color": "#8d3557",
+    "group": "NEXCO東日本",
+    "default": false
+  },
+  {
+    "key": "圏央道",
+    "slug": "ken-o",
+    "color": "#7e8d35",
+    "group": "NEXCO東日本",
+    "default": false
+  },
+  {
+    "key": "中央道",
+    "slug": "chuo",
+    "color": "#71358d",
+    "group": "NEXCO中日本",
+    "default": false
+  },
+  {
+    "key": "伊勢湾岸道",
+    "slug": "isewangan",
+    "color": "#358d3f",
+    "group": "NEXCO中日本",
+    "default": false
+  },
+  {
+    "key": "東海北陸道",
+    "slug": "tokai-hokuriku",
+    "color": "#35478d",
+    "group": "NEXCO中日本",
+    "default": false
+  },
+  {
+    "key": "名神",
+    "slug": "meishin",
+    "color": "#68358d",
+    "group": "NEXCO西日本",
+    "default": false
+  },
+  {
+    "key": "近畿道",
+    "slug": "kinki",
+    "color": "#4e8d35",
+    "group": "NEXCO西日本",
+    "default": false
   }
 ]

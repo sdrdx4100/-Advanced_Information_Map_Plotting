@@ -41,6 +41,146 @@
         "max_abs_grade": 64.13,
         "mean_abs_grade": 1.82
       }
+    },
+    "東北道": {
+      "下り": {
+        "segment_count": 13593,
+        "max_grade": 37.94,
+        "max_abs_grade": 37.94,
+        "mean_abs_grade": 1.12
+      },
+      "上り": {
+        "segment_count": 13583,
+        "max_grade": -17.55,
+        "max_abs_grade": 17.55,
+        "mean_abs_grade": 1.11
+      }
+    },
+    "常磐道": {
+      "下り": {
+        "segment_count": 5937,
+        "max_grade": -35.44,
+        "max_abs_grade": 35.44,
+        "mean_abs_grade": 1.12
+      },
+      "上り": {
+        "segment_count": 5077,
+        "max_grade": -25.75,
+        "max_abs_grade": 25.75,
+        "mean_abs_grade": 1.05
+      }
+    },
+    "関越道": {
+      "下り": {
+        "segment_count": 4817,
+        "max_grade": -28.68,
+        "max_abs_grade": 28.68,
+        "mean_abs_grade": 0.95
+      },
+      "上り": {
+        "segment_count": 4810,
+        "max_grade": -31.67,
+        "max_abs_grade": 31.67,
+        "mean_abs_grade": 0.93
+      }
+    },
+    "東関東道": {
+      "上り": {
+        "segment_count": 1702,
+        "max_grade": -23.32,
+        "max_abs_grade": 23.32,
+        "mean_abs_grade": 0.64
+      },
+      "下り": {
+        "segment_count": 1793,
+        "max_grade": 22.62,
+        "max_abs_grade": 22.62,
+        "mean_abs_grade": 0.68
+      }
+    },
+    "圏央道": {
+      "下り": {
+        "segment_count": 3303,
+        "max_grade": -32.96,
+        "max_abs_grade": 32.96,
+        "mean_abs_grade": 0.62
+      },
+      "上り": {
+        "segment_count": 3083,
+        "max_grade": -41.69,
+        "max_abs_grade": 41.69,
+        "mean_abs_grade": 0.66
+      }
+    },
+    "中央道": {
+      "上り": {
+        "segment_count": 7230,
+        "max_grade": -31.21,
+        "max_abs_grade": 31.21,
+        "mean_abs_grade": 1.63
+      },
+      "下り": {
+        "segment_count": 7234,
+        "max_grade": -23.31,
+        "max_abs_grade": 23.31,
+        "mean_abs_grade": 1.61
+      }
+    },
+    "伊勢湾岸道": {
+      "上り": {
+        "segment_count": 1002,
+        "max_grade": 14.55,
+        "max_abs_grade": 14.55,
+        "mean_abs_grade": 0.13
+      },
+      "下り": {
+        "segment_count": 1003,
+        "max_grade": -26.36,
+        "max_abs_grade": 26.36,
+        "mean_abs_grade": 0.16
+      }
+    },
+    "東海北陸道": {
+      "上り": {
+        "segment_count": 3433,
+        "max_grade": 84.86,
+        "max_abs_grade": 84.86,
+        "mean_abs_grade": 1.64
+      },
+      "下り": {
+        "segment_count": 2958,
+        "max_grade": 96.39,
+        "max_abs_grade": 96.39,
+        "mean_abs_grade": 1.83
+      }
+    },
+    "名神": {
+      "上り": {
+        "segment_count": 3928,
+        "max_grade": 58.87,
+        "max_abs_grade": 58.87,
+        "mean_abs_grade": 1.14
+      },
+      "下り": {
+        "segment_count": 3946,
+        "max_grade": 74.75,
+        "max_abs_grade": 74.75,
+        "mean_abs_grade": 1.19
+      }
+    },
+    "近畿道": {
+      "上り": {
+        "segment_count": 535,
+        "max_grade": -0.39,
+        "max_abs_grade": 0.39,
+        "mean_abs_grade": 0.0
+      },
+      "下り": {
+        "segment_count": 542,
+        "max_grade": 0.94,
+        "max_abs_grade": 0.94,
+        "mean_abs_grade": 0.0
+      }
     }
   },
   "anomalies": [
@@ -4481,9 +4621,4377 @@
       "structure": "normal",
       "from": "茨木千提寺IC",
       "to": null
+    },
+    {
+      "id": "東北道-下り-0-2485",
+      "grade": 11.03,
+      "structure": "normal",
+      "from": "一関IC",
+      "to": "中尊寺PA"
+    },
+    {
+      "id": "東北道-下り-0-2486",
+      "grade": 33.3,
+      "structure": "normal",
+      "from": "一関IC",
+      "to": "中尊寺PA"
+    },
+    {
+      "id": "東北道-下り-0-2487",
+      "grade": 13.37,
+      "structure": "normal",
+      "from": "一関IC",
+      "to": "中尊寺PA"
+    },
+    {
+      "id": "東北道-下り-0-2488",
+      "grade": 9.77,
+      "structure": "normal",
+      "from": "一関IC",
+      "to": "中尊寺PA"
+    },
+    {
+      "id": "東北道-下り-0-2489",
+      "grade": 21.97,
+      "structure": "normal",
+      "from": "一関IC",
+      "to": "中尊寺PA"
+    },
+    {
+      "id": "東北道-下り-0-2490",
+      "grade": 34.42,
+      "structure": "normal",
+      "from": "一関IC",
+      "to": "中尊寺PA"
+    },
+    {
+      "id": "東北道-下り-0-2491",
+      "grade": 37.94,
+      "structure": "normal",
+      "from": "一関IC",
+      "to": "中尊寺PA"
+    },
+    {
+      "id": "東北道-下り-0-2495",
+      "grade": -8.65,
+      "structure": "normal",
+      "from": "一関IC",
+      "to": "中尊寺PA"
+    },
+    {
+      "id": "東北道-下り-0-2498",
+      "grade": -9.79,
+      "structure": "normal",
+      "from": "一関IC",
+      "to": "中尊寺PA"
+    },
+    {
+      "id": "東北道-下り-0-2499",
+      "grade": -9.79,
+      "structure": "normal",
+      "from": "一関IC",
+      "to": "中尊寺PA"
+    },
+    {
+      "id": "東北道-下り-0-2500",
+      "grade": -9.79,
+      "structure": "normal",
+      "from": "一関IC",
+      "to": "中尊寺PA"
+    },
+    {
+      "id": "東北道-下り-0-2501",
+      "grade": -9.79,
+      "structure": "tunnel",
+      "from": "一関IC",
+      "to": "中尊寺PA"
+    },
+    {
+      "id": "東北道-下り-0-2502",
+      "grade": -9.79,
+      "structure": "tunnel",
+      "from": "一関IC",
+      "to": "中尊寺PA"
+    },
+    {
+      "id": "東北道-下り-0-2503",
+      "grade": -9.79,
+      "structure": "tunnel",
+      "from": "一関IC",
+      "to": "中尊寺PA"
+    },
+    {
+      "id": "東北道-下り-0-2504",
+      "grade": -9.79,
+      "structure": "tunnel",
+      "from": "一関IC",
+      "to": "中尊寺PA"
+    },
+    {
+      "id": "東北道-下り-0-2505",
+      "grade": -9.79,
+      "structure": "tunnel",
+      "from": "一関IC",
+      "to": "中尊寺PA"
+    },
+    {
+      "id": "東北道-下り-0-2506",
+      "grade": -9.79,
+      "structure": "tunnel",
+      "from": "一関IC",
+      "to": "中尊寺PA"
+    },
+    {
+      "id": "東北道-下り-0-2507",
+      "grade": -9.79,
+      "structure": "normal",
+      "from": "一関IC",
+      "to": "中尊寺PA"
+    },
+    {
+      "id": "東北道-下り-0-2508",
+      "grade": -9.79,
+      "structure": "normal",
+      "from": "一関IC",
+      "to": "中尊寺PA"
+    },
+    {
+      "id": "東北道-下り-0-2509",
+      "grade": -9.79,
+      "structure": "normal",
+      "from": "一関IC",
+      "to": "中尊寺PA"
+    },
+    {
+      "id": "東北道-下り-0-3318",
+      "grade": -9.62,
+      "structure": "normal",
+      "from": "北上JCT",
+      "to": "北上江釣子IC"
+    },
+    {
+      "id": "東北道-下り-0-4914",
+      "grade": 11.34,
+      "structure": "normal",
+      "from": "松尾八幡平IC",
+      "to": "前森山PA"
+    },
+    {
+      "id": "東北道-下り-0-4916",
+      "grade": 11.35,
+      "structure": "normal",
+      "from": "松尾八幡平IC",
+      "to": "前森山PA"
+    },
+    {
+      "id": "東北道-下り-0-4917",
+      "grade": 10.14,
+      "structure": "normal",
+      "from": "松尾八幡平IC",
+      "to": "前森山PA"
+    },
+    {
+      "id": "東北道-下り-0-4923",
+      "grade": 7.34,
+      "structure": "normal",
+      "from": "松尾八幡平IC",
+      "to": "前森山PA"
+    },
+    {
+      "id": "東北道-下り-0-4953",
+      "grade": 20.33,
+      "structure": "normal",
+      "from": "前森山PA",
+      "to": "畑PA"
+    },
+    {
+      "id": "東北道-下り-0-4956",
+      "grade": 12.6,
+      "structure": "normal",
+      "from": "前森山PA",
+      "to": "畑PA"
+    },
+    {
+      "id": "東北道-下り-0-4968",
+      "grade": 15.21,
+      "structure": "normal",
+      "from": "前森山PA",
+      "to": "畑PA"
+    },
+    {
+      "id": "東北道-下り-0-4978",
+      "grade": 12.02,
+      "structure": "normal",
+      "from": "前森山PA",
+      "to": "畑PA"
+    },
+    {
+      "id": "東北道-下り-0-4979",
+      "grade": 10.22,
+      "structure": "normal",
+      "from": "前森山PA",
+      "to": "畑PA"
+    },
+    {
+      "id": "東北道-下り-0-5017",
+      "grade": 10.96,
+      "structure": "normal",
+      "from": "前森山PA",
+      "to": "畑PA"
+    },
+    {
+      "id": "東北道-下り-0-5029",
+      "grade": 8.84,
+      "structure": "normal",
+      "from": "前森山PA",
+      "to": "畑PA"
+    },
+    {
+      "id": "東北道-下り-0-5035",
+      "grade": 8.89,
+      "structure": "normal",
+      "from": "前森山PA",
+      "to": "畑PA"
+    },
+    {
+      "id": "東北道-下り-1-2536",
+      "grade": 9.84,
+      "structure": "normal",
+      "from": "矢板IC",
+      "to": "矢板北PA"
+    },
+    {
+      "id": "東北道-下り-1-2537",
+      "grade": 8.06,
+      "structure": "normal",
+      "from": "矢板IC",
+      "to": "矢板北PA"
+    },
+    {
+      "id": "東北道-下り-1-2552",
+      "grade": 8.15,
+      "structure": "normal",
+      "from": "矢板北PA ;矢板北スマートIC",
+      "to": "西那須野塩原IC"
+    },
+    {
+      "id": "東北道-下り-1-2569",
+      "grade": -9.66,
+      "structure": "normal",
+      "from": "矢板北PA ;矢板北スマートIC",
+      "to": "西那須野塩原IC"
+    },
+    {
+      "id": "東北道-下り-1-2574",
+      "grade": -7.21,
+      "structure": "normal",
+      "from": "矢板北PA ;矢板北スマートIC",
+      "to": "西那須野塩原IC"
+    },
+    {
+      "id": "東北道-下り-1-2605",
+      "grade": 10.44,
+      "structure": "normal",
+      "from": "矢板北PA ;矢板北スマートIC",
+      "to": "西那須野塩原IC"
+    },
+    {
+      "id": "東北道-下り-1-2607",
+      "grade": -7.96,
+      "structure": "normal",
+      "from": "矢板北PA ;矢板北スマートIC",
+      "to": "西那須野塩原IC"
+    },
+    {
+      "id": "東北道-下り-1-2655",
+      "grade": 7.4,
+      "structure": "normal",
+      "from": "矢板北PA ;矢板北スマートIC",
+      "to": "西那須野塩原IC"
+    },
+    {
+      "id": "東北道-下り-3-78",
+      "grade": 9.61,
+      "structure": "normal",
+      "from": "福島西IC",
+      "to": "吾妻PA"
+    },
+    {
+      "id": "東北道-下り-3-262",
+      "grade": 10.51,
+      "structure": "normal",
+      "from": "福島飯坂IC",
+      "to": "桑折JCT"
+    },
+    {
+      "id": "東北道-下り-4-27",
+      "grade": -11.75,
+      "structure": "normal",
+      "from": "湯瀬PA",
+      "to": "鹿角八幡平IC"
+    },
+    {
+      "id": "東北道-下り-4-519",
+      "grade": -24.68,
+      "structure": "normal",
+      "from": "十和田IC",
+      "to": "小坂IC"
+    },
+    {
+      "id": "東北道-下り-4-521",
+      "grade": 17.48,
+      "structure": "normal",
+      "from": "十和田IC",
+      "to": "小坂IC"
+    },
+    {
+      "id": "東北道-下り-4-529",
+      "grade": 7.86,
+      "structure": "normal",
+      "from": "小坂IC",
+      "to": "小坂PA"
+    },
+    {
+      "id": "東北道-下り-4-639",
+      "grade": -11.08,
+      "structure": "normal",
+      "from": "小坂PA",
+      "to": "小坂JCT"
+    },
+    {
+      "id": "東北道-下り-7-185",
+      "grade": 10.71,
+      "structure": "normal",
+      "from": "田山PA",
+      "to": null
+    },
+    {
+      "id": "東北道-下り-7-186",
+      "grade": 9.75,
+      "structure": "normal",
+      "from": "田山PA",
+      "to": null
+    },
+    {
+      "id": "東北道-下り-7-190",
+      "grade": -13.69,
+      "structure": "normal",
+      "from": "田山PA",
+      "to": null
+    },
+    {
+      "id": "東北道-下り-7-200",
+      "grade": -8.84,
+      "structure": "normal",
+      "from": "田山PA",
+      "to": null
+    },
+    {
+      "id": "東北道-下り-7-202",
+      "grade": 9.77,
+      "structure": "normal",
+      "from": "田山PA",
+      "to": null
+    },
+    {
+      "id": "東北道-下り-9-2",
+      "grade": 7.66,
+      "structure": "normal",
+      "from": null,
+      "to": null
+    },
+    {
+      "id": "東北道-下り-9-17",
+      "grade": 10.5,
+      "structure": "normal",
+      "from": null,
+      "to": null
+    },
+    {
+      "id": "東北道-下り-9-21",
+      "grade": 8.46,
+      "structure": "normal",
+      "from": null,
+      "to": null
+    },
+    {
+      "id": "東北道-下り-9-31",
+      "grade": 10.14,
+      "structure": "normal",
+      "from": null,
+      "to": null
+    },
+    {
+      "id": "東北道-下り-9-32",
+      "grade": 8.43,
+      "structure": "normal",
+      "from": null,
+      "to": null
+    },
+    {
+      "id": "東北道-下り-9-34",
+      "grade": 8.88,
+      "structure": "normal",
+      "from": null,
+      "to": null
+    },
+    {
+      "id": "東北道-下り-9-37",
+      "grade": 13.48,
+      "structure": "normal",
+      "from": null,
+      "to": null
+    },
+    {
+      "id": "東北道-下り-11-10",
+      "grade": 7.28,
+      "structure": "normal",
+      "from": "安代IC",
+      "to": null
+    },
+    {
+      "id": "東北道-下り-11-12",
+      "grade": 9.88,
+      "structure": "normal",
+      "from": "安代IC",
+      "to": null
+    },
+    {
+      "id": "東北道-下り-11-19",
+      "grade": 17.84,
+      "structure": "normal",
+      "from": "安代IC",
+      "to": null
+    },
+    {
+      "id": "東北道-下り-11-28",
+      "grade": 7.02,
+      "structure": "normal",
+      "from": "安代IC",
+      "to": null
+    },
+    {
+      "id": "東北道-下り-12-3",
+      "grade": 16.26,
+      "structure": "normal",
+      "from": null,
+      "to": null
+    },
+    {
+      "id": "東北道-下り-12-9",
+      "grade": 8.41,
+      "structure": "normal",
+      "from": null,
+      "to": null
+    },
+    {
+      "id": "東北道-下り-12-16",
+      "grade": 12.41,
+      "structure": "normal",
+      "from": null,
+      "to": null
+    },
+    {
+      "id": "東北道-下り-12-21",
+      "grade": 8.11,
+      "structure": "normal",
+      "from": null,
+      "to": null
+    },
+    {
+      "id": "東北道-下り-12-22",
+      "grade": 9.48,
+      "structure": "normal",
+      "from": null,
+      "to": null
+    },
+    {
+      "id": "東北道-下り-19-7",
+      "grade": -10.51,
+      "structure": "normal",
+      "from": null,
+      "to": null
+    },
+    {
+      "id": "東北道-上り-0-245",
+      "grade": 11.89,
+      "structure": "normal",
+      "from": "畑PA",
+      "to": "前森山PA"
+    },
+    {
+      "id": "東北道-上り-0-248",
+      "grade": -10.07,
+      "structure": "normal",
+      "from": "畑PA",
+      "to": "前森山PA"
+    },
+    {
+      "id": "東北道-上り-0-309",
+      "grade": -7.41,
+      "structure": "normal",
+      "from": "畑PA",
+      "to": "前森山PA"
+    },
+    {
+      "id": "東北道-上り-0-311",
+      "grade": -9.32,
+      "structure": "normal",
+      "from": "畑PA",
+      "to": "前森山PA"
+    },
+    {
+      "id": "東北道-上り-0-327",
+      "grade": -14.39,
+      "structure": "normal",
+      "from": "畑PA",
+      "to": "前森山PA"
+    },
+    {
+      "id": "東北道-上り-0-349",
+      "grade": -9.0,
+      "structure": "normal",
+      "from": "畑PA",
+      "to": "前森山PA"
+    },
+    {
+      "id": "東北道-上り-0-350",
+      "grade": -11.94,
+      "structure": "normal",
+      "from": "畑PA",
+      "to": "前森山PA"
+    },
+    {
+      "id": "東北道-上り-0-360",
+      "grade": -17.39,
+      "structure": "normal",
+      "from": "畑PA",
+      "to": "前森山PA"
+    },
+    {
+      "id": "東北道-上り-0-367",
+      "grade": 9.18,
+      "structure": "normal",
+      "from": "畑PA",
+      "to": "前森山PA"
+    },
+    {
+      "id": "東北道-上り-0-372",
+      "grade": -13.61,
+      "structure": "normal",
+      "from": "畑PA",
+      "to": "前森山PA"
+    },
+    {
+      "id": "東北道-上り-0-375",
+      "grade": -17.55,
+      "structure": "normal",
+      "from": "畑PA",
+      "to": "前森山PA"
+    },
+    {
+      "id": "東北道-上り-0-404",
+      "grade": -7.22,
+      "structure": "normal",
+      "from": "前森山PA",
+      "to": "松尾八幡平IC"
+    },
+    {
+      "id": "東北道-上り-0-412",
+      "grade": -14.97,
+      "structure": "normal",
+      "from": "前森山PA",
+      "to": "松尾八幡平IC"
+    },
+    {
+      "id": "東北道-上り-0-413",
+      "grade": -8.61,
+      "structure": "normal",
+      "from": "前森山PA",
+      "to": "松尾八幡平IC"
+    },
+    {
+      "id": "東北道-上り-1-238",
+      "grade": -9.02,
+      "structure": "normal",
+      "from": "那須高原SA",
+      "to": "那須IC"
+    },
+    {
+      "id": "東北道-上り-1-759",
+      "grade": -8.7,
+      "structure": "normal",
+      "from": "西那須野塩原IC",
+      "to": "矢板北PA ;矢板北スマートIC"
+    },
+    {
+      "id": "東北道-上り-1-777",
+      "grade": -10.13,
+      "structure": "normal",
+      "from": "西那須野塩原IC",
+      "to": "矢板北PA ;矢板北スマートIC"
+    },
+    {
+      "id": "東北道-上り-1-809",
+      "grade": -9.39,
+      "structure": "normal",
+      "from": "西那須野塩原IC",
+      "to": "矢板北PA ;矢板北スマートIC"
+    },
+    {
+      "id": "東北道-上り-1-844",
+      "grade": 7.54,
+      "structure": "normal",
+      "from": "西那須野塩原IC",
+      "to": "矢板北PA ;矢板北スマートIC"
+    },
+    {
+      "id": "東北道-上り-1-845",
+      "grade": 12.52,
+      "structure": "normal",
+      "from": "西那須野塩原IC",
+      "to": "矢板北PA ;矢板北スマートIC"
+    },
+    {
+      "id": "東北道-上り-1-858",
+      "grade": -12.13,
+      "structure": "normal",
+      "from": "西那須野塩原IC",
+      "to": "矢板北PA ;矢板北スマートIC"
+    },
+    {
+      "id": "東北道-上り-1-865",
+      "grade": -8.04,
+      "structure": "normal",
+      "from": "矢板北PA",
+      "to": "矢板IC"
+    },
+    {
+      "id": "東北道-上り-1-878",
+      "grade": -9.56,
+      "structure": "normal",
+      "from": "矢板北PA",
+      "to": "矢板IC"
+    },
+    {
+      "id": "東北道-上り-1-884",
+      "grade": -7.41,
+      "structure": "normal",
+      "from": "矢板北PA",
+      "to": "矢板IC"
+    },
+    {
+      "id": "東北道-上り-1-2537",
+      "grade": -15.35,
+      "structure": "normal",
+      "from": "館林IC",
+      "to": "羽生PA"
+    },
+    {
+      "id": "東北道-上り-4-158",
+      "grade": -11.11,
+      "structure": "normal",
+      "from": "小坂JCT",
+      "to": "小坂PA"
+    },
+    {
+      "id": "東北道-上り-4-160",
+      "grade": 9.8,
+      "structure": "normal",
+      "from": "小坂JCT",
+      "to": "小坂PA"
+    },
+    {
+      "id": "東北道-上り-4-161",
+      "grade": -7.96,
+      "structure": "normal",
+      "from": "小坂JCT",
+      "to": "小坂PA"
+    },
+    {
+      "id": "東北道-上り-4-163",
+      "grade": 13.63,
+      "structure": "normal",
+      "from": "小坂JCT",
+      "to": "小坂PA"
+    },
+    {
+      "id": "東北道-上り-4-273",
+      "grade": -9.13,
+      "structure": "normal",
+      "from": "小坂PA",
+      "to": "小坂IC"
+    },
+    {
+      "id": "東北道-上り-4-281",
+      "grade": -13.84,
+      "structure": "normal",
+      "from": "小坂IC",
+      "to": "十和田IC"
+    },
+    {
+      "id": "東北道-上り-4-283",
+      "grade": 13.67,
+      "structure": "normal",
+      "from": "小坂IC",
+      "to": "十和田IC"
+    },
+    {
+      "id": "東北道-上り-4-284",
+      "grade": 10.73,
+      "structure": "normal",
+      "from": "小坂IC",
+      "to": "十和田IC"
+    },
+    {
+      "id": "東北道-上り-4-774",
+      "grade": 12.15,
+      "structure": "normal",
+      "from": "鹿角八幡平IC",
+      "to": "湯瀬PA"
+    },
+    {
+      "id": "東北道-上り-7-3",
+      "grade": -9.01,
+      "structure": "normal",
+      "from": null,
+      "to": "田山PA"
+    },
+    {
+      "id": "東北道-上り-7-5",
+      "grade": 12.45,
+      "structure": "normal",
+      "from": null,
+      "to": "田山PA"
+    },
+    {
+      "id": "東北道-上り-7-8",
+      "grade": -7.34,
+      "structure": "normal",
+      "from": null,
+      "to": "田山PA"
+    },
+    {
+      "id": "東北道-上り-7-15",
+      "grade": 17.31,
+      "structure": "normal",
+      "from": null,
+      "to": "田山PA"
+    },
+    {
+      "id": "東北道-上り-7-19",
+      "grade": -7.8,
+      "structure": "normal",
+      "from": null,
+      "to": "田山PA"
+    },
+    {
+      "id": "東北道-上り-7-20",
+      "grade": -12.44,
+      "structure": "normal",
+      "from": null,
+      "to": "田山PA"
+    },
+    {
+      "id": "東北道-上り-7-191",
+      "grade": -8.02,
+      "structure": "normal",
+      "from": "田山PA",
+      "to": null
+    },
+    {
+      "id": "東北道-上り-9-7",
+      "grade": -11.43,
+      "structure": "normal",
+      "from": null,
+      "to": null
+    },
+    {
+      "id": "東北道-上り-9-13",
+      "grade": -11.62,
+      "structure": "normal",
+      "from": null,
+      "to": null
+    },
+    {
+      "id": "東北道-上り-9-15",
+      "grade": -9.85,
+      "structure": "normal",
+      "from": null,
+      "to": null
+    },
+    {
+      "id": "東北道-上り-9-27",
+      "grade": -11.41,
+      "structure": "normal",
+      "from": null,
+      "to": null
+    },
+    {
+      "id": "東北道-上り-9-42",
+      "grade": -7.11,
+      "structure": "normal",
+      "from": null,
+      "to": null
+    },
+    {
+      "id": "東北道-上り-9-43",
+      "grade": -9.32,
+      "structure": "normal",
+      "from": null,
+      "to": null
+    },
+    {
+      "id": "東北道-上り-11-15",
+      "grade": -15.19,
+      "structure": "normal",
+      "from": null,
+      "to": "安代IC"
+    },
+    {
+      "id": "東北道-上り-11-19",
+      "grade": 7.5,
+      "structure": "normal",
+      "from": null,
+      "to": "安代IC"
+    },
+    {
+      "id": "東北道-上り-11-23",
+      "grade": -14.78,
+      "structure": "normal",
+      "from": null,
+      "to": "安代IC"
+    },
+    {
+      "id": "東北道-上り-11-30",
+      "grade": -10.07,
+      "structure": "normal",
+      "from": null,
+      "to": "安代IC"
+    },
+    {
+      "id": "東北道-上り-11-32",
+      "grade": -10.0,
+      "structure": "normal",
+      "from": null,
+      "to": "安代IC"
+    },
+    {
+      "id": "東北道-上り-13-22",
+      "grade": -9.91,
+      "structure": "normal",
+      "from": null,
+      "to": null
+    },
+    {
+      "id": "東北道-上り-13-23",
+      "grade": -9.31,
+      "structure": "normal",
+      "from": null,
+      "to": null
+    },
+    {
+      "id": "東北道-上り-13-28",
+      "grade": -7.26,
+      "structure": "normal",
+      "from": null,
+      "to": null
+    },
+    {
+      "id": "東北道-上り-13-29",
+      "grade": -8.05,
+      "structure": "normal",
+      "from": null,
+      "to": null
+    },
+    {
+      "id": "東北道-上り-13-35",
+      "grade": -10.86,
+      "structure": "normal",
+      "from": null,
+      "to": null
+    },
+    {
+      "id": "東北道-上り-13-41",
+      "grade": -11.62,
+      "structure": "normal",
+      "from": null,
+      "to": null
+    },
+    {
+      "id": "東北道-上り-13-44",
+      "grade": -8.07,
+      "structure": "normal",
+      "from": null,
+      "to": null
+    },
+    {
+      "id": "東北道-上り-17-1",
+      "grade": 9.99,
+      "structure": "normal",
+      "from": null,
+      "to": "安代IC"
+    },
+    {
+      "id": "常磐道-下り-0-1125",
+      "grade": -13.59,
+      "structure": "normal",
+      "from": "千代田石岡IC",
+      "to": "石岡小美玉スマートIC"
+    },
+    {
+      "id": "常磐道-下り-0-2680",
+      "grade": -7.47,
+      "structure": "normal",
+      "from": "日立北IC",
+      "to": "高萩IC"
+    },
+    {
+      "id": "常磐道-下り-0-2705",
+      "grade": 9.58,
+      "structure": "normal",
+      "from": "日立北IC",
+      "to": "高萩IC"
+    },
+    {
+      "id": "常磐道-下り-0-4023",
+      "grade": -20.49,
+      "structure": "normal",
+      "from": "いわき四倉IC",
+      "to": "広野IC"
+    },
+    {
+      "id": "常磐道-下り-0-4024",
+      "grade": -19.1,
+      "structure": "normal",
+      "from": "いわき四倉IC",
+      "to": "広野IC"
+    },
+    {
+      "id": "常磐道-下り-0-4025",
+      "grade": -35.44,
+      "structure": "normal",
+      "from": "いわき四倉IC",
+      "to": "広野IC"
+    },
+    {
+      "id": "常磐道-下り-0-4030",
+      "grade": 9.5,
+      "structure": "normal",
+      "from": "いわき四倉IC",
+      "to": "広野IC"
+    },
+    {
+      "id": "常磐道-下り-0-4031",
+      "grade": 9.5,
+      "structure": "normal",
+      "from": "いわき四倉IC",
+      "to": "広野IC"
+    },
+    {
+      "id": "常磐道-下り-0-4032",
+      "grade": 9.5,
+      "structure": "bridge",
+      "from": "いわき四倉IC",
+      "to": "広野IC"
+    },
+    {
+      "id": "常磐道-下り-0-4033",
+      "grade": 9.5,
+      "structure": "bridge",
+      "from": "いわき四倉IC",
+      "to": "広野IC"
+    },
+    {
+      "id": "常磐道-下り-0-4034",
+      "grade": 9.5,
+      "structure": "bridge",
+      "from": "いわき四倉IC",
+      "to": "広野IC"
+    },
+    {
+      "id": "常磐道-下り-0-4035",
+      "grade": 9.5,
+      "structure": "bridge",
+      "from": "いわき四倉IC",
+      "to": "広野IC"
+    },
+    {
+      "id": "常磐道-下り-0-4036",
+      "grade": 9.5,
+      "structure": "normal",
+      "from": "いわき四倉IC",
+      "to": "広野IC"
+    },
+    {
+      "id": "常磐道-下り-0-4037",
+      "grade": 9.5,
+      "structure": "normal",
+      "from": "いわき四倉IC",
+      "to": "広野IC"
+    },
+    {
+      "id": "常磐道-下り-1-253",
+      "grade": -7.15,
+      "structure": "normal",
+      "from": "南相馬鹿島SA;南相馬鹿島スマートIC",
+      "to": "相馬IC"
+    },
+    {
+      "id": "常磐道-下り-1-268",
+      "grade": 14.33,
+      "structure": "normal",
+      "from": "相馬IC",
+      "to": "新地IC"
+    },
+    {
+      "id": "常磐道-下り-1-274",
+      "grade": 11.02,
+      "structure": "normal",
+      "from": "相馬IC",
+      "to": "新地IC"
+    },
+    {
+      "id": "常磐道-下り-1-275",
+      "grade": -8.52,
+      "structure": "normal",
+      "from": "相馬IC",
+      "to": "新地IC"
+    },
+    {
+      "id": "常磐道-下り-1-277",
+      "grade": -16.36,
+      "structure": "normal",
+      "from": "相馬IC",
+      "to": "新地IC"
+    },
+    {
+      "id": "常磐道-下り-1-289",
+      "grade": 7.43,
+      "structure": "normal",
+      "from": "相馬IC",
+      "to": "新地IC"
+    },
+    {
+      "id": "常磐道-下り-1-290",
+      "grade": 7.57,
+      "structure": "normal",
+      "from": "相馬IC",
+      "to": "新地IC"
+    },
+    {
+      "id": "常磐道-下り-1-292",
+      "grade": 18.34,
+      "structure": "normal",
+      "from": "相馬IC",
+      "to": "新地IC"
+    },
+    {
+      "id": "常磐道-下り-1-293",
+      "grade": 14.46,
+      "structure": "normal",
+      "from": "相馬IC",
+      "to": "新地IC"
+    },
+    {
+      "id": "常磐道-下り-1-294",
+      "grade": 15.51,
+      "structure": "normal",
+      "from": "相馬IC",
+      "to": "新地IC"
+    },
+    {
+      "id": "常磐道-下り-1-330",
+      "grade": 12.64,
+      "structure": "normal",
+      "from": "相馬IC",
+      "to": "新地IC"
+    },
+    {
+      "id": "常磐道-下り-1-331",
+      "grade": 12.64,
+      "structure": "normal",
+      "from": "相馬IC",
+      "to": "新地IC"
+    },
+    {
+      "id": "常磐道-下り-1-347",
+      "grade": 9.7,
+      "structure": "normal",
+      "from": "相馬IC",
+      "to": "新地IC"
+    },
+    {
+      "id": "常磐道-下り-1-348",
+      "grade": 12.45,
+      "structure": "normal",
+      "from": "相馬IC",
+      "to": "新地IC"
+    },
+    {
+      "id": "常磐道-下り-1-349",
+      "grade": 8.14,
+      "structure": "normal",
+      "from": "相馬IC",
+      "to": "新地IC"
+    },
+    {
+      "id": "常磐道-下り-1-351",
+      "grade": 8.94,
+      "structure": "normal",
+      "from": "相馬IC",
+      "to": "新地IC"
+    },
+    {
+      "id": "常磐道-下り-1-353",
+      "grade": -8.55,
+      "structure": "normal",
+      "from": "相馬IC",
+      "to": "新地IC"
+    },
+    {
+      "id": "常磐道-下り-1-356",
+      "grade": -8.08,
+      "structure": "normal",
+      "from": "相馬IC",
+      "to": "新地IC"
+    },
+    {
+      "id": "常磐道-下り-1-357",
+      "grade": -11.95,
+      "structure": "normal",
+      "from": "相馬IC",
+      "to": "新地IC"
+    },
+    {
+      "id": "常磐道-下り-1-359",
+      "grade": 8.62,
+      "structure": "normal",
+      "from": "相馬IC",
+      "to": "新地IC"
+    },
+    {
+      "id": "常磐道-下り-1-378",
+      "grade": -7.91,
+      "structure": "normal",
+      "from": "相馬IC",
+      "to": "新地IC"
+    },
+    {
+      "id": "常磐道-下り-1-380",
+      "grade": 12.56,
+      "structure": "normal",
+      "from": "相馬IC",
+      "to": "新地IC"
+    },
+    {
+      "id": "常磐道-下り-1-382",
+      "grade": -22.86,
+      "structure": "normal",
+      "from": "相馬IC",
+      "to": "新地IC"
+    },
+    {
+      "id": "常磐道-下り-1-390",
+      "grade": -9.76,
+      "structure": "normal",
+      "from": "相馬IC",
+      "to": "新地IC"
+    },
+    {
+      "id": "常磐道-下り-1-404",
+      "grade": -7.82,
+      "structure": "normal",
+      "from": "相馬IC",
+      "to": "新地IC"
+    },
+    {
+      "id": "常磐道-下り-1-459",
+      "grade": 26.18,
+      "structure": "normal",
+      "from": "新地IC",
+      "to": "山元南スマートIC"
+    },
+    {
+      "id": "常磐道-下り-1-462",
+      "grade": -12.44,
+      "structure": "normal",
+      "from": "新地IC",
+      "to": "山元南スマートIC"
+    },
+    {
+      "id": "常磐道-下り-1-465",
+      "grade": 8.74,
+      "structure": "normal",
+      "from": "新地IC",
+      "to": "山元南スマートIC"
+    },
+    {
+      "id": "常磐道-下り-1-466",
+      "grade": 7.43,
+      "structure": "normal",
+      "from": "新地IC",
+      "to": "山元南スマートIC"
+    },
+    {
+      "id": "常磐道-下り-1-471",
+      "grade": 7.19,
+      "structure": "normal",
+      "from": "新地IC",
+      "to": "山元南スマートIC"
+    },
+    {
+      "id": "常磐道-下り-1-475",
+      "grade": -19.81,
+      "structure": "normal",
+      "from": "新地IC",
+      "to": "山元南スマートIC"
+    },
+    {
+      "id": "常磐道-下り-1-528",
+      "grade": -7.36,
+      "structure": "normal",
+      "from": "新地IC",
+      "to": "山元南スマートIC"
+    },
+    {
+      "id": "常磐道-下り-1-530",
+      "grade": 10.17,
+      "structure": "normal",
+      "from": "新地IC",
+      "to": "山元南スマートIC"
+    },
+    {
+      "id": "常磐道-下り-1-531",
+      "grade": 14.6,
+      "structure": "normal",
+      "from": "新地IC",
+      "to": "山元南スマートIC"
+    },
+    {
+      "id": "常磐道-下り-1-555",
+      "grade": -11.86,
+      "structure": "normal",
+      "from": "新地IC",
+      "to": "山元南スマートIC"
+    },
+    {
+      "id": "常磐道-下り-1-708",
+      "grade": -10.23,
+      "structure": "normal",
+      "from": "山元南スマートIC",
+      "to": "山元IC"
+    },
+    {
+      "id": "常磐道-下り-1-807",
+      "grade": -7.62,
+      "structure": "normal",
+      "from": "山元IC",
+      "to": "鳥の海PA"
+    },
+    {
+      "id": "常磐道-上り-0-468",
+      "grade": -25.75,
+      "structure": "normal",
+      "from": "四倉PA",
+      "to": "いわき中央IC"
+    },
+    {
+      "id": "常磐道-上り-0-1108",
+      "grade": 8.83,
+      "structure": "normal",
+      "from": "関本PA",
+      "to": "北茨城IC"
+    },
+    {
+      "id": "常磐道-上り-0-1109",
+      "grade": 19.88,
+      "structure": "normal",
+      "from": "関本PA",
+      "to": "北茨城IC"
+    },
+    {
+      "id": "常磐道-上り-0-1110",
+      "grade": 7.58,
+      "structure": "normal",
+      "from": "関本PA",
+      "to": "北茨城IC"
+    },
+    {
+      "id": "常磐道-上り-0-1385",
+      "grade": 7.76,
+      "structure": "normal",
+      "from": "高萩IC",
+      "to": "日立北IC"
+    },
+    {
+      "id": "常磐道-上り-0-2936",
+      "grade": -7.18,
+      "structure": "normal",
+      "from": "石岡小美玉スマートIC",
+      "to": "千代田石岡IC"
+    },
+    {
+      "id": "常磐道-上り-0-3595",
+      "grade": -7.78,
+      "structure": "normal",
+      "from": "谷田部IC",
+      "to": "谷和原IC"
+    },
+    {
+      "id": "常磐道-上り-1-158",
+      "grade": 7.81,
+      "structure": "normal",
+      "from": "鳥の海PA",
+      "to": "山元IC"
+    },
+    {
+      "id": "常磐道-上り-4-14",
+      "grade": 8.75,
+      "structure": "normal",
+      "from": null,
+      "to": "南相馬鹿島SA;南相馬鹿島スマートIC"
+    },
+    {
+      "id": "常磐道-上り-5-1",
+      "grade": 9.71,
+      "structure": "normal",
+      "from": null,
+      "to": "新地IC"
+    },
+    {
+      "id": "常磐道-上り-5-2",
+      "grade": 9.9,
+      "structure": "normal",
+      "from": null,
+      "to": "新地IC"
+    },
+    {
+      "id": "常磐道-上り-5-11",
+      "grade": -11.83,
+      "structure": "normal",
+      "from": null,
+      "to": "新地IC"
+    },
+    {
+      "id": "常磐道-上り-5-14",
+      "grade": 7.59,
+      "structure": "normal",
+      "from": null,
+      "to": "新地IC"
+    },
+    {
+      "id": "常磐道-上り-5-17",
+      "grade": -20.1,
+      "structure": "normal",
+      "from": null,
+      "to": "新地IC"
+    },
+    {
+      "id": "常磐道-上り-5-71",
+      "grade": 7.81,
+      "structure": "normal",
+      "from": "新地IC",
+      "to": null
+    },
+    {
+      "id": "常磐道-上り-5-72",
+      "grade": 8.5,
+      "structure": "normal",
+      "from": "新地IC",
+      "to": null
+    },
+    {
+      "id": "常磐道-上り-5-85",
+      "grade": 7.85,
+      "structure": "normal",
+      "from": "新地IC",
+      "to": null
+    },
+    {
+      "id": "常磐道-上り-5-86",
+      "grade": 15.66,
+      "structure": "normal",
+      "from": "新地IC",
+      "to": null
+    },
+    {
+      "id": "常磐道-上り-5-94",
+      "grade": 16.67,
+      "structure": "normal",
+      "from": "新地IC",
+      "to": null
+    },
+    {
+      "id": "常磐道-上り-7-18",
+      "grade": -7.31,
+      "structure": "normal",
+      "from": null,
+      "to": null
+    },
+    {
+      "id": "常磐道-上り-9-14",
+      "grade": 7.87,
+      "structure": "normal",
+      "from": null,
+      "to": "常磐双葉IC"
+    },
+    {
+      "id": "常磐道-上り-10-41",
+      "grade": 10.4,
+      "structure": "normal",
+      "from": "山元南スマートIC",
+      "to": null
+    },
+    {
+      "id": "常磐道-上り-10-44",
+      "grade": -10.72,
+      "structure": "normal",
+      "from": "山元南スマートIC",
+      "to": null
+    },
+    {
+      "id": "関越道-下り-4-336",
+      "grade": -9.81,
+      "structure": "normal",
+      "from": "長岡南越路スマートＩＣ",
+      "to": "長岡IC"
+    },
+    {
+      "id": "関越道-下り-6-259",
+      "grade": -11.61,
+      "structure": "normal",
+      "from": "三芳PA",
+      "to": "川越 IC"
+    },
+    {
+      "id": "関越道-下り-8-131",
+      "grade": -28.68,
+      "structure": "normal",
+      "from": "堀之内PA",
+      "to": null
+    },
+    {
+      "id": "関越道-下り-13-21",
+      "grade": -7.39,
+      "structure": "normal",
+      "from": null,
+      "to": null
+    },
+    {
+      "id": "関越道-下り-13-22",
+      "grade": -7.18,
+      "structure": "normal",
+      "from": null,
+      "to": null
+    },
+    {
+      "id": "関越道-上り-0-1146",
+      "grade": -10.62,
+      "structure": "normal",
+      "from": "駒寄PA",
+      "to": "前橋IC"
+    },
+    {
+      "id": "関越道-上り-5-274",
+      "grade": 9.23,
+      "structure": "normal",
+      "from": "鶴ヶ島IC",
+      "to": "鶴ヶ島JCT"
+    },
+    {
+      "id": "関越道-上り-10-35",
+      "grade": -31.67,
+      "structure": "normal",
+      "from": "越後川口ＩＣ、越後川口ＳＡ",
+      "to": null
+    },
+    {
+      "id": "関越道-上り-10-36",
+      "grade": -15.26,
+      "structure": "normal",
+      "from": "越後川口ＩＣ、越後川口ＳＡ",
+      "to": null
+    },
+    {
+      "id": "関越道-上り-10-37",
+      "grade": -12.04,
+      "structure": "normal",
+      "from": "越後川口ＩＣ、越後川口ＳＡ",
+      "to": null
+    },
+    {
+      "id": "東関東道-上り-0-1130",
+      "grade": 12.61,
+      "structure": "normal",
+      "from": "千葉北IC",
+      "to": "宮野木JCT"
+    },
+    {
+      "id": "東関東道-上り-1-105",
+      "grade": -23.32,
+      "structure": "normal",
+      "from": "鉾田IC",
+      "to": "茨城空港北IC"
+    },
+    {
+      "id": "東関東道-上り-1-108",
+      "grade": 9.57,
+      "structure": "normal",
+      "from": "鉾田IC",
+      "to": "茨城空港北IC"
+    },
+    {
+      "id": "東関東道-上り-1-109",
+      "grade": 10.45,
+      "structure": "normal",
+      "from": "鉾田IC",
+      "to": "茨城空港北IC"
+    },
+    {
+      "id": "東関東道-上り-1-119",
+      "grade": -14.55,
+      "structure": "normal",
+      "from": "鉾田IC",
+      "to": "茨城空港北IC"
+    },
+    {
+      "id": "東関東道-上り-1-122",
+      "grade": 8.96,
+      "structure": "normal",
+      "from": "鉾田IC",
+      "to": "茨城空港北IC"
+    },
+    {
+      "id": "東関東道-下り-0-352",
+      "grade": -13.32,
+      "structure": "normal",
+      "from": "宮野木JCT",
+      "to": "千葉北IC"
+    },
+    {
+      "id": "東関東道-下り-0-628",
+      "grade": -21.42,
+      "structure": "normal",
+      "from": "佐倉IC",
+      "to": "酒々井PA"
+    },
+    {
+      "id": "東関東道-下り-1-32",
+      "grade": -7.37,
+      "structure": "normal",
+      "from": "大栄JCT",
+      "to": "大栄PA"
+    },
+    {
+      "id": "東関東道-下り-3-1",
+      "grade": 13.55,
+      "structure": "normal",
+      "from": null,
+      "to": "茨城空港北IC"
+    },
+    {
+      "id": "東関東道-下り-3-4",
+      "grade": -11.56,
+      "structure": "normal",
+      "from": "茨城空港北IC",
+      "to": "鉾田IC"
+    },
+    {
+      "id": "東関東道-下り-3-54",
+      "grade": -7.49,
+      "structure": "normal",
+      "from": "茨城空港北IC",
+      "to": "鉾田IC"
+    },
+    {
+      "id": "東関東道-下り-3-57",
+      "grade": 14.47,
+      "structure": "normal",
+      "from": "茨城空港北IC",
+      "to": "鉾田IC"
+    },
+    {
+      "id": "東関東道-下り-3-65",
+      "grade": -7.02,
+      "structure": "normal",
+      "from": "茨城空港北IC",
+      "to": "鉾田IC"
+    },
+    {
+      "id": "東関東道-下り-3-67",
+      "grade": -8.33,
+      "structure": "normal",
+      "from": "茨城空港北IC",
+      "to": "鉾田IC"
+    },
+    {
+      "id": "東関東道-下り-3-68",
+      "grade": -10.33,
+      "structure": "normal",
+      "from": "茨城空港北IC",
+      "to": "鉾田IC"
+    },
+    {
+      "id": "東関東道-下り-3-71",
+      "grade": 22.62,
+      "structure": "normal",
+      "from": "茨城空港北IC",
+      "to": "鉾田IC"
+    },
+    {
+      "id": "圏央道-下り-0-327",
+      "grade": -10.7,
+      "structure": "normal",
+      "from": "あきる野ＩＣ",
+      "to": "日の出ＩＣ"
+    },
+    {
+      "id": "圏央道-下り-0-329",
+      "grade": 7.97,
+      "structure": "normal",
+      "from": "あきる野ＩＣ",
+      "to": "日の出ＩＣ"
+    },
+    {
+      "id": "圏央道-下り-0-932",
+      "grade": 10.51,
+      "structure": "normal",
+      "from": "鶴ヶ島JCT",
+      "to": "坂戸ＩＣ"
+    },
+    {
+      "id": "圏央道-下り-1-104",
+      "grade": -7.31,
+      "structure": "normal",
+      "from": "阿見東IC",
+      "to": "江戸崎ＰＡ（外廻り）"
+    },
+    {
+      "id": "圏央道-下り-1-182",
+      "grade": 8.28,
+      "structure": "normal",
+      "from": "江戸崎ＰＡ（内廻り）",
+      "to": "稲敷ＩＣ"
+    },
+    {
+      "id": "圏央道-下り-1-187",
+      "grade": -12.66,
+      "structure": "normal",
+      "from": "江戸崎ＰＡ（内廻り）",
+      "to": "稲敷ＩＣ"
+    },
+    {
+      "id": "圏央道-下り-1-218",
+      "grade": 13.82,
+      "structure": "normal",
+      "from": "稲敷ＩＣ",
+      "to": null
+    },
+    {
+      "id": "圏央道-下り-1-227",
+      "grade": 7.38,
+      "structure": "normal",
+      "from": "稲敷ＩＣ",
+      "to": null
+    },
+    {
+      "id": "圏央道-下り-1-230",
+      "grade": -12.56,
+      "structure": "normal",
+      "from": "稲敷ＩＣ",
+      "to": null
+    },
+    {
+      "id": "圏央道-下り-1-231",
+      "grade": -17.12,
+      "structure": "normal",
+      "from": "稲敷ＩＣ",
+      "to": null
+    },
+    {
+      "id": "圏央道-下り-1-234",
+      "grade": 7.2,
+      "structure": "normal",
+      "from": "稲敷ＩＣ",
+      "to": null
+    },
+    {
+      "id": "圏央道-下り-1-266",
+      "grade": -12.85,
+      "structure": "normal",
+      "from": "稲敷ＩＣ",
+      "to": null
+    },
+    {
+      "id": "圏央道-下り-1-267",
+      "grade": -18.98,
+      "structure": "normal",
+      "from": "稲敷ＩＣ",
+      "to": null
+    },
+    {
+      "id": "圏央道-下り-1-319",
+      "grade": -32.96,
+      "structure": "normal",
+      "from": "稲敷ＩＣ",
+      "to": null
+    },
+    {
+      "id": "圏央道-下り-2-5",
+      "grade": -7.06,
+      "structure": "normal",
+      "from": "大栄JCT",
+      "to": "下総IC"
+    },
+    {
+      "id": "圏央道-下り-2-9",
+      "grade": 11.13,
+      "structure": "normal",
+      "from": "大栄JCT",
+      "to": "下総IC"
+    },
+    {
+      "id": "圏央道-下り-2-10",
+      "grade": 8.13,
+      "structure": "normal",
+      "from": "大栄JCT",
+      "to": "下総IC"
+    },
+    {
+      "id": "圏央道-下り-2-39",
+      "grade": -12.99,
+      "structure": "normal",
+      "from": "大栄JCT",
+      "to": "下総IC"
+    },
+    {
+      "id": "圏央道-下り-2-41",
+      "grade": 12.51,
+      "structure": "normal",
+      "from": "大栄JCT",
+      "to": "下総IC"
+    },
+    {
+      "id": "圏央道-下り-2-45",
+      "grade": -9.84,
+      "structure": "normal",
+      "from": "大栄JCT",
+      "to": "下総IC"
+    },
+    {
+      "id": "圏央道-下り-2-48",
+      "grade": -7.41,
+      "structure": "normal",
+      "from": "大栄JCT",
+      "to": "下総IC"
+    },
+    {
+      "id": "圏央道-下り-2-63",
+      "grade": 26.19,
+      "structure": "normal",
+      "from": "大栄JCT",
+      "to": "下総IC"
+    },
+    {
+      "id": "圏央道-下り-2-65",
+      "grade": -9.08,
+      "structure": "normal",
+      "from": "大栄JCT",
+      "to": "下総IC"
+    },
+    {
+      "id": "圏央道-下り-2-78",
+      "grade": -12.85,
+      "structure": "normal",
+      "from": "大栄JCT",
+      "to": "下総IC"
+    },
+    {
+      "id": "圏央道-下り-2-102",
+      "grade": -9.16,
+      "structure": "normal",
+      "from": "大栄JCT",
+      "to": "下総IC"
+    },
+    {
+      "id": "圏央道-下り-2-103",
+      "grade": -21.76,
+      "structure": "normal",
+      "from": "大栄JCT",
+      "to": "下総IC"
+    },
+    {
+      "id": "圏央道-下り-2-105",
+      "grade": 10.66,
+      "structure": "normal",
+      "from": "大栄JCT",
+      "to": "下総IC"
+    },
+    {
+      "id": "圏央道-下り-2-106",
+      "grade": 9.11,
+      "structure": "normal",
+      "from": "大栄JCT",
+      "to": "下総IC"
+    },
+    {
+      "id": "圏央道-下り-2-108",
+      "grade": -8.79,
+      "structure": "normal",
+      "from": "大栄JCT",
+      "to": "下総IC"
+    },
+    {
+      "id": "圏央道-下り-2-112",
+      "grade": 14.88,
+      "structure": "normal",
+      "from": "下総IC",
+      "to": "神崎ＩＣ"
+    },
+    {
+      "id": "圏央道-下り-2-114",
+      "grade": -17.36,
+      "structure": "normal",
+      "from": "下総IC",
+      "to": "神崎ＩＣ"
+    },
+    {
+      "id": "圏央道-下り-2-128",
+      "grade": -12.58,
+      "structure": "normal",
+      "from": "下総IC",
+      "to": "神崎ＩＣ"
+    },
+    {
+      "id": "圏央道-下り-2-129",
+      "grade": -8.25,
+      "structure": "normal",
+      "from": "下総IC",
+      "to": "神崎ＩＣ"
+    },
+    {
+      "id": "圏央道-下り-2-130",
+      "grade": 21.86,
+      "structure": "normal",
+      "from": "下総IC",
+      "to": "神崎ＩＣ"
+    },
+    {
+      "id": "圏央道-下り-2-131",
+      "grade": 16.36,
+      "structure": "normal",
+      "from": "下総IC",
+      "to": "神崎ＩＣ"
+    },
+    {
+      "id": "圏央道-下り-2-133",
+      "grade": -8.82,
+      "structure": "normal",
+      "from": "下総IC",
+      "to": "神崎ＩＣ"
+    },
+    {
+      "id": "圏央道-下り-2-134",
+      "grade": -13.4,
+      "structure": "normal",
+      "from": "下総IC",
+      "to": "神崎ＩＣ"
+    },
+    {
+      "id": "圏央道-下り-2-135",
+      "grade": -12.92,
+      "structure": "normal",
+      "from": "下総IC",
+      "to": "神崎ＩＣ"
+    },
+    {
+      "id": "圏央道-下り-2-138",
+      "grade": 7.75,
+      "structure": "normal",
+      "from": "下総IC",
+      "to": "神崎ＩＣ"
+    },
+    {
+      "id": "圏央道-下り-2-139",
+      "grade": -9.28,
+      "structure": "normal",
+      "from": "下総IC",
+      "to": "神崎ＩＣ"
+    },
+    {
+      "id": "圏央道-下り-2-140",
+      "grade": -7.67,
+      "structure": "normal",
+      "from": "下総IC",
+      "to": "神崎ＩＣ"
+    },
+    {
+      "id": "圏央道-下り-2-146",
+      "grade": 9.85,
+      "structure": "normal",
+      "from": "下総IC",
+      "to": "神崎ＩＣ"
+    },
+    {
+      "id": "圏央道-下り-2-150",
+      "grade": -19.29,
+      "structure": "normal",
+      "from": "下総IC",
+      "to": "神崎ＩＣ"
+    },
+    {
+      "id": "圏央道-下り-2-189",
+      "grade": 8.24,
+      "structure": "normal",
+      "from": "神崎ＩＣ",
+      "to": null
+    },
+    {
+      "id": "圏央道-下り-2-190",
+      "grade": 9.39,
+      "structure": "normal",
+      "from": "神崎ＩＣ",
+      "to": null
+    },
+    {
+      "id": "圏央道-下り-2-197",
+      "grade": -14.84,
+      "structure": "normal",
+      "from": "神崎ＩＣ",
+      "to": null
+    },
+    {
+      "id": "圏央道-下り-4-63",
+      "grade": -10.2,
+      "structure": "normal",
+      "from": "坂東PA(内回り)",
+      "to": "坂東PA(外回り)"
+    },
+    {
+      "id": "圏央道-下り-4-77",
+      "grade": 12.48,
+      "structure": "normal",
+      "from": "坂東PA(外回り)",
+      "to": null
+    },
+    {
+      "id": "圏央道-下り-4-79",
+      "grade": -7.41,
+      "structure": "normal",
+      "from": "坂東PA(外回り)",
+      "to": null
+    },
+    {
+      "id": "圏央道-下り-5-6",
+      "grade": 9.31,
+      "structure": "normal",
+      "from": null,
+      "to": "つくば西スマートIC"
+    },
+    {
+      "id": "圏央道-下り-5-131",
+      "grade": -8.17,
+      "structure": "normal",
+      "from": "つくば中央ＩＣ",
+      "to": null
+    },
+    {
+      "id": "圏央道-下り-5-136",
+      "grade": -12.06,
+      "structure": "normal",
+      "from": "つくば中央ＩＣ",
+      "to": null
+    },
+    {
+      "id": "圏央道-下り-13-1",
+      "grade": 13.72,
+      "structure": "normal",
+      "from": null,
+      "to": null
+    },
+    {
+      "id": "圏央道-下り-14-1",
+      "grade": 8.69,
+      "structure": "normal",
+      "from": null,
+      "to": null
+    },
+    {
+      "id": "圏央道-上り-1-102",
+      "grade": -14.29,
+      "structure": "normal",
+      "from": "稲敷東IC",
+      "to": "神崎ＩＣ"
+    },
+    {
+      "id": "圏央道-上り-1-148",
+      "grade": -9.51,
+      "structure": "normal",
+      "from": "神崎ＩＣ",
+      "to": "下総IC"
+    },
+    {
+      "id": "圏央道-上り-1-154",
+      "grade": -9.01,
+      "structure": "normal",
+      "from": "神崎ＩＣ",
+      "to": "下総IC"
+    },
+    {
+      "id": "圏央道-上り-1-157",
+      "grade": 8.8,
+      "structure": "normal",
+      "from": "神崎ＩＣ",
+      "to": "下総IC"
+    },
+    {
+      "id": "圏央道-上り-1-158",
+      "grade": 33.72,
+      "structure": "normal",
+      "from": "神崎ＩＣ",
+      "to": "下総IC"
+    },
+    {
+      "id": "圏央道-上り-1-161",
+      "grade": -41.69,
+      "structure": "normal",
+      "from": "神崎ＩＣ",
+      "to": "下総IC"
+    },
+    {
+      "id": "圏央道-上り-1-163",
+      "grade": 21.81,
+      "structure": "normal",
+      "from": "神崎ＩＣ",
+      "to": "下総IC"
+    },
+    {
+      "id": "圏央道-上り-1-175",
+      "grade": 10.13,
+      "structure": "normal",
+      "from": "神崎ＩＣ",
+      "to": "下総IC"
+    },
+    {
+      "id": "圏央道-上り-1-177",
+      "grade": 10.88,
+      "structure": "normal",
+      "from": "神崎ＩＣ",
+      "to": "下総IC"
+    },
+    {
+      "id": "圏央道-上り-1-178",
+      "grade": 11.25,
+      "structure": "normal",
+      "from": "神崎ＩＣ",
+      "to": "下総IC"
+    },
+    {
+      "id": "圏央道-上り-1-180",
+      "grade": -20.57,
+      "structure": "normal",
+      "from": "神崎ＩＣ",
+      "to": "下総IC"
+    },
+    {
+      "id": "圏央道-上り-1-181",
+      "grade": -10.39,
+      "structure": "normal",
+      "from": "下総IC",
+      "to": null
+    },
+    {
+      "id": "圏央道-上り-1-183",
+      "grade": 19.98,
+      "structure": "normal",
+      "from": "下総IC",
+      "to": null
+    },
+    {
+      "id": "圏央道-上り-1-186",
+      "grade": -13.28,
+      "structure": "normal",
+      "from": "下総IC",
+      "to": null
+    },
+    {
+      "id": "圏央道-上り-1-189",
+      "grade": 21.06,
+      "structure": "normal",
+      "from": "下総IC",
+      "to": null
+    },
+    {
+      "id": "圏央道-上り-1-213",
+      "grade": -9.27,
+      "structure": "normal",
+      "from": "下総IC",
+      "to": null
+    },
+    {
+      "id": "圏央道-上り-1-214",
+      "grade": 12.89,
+      "structure": "normal",
+      "from": "下総IC",
+      "to": null
+    },
+    {
+      "id": "圏央道-上り-1-227",
+      "grade": -12.62,
+      "structure": "normal",
+      "from": "下総IC",
+      "to": null
+    },
+    {
+      "id": "圏央道-上り-1-228",
+      "grade": -13.26,
+      "structure": "normal",
+      "from": "下総IC",
+      "to": null
+    },
+    {
+      "id": "圏央道-上り-1-230",
+      "grade": 12.79,
+      "structure": "normal",
+      "from": "下総IC",
+      "to": null
+    },
+    {
+      "id": "圏央道-上り-1-231",
+      "grade": 7.91,
+      "structure": "normal",
+      "from": "下総IC",
+      "to": null
+    },
+    {
+      "id": "圏央道-上り-1-233",
+      "grade": -20.15,
+      "structure": "normal",
+      "from": "下総IC",
+      "to": null
+    },
+    {
+      "id": "圏央道-上り-1-234",
+      "grade": -14.37,
+      "structure": "normal",
+      "from": "下総IC",
+      "to": null
+    },
+    {
+      "id": "圏央道-上り-1-251",
+      "grade": -9.06,
+      "structure": "normal",
+      "from": "下総IC",
+      "to": null
+    },
+    {
+      "id": "圏央道-上り-1-253",
+      "grade": 8.25,
+      "structure": "normal",
+      "from": "下総IC",
+      "to": null
+    },
+    {
+      "id": "圏央道-上り-1-259",
+      "grade": 7.47,
+      "structure": "normal",
+      "from": "下総IC",
+      "to": null
+    },
+    {
+      "id": "圏央道-上り-1-262",
+      "grade": -9.69,
+      "structure": "normal",
+      "from": "下総IC",
+      "to": null
+    },
+    {
+      "id": "圏央道-上り-1-263",
+      "grade": -19.8,
+      "structure": "normal",
+      "from": "下総IC",
+      "to": null
+    },
+    {
+      "id": "圏央道-上り-1-282",
+      "grade": -21.11,
+      "structure": "normal",
+      "from": "下総IC",
+      "to": null
+    },
+    {
+      "id": "圏央道-上り-1-284",
+      "grade": 8.98,
+      "structure": "normal",
+      "from": "下総IC",
+      "to": null
+    },
+    {
+      "id": "圏央道-上り-2-2",
+      "grade": 17.14,
+      "structure": "normal",
+      "from": null,
+      "to": "稲敷ＩＣ"
+    },
+    {
+      "id": "圏央道-上り-2-3",
+      "grade": 13.7,
+      "structure": "normal",
+      "from": null,
+      "to": "稲敷ＩＣ"
+    },
+    {
+      "id": "圏央道-上り-2-6",
+      "grade": -8.59,
+      "structure": "normal",
+      "from": null,
+      "to": "稲敷ＩＣ"
+    },
+    {
+      "id": "圏央道-上り-2-15",
+      "grade": -8.61,
+      "structure": "normal",
+      "from": null,
+      "to": "稲敷ＩＣ"
+    },
+    {
+      "id": "圏央道-上り-2-28",
+      "grade": 8.43,
+      "structure": "normal",
+      "from": "稲敷ＩＣ",
+      "to": "江戸崎ＰＡ（内廻り）"
+    },
+    {
+      "id": "圏央道-上り-2-46",
+      "grade": 10.84,
+      "structure": "normal",
+      "from": "稲敷ＩＣ",
+      "to": "江戸崎ＰＡ（内廻り）"
+    },
+    {
+      "id": "圏央道-上り-2-54",
+      "grade": 7.98,
+      "structure": "normal",
+      "from": "稲敷ＩＣ",
+      "to": "江戸崎ＰＡ（内廻り）"
+    },
+    {
+      "id": "圏央道-上り-2-76",
+      "grade": -8.75,
+      "structure": "normal",
+      "from": "江戸崎ＰＡ（外廻り）",
+      "to": "阿見東IC"
+    },
+    {
+      "id": "圏央道-上り-2-128",
+      "grade": 7.54,
+      "structure": "normal",
+      "from": "江戸崎ＰＡ（外廻り）",
+      "to": "阿見東IC"
+    },
+    {
+      "id": "圏央道-上り-3-43",
+      "grade": 13.04,
+      "structure": "normal",
+      "from": null,
+      "to": "つくば西スマートIC"
+    },
+    {
+      "id": "圏央道-上り-3-166",
+      "grade": 10.88,
+      "structure": "normal",
+      "from": "つくば中央ＩＣ",
+      "to": null
+    },
+    {
+      "id": "圏央道-上り-3-167",
+      "grade": -12.68,
+      "structure": "normal",
+      "from": "つくば中央ＩＣ",
+      "to": null
+    },
+    {
+      "id": "圏央道-上り-3-173",
+      "grade": -8.95,
+      "structure": "normal",
+      "from": "つくば中央ＩＣ",
+      "to": null
+    },
+    {
+      "id": "圏央道-上り-5-6",
+      "grade": -7.62,
+      "structure": "normal",
+      "from": null,
+      "to": "坂東PA(外回り)"
+    },
+    {
+      "id": "圏央道-上り-5-19",
+      "grade": 7.94,
+      "structure": "normal",
+      "from": "坂東PA(外回り)",
+      "to": "坂東PA(内回り)"
+    },
+    {
+      "id": "圏央道-上り-11-0",
+      "grade": 9.33,
+      "structure": "normal",
+      "from": null,
+      "to": null
+    },
+    {
+      "id": "圏央道-上り-12-3",
+      "grade": 34.68,
+      "structure": "normal",
+      "from": null,
+      "to": null
+    },
+    {
+      "id": "中央道-上り-0-109",
+      "grade": 8.85,
+      "structure": "normal",
+      "from": null,
+      "to": "小牧東IC"
+    },
+    {
+      "id": "中央道-上り-0-518",
+      "grade": -16.46,
+      "structure": "normal",
+      "from": "土岐IC",
+      "to": "瑞浪IC"
+    },
+    {
+      "id": "中央道-上り-0-520",
+      "grade": 7.51,
+      "structure": "normal",
+      "from": "土岐IC",
+      "to": "瑞浪IC"
+    },
+    {
+      "id": "中央道-上り-0-521",
+      "grade": 19.01,
+      "structure": "normal",
+      "from": "土岐IC",
+      "to": "瑞浪IC"
+    },
+    {
+      "id": "中央道-上り-0-583",
+      "grade": 11.87,
+      "structure": "normal",
+      "from": "瑞浪IC",
+      "to": "屏風山PA"
+    },
+    {
+      "id": "中央道-上り-0-894",
+      "grade": -8.14,
+      "structure": "normal",
+      "from": "屏風山PA",
+      "to": "中野"
+    },
+    {
+      "id": "中央道-上り-0-1619",
+      "grade": -31.21,
+      "structure": "normal",
+      "from": "園原IC",
+      "to": "阿智ＰＡ"
+    },
+    {
+      "id": "中央道-上り-0-1620",
+      "grade": 9.22,
+      "structure": "normal",
+      "from": "園原IC",
+      "to": "阿智ＰＡ"
+    },
+    {
+      "id": "中央道-上り-0-1621",
+      "grade": 14.39,
+      "structure": "normal",
+      "from": "園原IC",
+      "to": "阿智ＰＡ"
+    },
+    {
+      "id": "中央道-上り-1-691",
+      "grade": -13.73,
+      "structure": "normal",
+      "from": "諏訪南IC",
+      "to": "小淵沢IC"
+    },
+    {
+      "id": "中央道-上り-1-833",
+      "grade": -7.74,
+      "structure": "normal",
+      "from": "八ヶ岳PA",
+      "to": "長坂IC"
+    },
+    {
+      "id": "中央道-上り-1-1196",
+      "grade": -8.48,
+      "structure": "normal",
+      "from": "韮崎IC",
+      "to": "双葉JCT"
+    },
+    {
+      "id": "中央道-上り-2-511",
+      "grade": -9.26,
+      "structure": "normal",
+      "from": "八王子ＪＣＴ",
+      "to": "相模湖東ＩＣ"
+    },
+    {
+      "id": "中央道-上り-2-512",
+      "grade": -7.36,
+      "structure": "normal",
+      "from": "八王子ＪＣＴ",
+      "to": "相模湖東ＩＣ"
+    },
+    {
+      "id": "中央道-上り-2-530",
+      "grade": 17.86,
+      "structure": "normal",
+      "from": "八王子ＪＣＴ",
+      "to": "相模湖東ＩＣ"
+    },
+    {
+      "id": "中央道-上り-24-25",
+      "grade": -19.48,
+      "structure": "normal",
+      "from": null,
+      "to": null
+    },
+    {
+      "id": "中央道-上り-24-27",
+      "grade": 9.43,
+      "structure": "normal",
+      "from": null,
+      "to": null
+    },
+    {
+      "id": "中央道-上り-24-28",
+      "grade": 16.01,
+      "structure": "normal",
+      "from": null,
+      "to": null
+    },
+    {
+      "id": "中央道-下り-0-1183",
+      "grade": 11.5,
+      "structure": "normal",
+      "from": "中野",
+      "to": "屏風山PA"
+    },
+    {
+      "id": "中央道-下り-0-1262",
+      "grade": -7.41,
+      "structure": "normal",
+      "from": "中野",
+      "to": "屏風山PA"
+    },
+    {
+      "id": "中央道-下り-0-1557",
+      "grade": -23.31,
+      "structure": "normal",
+      "from": "瑞浪IC",
+      "to": "土岐IC"
+    },
+    {
+      "id": "中央道-下り-0-1559",
+      "grade": 7.38,
+      "structure": "normal",
+      "from": "瑞浪IC",
+      "to": "土岐IC"
+    },
+    {
+      "id": "中央道-下り-0-1560",
+      "grade": 17.96,
+      "structure": "normal",
+      "from": "瑞浪IC",
+      "to": "土岐IC"
+    },
+    {
+      "id": "中央道-下り-0-1709",
+      "grade": 9.08,
+      "structure": "normal",
+      "from": "土岐IC",
+      "to": "虎渓山PA"
+    },
+    {
+      "id": "中央道-下り-0-1712",
+      "grade": -16.38,
+      "structure": "normal",
+      "from": "土岐IC",
+      "to": "虎渓山PA"
+    },
+    {
+      "id": "中央道-下り-0-1713",
+      "grade": -18.13,
+      "structure": "normal",
+      "from": "土岐IC",
+      "to": "虎渓山PA"
+    },
+    {
+      "id": "中央道-下り-0-1714",
+      "grade": -18.13,
+      "structure": "normal",
+      "from": "土岐IC",
+      "to": "虎渓山PA"
+    },
+    {
+      "id": "中央道-下り-0-1715",
+      "grade": -18.13,
+      "structure": "normal",
+      "from": "土岐IC",
+      "to": "虎渓山PA"
+    },
+    {
+      "id": "中央道-下り-0-1716",
+      "grade": -18.13,
+      "structure": "tunnel",
+      "from": "土岐IC",
+      "to": "虎渓山PA"
+    },
+    {
+      "id": "中央道-下り-0-1717",
+      "grade": -18.13,
+      "structure": "normal",
+      "from": "土岐IC",
+      "to": "虎渓山PA"
+    },
+    {
+      "id": "中央道-下り-0-1718",
+      "grade": -18.13,
+      "structure": "normal",
+      "from": "土岐IC",
+      "to": "虎渓山PA"
+    },
+    {
+      "id": "中央道-下り-0-1719",
+      "grade": -18.13,
+      "structure": "normal",
+      "from": "土岐IC",
+      "to": "虎渓山PA"
+    },
+    {
+      "id": "中央道-下り-0-1878",
+      "grade": -7.72,
+      "structure": "normal",
+      "from": "多治見IC",
+      "to": "内津峠PA"
+    },
+    {
+      "id": "中央道-下り-0-1968",
+      "grade": -8.49,
+      "structure": "normal",
+      "from": "小牧東IC",
+      "to": null
+    },
+    {
+      "id": "中央道-下り-1-35",
+      "grade": 8.32,
+      "structure": "normal",
+      "from": null,
+      "to": "甲府昭和IC"
+    },
+    {
+      "id": "中央道-下り-1-311",
+      "grade": 9.64,
+      "structure": "normal",
+      "from": "双葉JCT",
+      "to": "韮崎IC"
+    },
+    {
+      "id": "中央道-下り-1-674",
+      "grade": 8.02,
+      "structure": "normal",
+      "from": "長坂IC",
+      "to": "八ヶ岳PA"
+    },
+    {
+      "id": "中央道-下り-2-548",
+      "grade": -9.1,
+      "structure": "normal",
+      "from": "石川PA",
+      "to": null
+    },
+    {
+      "id": "中央道-下り-3-45",
+      "grade": 7.66,
+      "structure": "normal",
+      "from": null,
+      "to": null
+    },
+    {
+      "id": "中央道-下り-3-49",
+      "grade": 7.57,
+      "structure": "normal",
+      "from": null,
+      "to": null
+    },
+    {
+      "id": "中央道-下り-3-74",
+      "grade": 7.0,
+      "structure": "normal",
+      "from": null,
+      "to": null
+    },
+    {
+      "id": "中央道-下り-5-280",
+      "grade": 8.07,
+      "structure": "normal",
+      "from": "道の駅 つる",
+      "to": "大月ＪＣＴ"
+    },
+    {
+      "id": "中央道-下り-16-1",
+      "grade": 7.36,
+      "structure": "normal",
+      "from": null,
+      "to": null
+    },
+    {
+      "id": "中央道-下り-20-30",
+      "grade": -7.31,
+      "structure": "normal",
+      "from": "初狩PA",
+      "to": null
+    },
+    {
+      "id": "中央道-下り-25-2",
+      "grade": -10.53,
+      "structure": "normal",
+      "from": null,
+      "to": null
+    },
+    {
+      "id": "中央道-下り-25-3",
+      "grade": -13.81,
+      "structure": "normal",
+      "from": null,
+      "to": null
+    },
+    {
+      "id": "中央道-下り-25-4",
+      "grade": 15.39,
+      "structure": "normal",
+      "from": null,
+      "to": null
+    },
+    {
+      "id": "中央道-下り-25-5",
+      "grade": 7.54,
+      "structure": "normal",
+      "from": null,
+      "to": null
+    },
+    {
+      "id": "中央道-下り-26-4",
+      "grade": 10.59,
+      "structure": "normal",
+      "from": null,
+      "to": "勝沼IC"
+    },
+    {
+      "id": "中央道-下り-32-76",
+      "grade": -9.02,
+      "structure": "normal",
+      "from": "笛吹八代スマートIC",
+      "to": null
+    },
+    {
+      "id": "中央道-下り-33-2",
+      "grade": 10.37,
+      "structure": "normal",
+      "from": null,
+      "to": null
+    },
+    {
+      "id": "伊勢湾岸道-上り-0-600",
+      "grade": 7.24,
+      "structure": "normal",
+      "from": "豊田東IC",
+      "to": "豊田東JCT"
+    },
+    {
+      "id": "伊勢湾岸道-上り-0-601",
+      "grade": 14.55,
+      "structure": "normal",
+      "from": "豊田東IC",
+      "to": "豊田東JCT"
+    },
+    {
+      "id": "伊勢湾岸道-下り-0-7",
+      "grade": 7.4,
+      "structure": "normal",
+      "from": "豊田東JCT",
+      "to": "豊田東IC"
+    },
+    {
+      "id": "伊勢湾岸道-下り-0-8",
+      "grade": 7.07,
+      "structure": "normal",
+      "from": "豊田東JCT",
+      "to": "豊田東IC"
+    },
+    {
+      "id": "伊勢湾岸道-下り-0-9",
+      "grade": 13.55,
+      "structure": "normal",
+      "from": "豊田東JCT",
+      "to": "豊田東IC"
+    },
+    {
+      "id": "伊勢湾岸道-下り-0-11",
+      "grade": -26.36,
+      "structure": "normal",
+      "from": "豊田東JCT",
+      "to": "豊田東IC"
+    },
+    {
+      "id": "伊勢湾岸道-下り-0-12",
+      "grade": -8.12,
+      "structure": "normal",
+      "from": "豊田東JCT",
+      "to": "豊田東IC"
+    },
+    {
+      "id": "東海北陸道-上り-1-115",
+      "grade": -7.31,
+      "structure": "normal",
+      "from": "白鳥IC",
+      "to": "ぎふ大和IC/PA"
+    },
+    {
+      "id": "東海北陸道-上り-1-116",
+      "grade": 10.78,
+      "structure": "normal",
+      "from": "白鳥IC",
+      "to": "ぎふ大和IC/PA"
+    },
+    {
+      "id": "東海北陸道-上り-1-331",
+      "grade": -28.84,
+      "structure": "normal",
+      "from": "郡上八幡IC",
+      "to": null
+    },
+    {
+      "id": "東海北陸道-上り-1-335",
+      "grade": 21.37,
+      "structure": "normal",
+      "from": "郡上八幡IC",
+      "to": null
+    },
+    {
+      "id": "東海北陸道-上り-1-336",
+      "grade": 28.85,
+      "structure": "normal",
+      "from": "郡上八幡IC",
+      "to": null
+    },
+    {
+      "id": "東海北陸道-上り-4-113",
+      "grade": 18.81,
+      "structure": "normal",
+      "from": null,
+      "to": "関IC"
+    },
+    {
+      "id": "東海北陸道-上り-4-114",
+      "grade": 16.46,
+      "structure": "normal",
+      "from": null,
+      "to": "関IC"
+    },
+    {
+      "id": "東海北陸道-上り-4-116",
+      "grade": 16.54,
+      "structure": "normal",
+      "from": null,
+      "to": "関IC"
+    },
+    {
+      "id": "東海北陸道-上り-4-118",
+      "grade": 27.1,
+      "structure": "normal",
+      "from": null,
+      "to": "関IC"
+    },
+    {
+      "id": "東海北陸道-上り-4-119",
+      "grade": 17.81,
+      "structure": "normal",
+      "from": null,
+      "to": "関IC"
+    },
+    {
+      "id": "東海北陸道-上り-4-120",
+      "grade": 41.82,
+      "structure": "normal",
+      "from": null,
+      "to": "関IC"
+    },
+    {
+      "id": "東海北陸道-上り-4-121",
+      "grade": 49.11,
+      "structure": "normal",
+      "from": null,
+      "to": "関IC"
+    },
+    {
+      "id": "東海北陸道-上り-4-122",
+      "grade": 41.97,
+      "structure": "normal",
+      "from": null,
+      "to": "関IC"
+    },
+    {
+      "id": "東海北陸道-上り-4-123",
+      "grade": 35.7,
+      "structure": "normal",
+      "from": null,
+      "to": "関IC"
+    },
+    {
+      "id": "東海北陸道-上り-4-124",
+      "grade": 34.44,
+      "structure": "normal",
+      "from": null,
+      "to": "関IC"
+    },
+    {
+      "id": "東海北陸道-上り-4-125",
+      "grade": 53.67,
+      "structure": "normal",
+      "from": null,
+      "to": "関IC"
+    },
+    {
+      "id": "東海北陸道-上り-4-127",
+      "grade": -30.06,
+      "structure": "normal",
+      "from": null,
+      "to": "関IC"
+    },
+    {
+      "id": "東海北陸道-上り-4-128",
+      "grade": -8.78,
+      "structure": "normal",
+      "from": null,
+      "to": "関IC"
+    },
+    {
+      "id": "東海北陸道-上り-4-129",
+      "grade": -54.76,
+      "structure": "normal",
+      "from": null,
+      "to": "関IC"
+    },
+    {
+      "id": "東海北陸道-上り-4-130",
+      "grade": -49.52,
+      "structure": "normal",
+      "from": null,
+      "to": "関IC"
+    },
+    {
+      "id": "東海北陸道-上り-4-133",
+      "grade": 36.02,
+      "structure": "normal",
+      "from": null,
+      "to": "関IC"
+    },
+    {
+      "id": "東海北陸道-上り-4-134",
+      "grade": 59.75,
+      "structure": "normal",
+      "from": null,
+      "to": "関IC"
+    },
+    {
+      "id": "東海北陸道-上り-4-135",
+      "grade": 63.5,
+      "structure": "normal",
+      "from": null,
+      "to": "関IC"
+    },
+    {
+      "id": "東海北陸道-上り-4-136",
+      "grade": 84.86,
+      "structure": "normal",
+      "from": null,
+      "to": "関IC"
+    },
+    {
+      "id": "東海北陸道-上り-4-137",
+      "grade": 42.04,
+      "structure": "normal",
+      "from": null,
+      "to": "関IC"
+    },
+    {
+      "id": "東海北陸道-上り-4-138",
+      "grade": -19.32,
+      "structure": "normal",
+      "from": null,
+      "to": "関IC"
+    },
+    {
+      "id": "東海北陸道-上り-4-139",
+      "grade": -42.15,
+      "structure": "normal",
+      "from": null,
+      "to": "関IC"
+    },
+    {
+      "id": "東海北陸道-上り-4-140",
+      "grade": -58.11,
+      "structure": "normal",
+      "from": null,
+      "to": "関IC"
+    },
+    {
+      "id": "東海北陸道-上り-4-141",
+      "grade": -64.06,
+      "structure": "normal",
+      "from": null,
+      "to": "関IC"
+    },
+    {
+      "id": "東海北陸道-上り-4-142",
+      "grade": -66.9,
+      "structure": "normal",
+      "from": null,
+      "to": "関IC"
+    },
+    {
+      "id": "東海北陸道-上り-4-143",
+      "grade": -55.36,
+      "structure": "normal",
+      "from": null,
+      "to": "関IC"
+    },
+    {
+      "id": "東海北陸道-上り-4-144",
+      "grade": -14.68,
+      "structure": "normal",
+      "from": null,
+      "to": "関IC"
+    },
+    {
+      "id": "東海北陸道-上り-4-145",
+      "grade": -26.44,
+      "structure": "normal",
+      "from": null,
+      "to": "関IC"
+    },
+    {
+      "id": "東海北陸道-上り-4-147",
+      "grade": -10.03,
+      "structure": "normal",
+      "from": null,
+      "to": "関IC"
+    },
+    {
+      "id": "東海北陸道-上り-4-149",
+      "grade": 10.74,
+      "structure": "normal",
+      "from": null,
+      "to": "関IC"
+    },
+    {
+      "id": "東海北陸道-上り-4-153",
+      "grade": 25.69,
+      "structure": "normal",
+      "from": null,
+      "to": "関IC"
+    },
+    {
+      "id": "東海北陸道-上り-4-154",
+      "grade": 39.09,
+      "structure": "normal",
+      "from": null,
+      "to": "関IC"
+    },
+    {
+      "id": "東海北陸道-上り-4-155",
+      "grade": 52.47,
+      "structure": "normal",
+      "from": null,
+      "to": "関IC"
+    },
+    {
+      "id": "東海北陸道-上り-4-156",
+      "grade": 55.38,
+      "structure": "normal",
+      "from": null,
+      "to": "関IC"
+    },
+    {
+      "id": "東海北陸道-上り-4-157",
+      "grade": 27.85,
+      "structure": "normal",
+      "from": null,
+      "to": "関IC"
+    },
+    {
+      "id": "東海北陸道-上り-4-158",
+      "grade": 18.83,
+      "structure": "normal",
+      "from": null,
+      "to": "関IC"
+    },
+    {
+      "id": "東海北陸道-上り-4-159",
+      "grade": 17.6,
+      "structure": "normal",
+      "from": null,
+      "to": "関IC"
+    },
+    {
+      "id": "東海北陸道-上り-4-160",
+      "grade": -17.18,
+      "structure": "normal",
+      "from": null,
+      "to": "関IC"
+    },
+    {
+      "id": "東海北陸道-上り-4-161",
+      "grade": -16.77,
+      "structure": "normal",
+      "from": null,
+      "to": "関IC"
+    },
+    {
+      "id": "東海北陸道-上り-4-162",
+      "grade": -72.12,
+      "structure": "normal",
+      "from": null,
+      "to": "関IC"
+    },
+    {
+      "id": "東海北陸道-上り-4-163",
+      "grade": -77.27,
+      "structure": "normal",
+      "from": null,
+      "to": "関IC"
+    },
+    {
+      "id": "東海北陸道-上り-4-164",
+      "grade": -36.68,
+      "structure": "normal",
+      "from": null,
+      "to": "関IC"
+    },
+    {
+      "id": "東海北陸道-上り-4-165",
+      "grade": -27.0,
+      "structure": "normal",
+      "from": null,
+      "to": "関IC"
+    },
+    {
+      "id": "東海北陸道-上り-4-167",
+      "grade": 27.64,
+      "structure": "normal",
+      "from": null,
+      "to": "関IC"
+    },
+    {
+      "id": "東海北陸道-上り-4-168",
+      "grade": 33.09,
+      "structure": "normal",
+      "from": null,
+      "to": "関IC"
+    },
+    {
+      "id": "東海北陸道-上り-4-169",
+      "grade": 25.71,
+      "structure": "normal",
+      "from": null,
+      "to": "関IC"
+    },
+    {
+      "id": "東海北陸道-上り-4-170",
+      "grade": 8.13,
+      "structure": "normal",
+      "from": null,
+      "to": "関IC"
+    },
+    {
+      "id": "東海北陸道-上り-4-171",
+      "grade": -16.38,
+      "structure": "normal",
+      "from": null,
+      "to": "関IC"
+    },
+    {
+      "id": "東海北陸道-上り-4-172",
+      "grade": -16.38,
+      "structure": "normal",
+      "from": null,
+      "to": "関IC"
+    },
+    {
+      "id": "東海北陸道-上り-4-173",
+      "grade": -16.38,
+      "structure": "tunnel",
+      "from": null,
+      "to": "関IC"
+    },
+    {
+      "id": "東海北陸道-上り-4-174",
+      "grade": -16.38,
+      "structure": "tunnel",
+      "from": null,
+      "to": "関IC"
+    },
+    {
+      "id": "東海北陸道-上り-4-175",
+      "grade": -16.38,
+      "structure": "tunnel",
+      "from": null,
+      "to": "関IC"
+    },
+    {
+      "id": "東海北陸道-上り-4-176",
+      "grade": -16.38,
+      "structure": "normal",
+      "from": null,
+      "to": "関IC"
+    },
+    {
+      "id": "東海北陸道-上り-4-177",
+      "grade": -16.38,
+      "structure": "normal",
+      "from": null,
+      "to": "関IC"
+    },
+    {
+      "id": "東海北陸道-上り-4-178",
+      "grade": -16.38,
+      "structure": "normal",
+      "from": null,
+      "to": "関IC"
+    },
+    {
+      "id": "東海北陸道-上り-7-157",
+      "grade": 35.59,
+      "structure": "normal",
+      "from": null,
+      "to": null
+    },
+    {
+      "id": "東海北陸道-上り-7-158",
+      "grade": 34.96,
+      "structure": "normal",
+      "from": null,
+      "to": null
+    },
+    {
+      "id": "東海北陸道-上り-7-159",
+      "grade": 69.18,
+      "structure": "normal",
+      "from": null,
+      "to": null
+    },
+    {
+      "id": "東海北陸道-上り-7-160",
+      "grade": 49.62,
+      "structure": "normal",
+      "from": null,
+      "to": null
+    },
+    {
+      "id": "東海北陸道-上り-7-161",
+      "grade": 13.44,
+      "structure": "normal",
+      "from": null,
+      "to": null
+    },
+    {
+      "id": "東海北陸道-上り-17-21",
+      "grade": -18.16,
+      "structure": "normal",
+      "from": "飛驒白川PA",
+      "to": "白川郷IC"
+    },
+    {
+      "id": "東海北陸道-上り-17-24",
+      "grade": 7.9,
+      "structure": "normal",
+      "from": "飛驒白川PA",
+      "to": "白川郷IC"
+    },
+    {
+      "id": "東海北陸道-上り-17-25",
+      "grade": 11.94,
+      "structure": "normal",
+      "from": "飛驒白川PA",
+      "to": "白川郷IC"
+    },
+    {
+      "id": "東海北陸道-下り-0-2",
+      "grade": 7.74,
+      "structure": "normal",
+      "from": null,
+      "to": "松ノ木峠PA"
+    },
+    {
+      "id": "東海北陸道-下り-1-1",
+      "grade": -16.07,
+      "structure": "normal",
+      "from": null,
+      "to": "郡上八幡IC"
+    },
+    {
+      "id": "東海北陸道-下り-1-2",
+      "grade": -31.38,
+      "structure": "normal",
+      "from": null,
+      "to": "郡上八幡IC"
+    },
+    {
+      "id": "東海北陸道-下り-1-6",
+      "grade": 19.82,
+      "structure": "normal",
+      "from": null,
+      "to": "郡上八幡IC"
+    },
+    {
+      "id": "東海北陸道-下り-4-62",
+      "grade": 41.73,
+      "structure": "normal",
+      "from": "関IC",
+      "to": null
+    },
+    {
+      "id": "東海北陸道-下り-4-63",
+      "grade": 30.51,
+      "structure": "normal",
+      "from": "関IC",
+      "to": null
+    },
+    {
+      "id": "東海北陸道-下り-4-64",
+      "grade": 55.44,
+      "structure": "normal",
+      "from": "関IC",
+      "to": null
+    },
+    {
+      "id": "東海北陸道-下り-4-65",
+      "grade": 28.29,
+      "structure": "normal",
+      "from": "関IC",
+      "to": null
+    },
+    {
+      "id": "東海北陸道-下り-4-67",
+      "grade": -61.56,
+      "structure": "normal",
+      "from": "関IC",
+      "to": null
+    },
+    {
+      "id": "東海北陸道-下り-4-68",
+      "grade": -45.75,
+      "structure": "normal",
+      "from": "関IC",
+      "to": null
+    },
+    {
+      "id": "東海北陸道-下り-4-70",
+      "grade": 37.84,
+      "structure": "normal",
+      "from": "関IC",
+      "to": null
+    },
+    {
+      "id": "東海北陸道-下り-4-71",
+      "grade": 48.53,
+      "structure": "normal",
+      "from": "関IC",
+      "to": null
+    },
+    {
+      "id": "東海北陸道-下り-4-72",
+      "grade": 30.18,
+      "structure": "normal",
+      "from": "関IC",
+      "to": null
+    },
+    {
+      "id": "東海北陸道-下り-4-73",
+      "grade": 40.01,
+      "structure": "normal",
+      "from": "関IC",
+      "to": null
+    },
+    {
+      "id": "東海北陸道-下り-4-74",
+      "grade": 96.39,
+      "structure": "normal",
+      "from": "関IC",
+      "to": null
+    },
+    {
+      "id": "東海北陸道-下り-4-76",
+      "grade": -43.16,
+      "structure": "normal",
+      "from": "関IC",
+      "to": null
+    },
+    {
+      "id": "東海北陸道-下り-4-77",
+      "grade": -34.2,
+      "structure": "normal",
+      "from": "関IC",
+      "to": null
+    },
+    {
+      "id": "東海北陸道-下り-4-78",
+      "grade": -16.77,
+      "structure": "normal",
+      "from": "関IC",
+      "to": null
+    },
+    {
+      "id": "東海北陸道-下り-4-79",
+      "grade": -30.77,
+      "structure": "normal",
+      "from": "関IC",
+      "to": null
+    },
+    {
+      "id": "東海北陸道-下り-4-80",
+      "grade": -46.45,
+      "structure": "normal",
+      "from": "関IC",
+      "to": null
+    },
+    {
+      "id": "東海北陸道-下り-4-81",
+      "grade": -33.36,
+      "structure": "normal",
+      "from": "関IC",
+      "to": null
+    },
+    {
+      "id": "東海北陸道-下り-4-82",
+      "grade": -16.88,
+      "structure": "normal",
+      "from": "関IC",
+      "to": null
+    },
+    {
+      "id": "東海北陸道-下り-4-83",
+      "grade": -34.25,
+      "structure": "normal",
+      "from": "関IC",
+      "to": null
+    },
+    {
+      "id": "東海北陸道-下り-4-84",
+      "grade": -13.96,
+      "structure": "normal",
+      "from": "関IC",
+      "to": null
+    },
+    {
+      "id": "東海北陸道-下り-4-86",
+      "grade": -8.43,
+      "structure": "normal",
+      "from": "関IC",
+      "to": null
+    },
+    {
+      "id": "東海北陸道-下り-4-88",
+      "grade": 7.76,
+      "structure": "normal",
+      "from": "関IC",
+      "to": null
+    },
+    {
+      "id": "東海北陸道-下り-4-89",
+      "grade": 15.91,
+      "structure": "normal",
+      "from": "関IC",
+      "to": null
+    },
+    {
+      "id": "東海北陸道-下り-4-90",
+      "grade": 21.94,
+      "structure": "normal",
+      "from": "関IC",
+      "to": null
+    },
+    {
+      "id": "東海北陸道-下り-4-91",
+      "grade": 25.47,
+      "structure": "normal",
+      "from": "関IC",
+      "to": null
+    },
+    {
+      "id": "東海北陸道-下り-4-92",
+      "grade": 24.57,
+      "structure": "normal",
+      "from": "関IC",
+      "to": null
+    },
+    {
+      "id": "東海北陸道-下り-4-93",
+      "grade": 41.39,
+      "structure": "normal",
+      "from": "関IC",
+      "to": null
+    },
+    {
+      "id": "東海北陸道-下り-4-94",
+      "grade": 52.5,
+      "structure": "normal",
+      "from": "関IC",
+      "to": null
+    },
+    {
+      "id": "東海北陸道-下り-4-95",
+      "grade": 58.48,
+      "structure": "normal",
+      "from": "関IC",
+      "to": null
+    },
+    {
+      "id": "東海北陸道-下り-4-96",
+      "grade": 68.9,
+      "structure": "normal",
+      "from": "関IC",
+      "to": null
+    },
+    {
+      "id": "東海北陸道-下り-4-97",
+      "grade": 51.29,
+      "structure": "normal",
+      "from": "関IC",
+      "to": null
+    },
+    {
+      "id": "東海北陸道-下り-4-99",
+      "grade": -73.35,
+      "structure": "normal",
+      "from": "関IC",
+      "to": null
+    },
+    {
+      "id": "東海北陸道-下り-4-100",
+      "grade": -82.2,
+      "structure": "normal",
+      "from": "関IC",
+      "to": null
+    },
+    {
+      "id": "東海北陸道-下り-4-101",
+      "grade": -69.34,
+      "structure": "normal",
+      "from": "関IC",
+      "to": null
+    },
+    {
+      "id": "東海北陸道-下り-4-102",
+      "grade": -17.12,
+      "structure": "normal",
+      "from": "関IC",
+      "to": null
+    },
+    {
+      "id": "東海北陸道-下り-4-105",
+      "grade": 9.34,
+      "structure": "normal",
+      "from": "関IC",
+      "to": null
+    },
+    {
+      "id": "東海北陸道-下り-4-106",
+      "grade": 53.74,
+      "structure": "normal",
+      "from": "関IC",
+      "to": null
+    },
+    {
+      "id": "東海北陸道-下り-4-107",
+      "grade": 50.13,
+      "structure": "normal",
+      "from": "関IC",
+      "to": null
+    },
+    {
+      "id": "東海北陸道-下り-4-109",
+      "grade": -17.11,
+      "structure": "normal",
+      "from": "関IC",
+      "to": null
+    },
+    {
+      "id": "東海北陸道-下り-4-110",
+      "grade": -57.57,
+      "structure": "normal",
+      "from": "関IC",
+      "to": null
+    },
+    {
+      "id": "東海北陸道-下り-4-111",
+      "grade": -59.57,
+      "structure": "normal",
+      "from": "関IC",
+      "to": null
+    },
+    {
+      "id": "東海北陸道-下り-4-112",
+      "grade": -23.71,
+      "structure": "normal",
+      "from": "関IC",
+      "to": null
+    },
+    {
+      "id": "東海北陸道-下り-4-113",
+      "grade": -38.02,
+      "structure": "normal",
+      "from": "関IC",
+      "to": null
+    },
+    {
+      "id": "東海北陸道-下り-4-114",
+      "grade": -39.49,
+      "structure": "normal",
+      "from": "関IC",
+      "to": null
+    },
+    {
+      "id": "東海北陸道-下り-4-115",
+      "grade": -35.2,
+      "structure": "normal",
+      "from": "関IC",
+      "to": null
+    },
+    {
+      "id": "東海北陸道-下り-4-116",
+      "grade": -30.52,
+      "structure": "normal",
+      "from": "関IC",
+      "to": null
+    },
+    {
+      "id": "東海北陸道-下り-4-117",
+      "grade": -13.73,
+      "structure": "normal",
+      "from": "関IC",
+      "to": null
+    },
+    {
+      "id": "東海北陸道-下り-4-118",
+      "grade": -10.03,
+      "structure": "normal",
+      "from": "関IC",
+      "to": null
+    },
+    {
+      "id": "東海北陸道-下り-4-119",
+      "grade": -7.35,
+      "structure": "normal",
+      "from": "関IC",
+      "to": null
+    },
+    {
+      "id": "東海北陸道-下り-4-137",
+      "grade": 8.16,
+      "structure": "normal",
+      "from": "関IC",
+      "to": null
+    },
+    {
+      "id": "東海北陸道-下り-14-14",
+      "grade": -14.13,
+      "structure": "normal",
+      "from": "白川郷IC",
+      "to": "飛驒白川PA"
+    },
+    {
+      "id": "東海北陸道-下り-14-16",
+      "grade": 26.64,
+      "structure": "normal",
+      "from": "白川郷IC",
+      "to": "飛驒白川PA"
+    },
+    {
+      "id": "名神-上り-0-337",
+      "grade": -15.76,
+      "structure": "normal",
+      "from": "城南宮北IC",
+      "to": "京都東IC"
+    },
+    {
+      "id": "名神-上り-1-48",
+      "grade": 7.68,
+      "structure": "normal",
+      "from": "彦根IC",
+      "to": "米原JCT"
+    },
+    {
+      "id": "名神-上り-1-61",
+      "grade": 30.4,
+      "structure": "normal",
+      "from": "彦根IC",
+      "to": "米原JCT"
+    },
+    {
+      "id": "名神-上り-1-62",
+      "grade": 55.51,
+      "structure": "normal",
+      "from": "彦根IC",
+      "to": "米原JCT"
+    },
+    {
+      "id": "名神-上り-1-63",
+      "grade": 52.45,
+      "structure": "normal",
+      "from": "彦根IC",
+      "to": "米原JCT"
+    },
+    {
+      "id": "名神-上り-1-65",
+      "grade": -21.77,
+      "structure": "normal",
+      "from": "彦根IC",
+      "to": "米原JCT"
+    },
+    {
+      "id": "名神-上り-1-66",
+      "grade": -17.74,
+      "structure": "normal",
+      "from": "彦根IC",
+      "to": "米原JCT"
+    },
+    {
+      "id": "名神-上り-1-67",
+      "grade": -9.7,
+      "structure": "normal",
+      "from": "彦根IC",
+      "to": "米原JCT"
+    },
+    {
+      "id": "名神-上り-1-68",
+      "grade": -9.7,
+      "structure": "normal",
+      "from": "彦根IC",
+      "to": "米原JCT"
+    },
+    {
+      "id": "名神-上り-1-69",
+      "grade": -9.7,
+      "structure": "normal",
+      "from": "彦根IC",
+      "to": "米原JCT"
+    },
+    {
+      "id": "名神-上り-1-70",
+      "grade": -9.7,
+      "structure": "tunnel",
+      "from": "彦根IC",
+      "to": "米原JCT"
+    },
+    {
+      "id": "名神-上り-1-71",
+      "grade": -9.7,
+      "structure": "tunnel",
+      "from": "彦根IC",
+      "to": "米原JCT"
+    },
+    {
+      "id": "名神-上り-1-72",
+      "grade": -9.7,
+      "structure": "normal",
+      "from": "彦根IC",
+      "to": "米原JCT"
+    },
+    {
+      "id": "名神-上り-1-73",
+      "grade": -9.7,
+      "structure": "normal",
+      "from": "彦根IC",
+      "to": "米原JCT"
+    },
+    {
+      "id": "名神-上り-1-790",
+      "grade": -13.54,
+      "structure": "normal",
+      "from": "大垣IC",
+      "to": "安八スマートIC"
+    },
+    {
+      "id": "名神-上り-1-838",
+      "grade": -7.76,
+      "structure": "normal",
+      "from": "安八スマートIC",
+      "to": "岐阜羽島IC"
+    },
+    {
+      "id": "名神-上り-1-950",
+      "grade": -16.55,
+      "structure": "normal",
+      "from": "羽島PA",
+      "to": "一宮JCT"
+    },
+    {
+      "id": "名神-上り-2-431",
+      "grade": -9.96,
+      "structure": "normal",
+      "from": "吹田SA",
+      "to": "吹田JCT"
+    },
+    {
+      "id": "名神-上り-2-434",
+      "grade": 9.86,
+      "structure": "normal",
+      "from": "吹田JCT",
+      "to": "茨木IC"
+    },
+    {
+      "id": "名神-上り-2-692",
+      "grade": 41.84,
+      "structure": "normal",
+      "from": "高槻JCT",
+      "to": null
+    },
+    {
+      "id": "名神-上り-2-693",
+      "grade": 58.87,
+      "structure": "normal",
+      "from": "高槻JCT",
+      "to": null
+    },
+    {
+      "id": "名神-上り-2-694",
+      "grade": 23.92,
+      "structure": "normal",
+      "from": "高槻JCT",
+      "to": null
+    },
+    {
+      "id": "名神-上り-2-695",
+      "grade": 16.29,
+      "structure": "normal",
+      "from": "高槻JCT",
+      "to": null
+    },
+    {
+      "id": "名神-上り-2-700",
+      "grade": -20.37,
+      "structure": "normal",
+      "from": "高槻JCT",
+      "to": null
+    },
+    {
+      "id": "名神-上り-2-701",
+      "grade": -13.44,
+      "structure": "normal",
+      "from": "高槻JCT",
+      "to": null
+    },
+    {
+      "id": "名神-上り-2-704",
+      "grade": -10.96,
+      "structure": "normal",
+      "from": "高槻JCT",
+      "to": null
+    },
+    {
+      "id": "名神-上り-2-705",
+      "grade": -10.96,
+      "structure": "normal",
+      "from": "高槻JCT",
+      "to": null
+    },
+    {
+      "id": "名神-上り-2-706",
+      "grade": -10.96,
+      "structure": "tunnel",
+      "from": "高槻JCT",
+      "to": null
+    },
+    {
+      "id": "名神-上り-2-707",
+      "grade": -10.96,
+      "structure": "tunnel",
+      "from": "高槻JCT",
+      "to": null
+    },
+    {
+      "id": "名神-上り-2-708",
+      "grade": -10.96,
+      "structure": "normal",
+      "from": "高槻JCT",
+      "to": null
+    },
+    {
+      "id": "名神-上り-2-709",
+      "grade": -10.96,
+      "structure": "normal",
+      "from": "高槻JCT",
+      "to": null
+    },
+    {
+      "id": "名神-上り-2-710",
+      "grade": -10.96,
+      "structure": "normal",
+      "from": "高槻JCT",
+      "to": null
+    },
+    {
+      "id": "名神-上り-2-711",
+      "grade": -10.96,
+      "structure": "tunnel",
+      "from": "高槻JCT",
+      "to": null
+    },
+    {
+      "id": "名神-上り-2-712",
+      "grade": -10.96,
+      "structure": "tunnel",
+      "from": "高槻JCT",
+      "to": null
+    },
+    {
+      "id": "名神-上り-2-713",
+      "grade": -10.96,
+      "structure": "normal",
+      "from": "高槻JCT",
+      "to": null
+    },
+    {
+      "id": "名神-上り-2-714",
+      "grade": -10.96,
+      "structure": "normal",
+      "from": "高槻JCT",
+      "to": null
+    },
+    {
+      "id": "名神-上り-2-715",
+      "grade": -10.96,
+      "structure": "normal",
+      "from": "高槻JCT",
+      "to": null
+    },
+    {
+      "id": "名神-下り-0-641",
+      "grade": -7.82,
+      "structure": "normal",
+      "from": "菩提寺PA",
+      "to": "栗東湖南IC"
+    },
+    {
+      "id": "名神-下り-0-1258",
+      "grade": -18.29,
+      "structure": "normal",
+      "from": "京都東IC",
+      "to": "城南宮北IC"
+    },
+    {
+      "id": "名神-下り-0-1286",
+      "grade": -15.64,
+      "structure": "normal",
+      "from": "京都東IC",
+      "to": "城南宮北IC"
+    },
+    {
+      "id": "名神-下り-0-1494",
+      "grade": 18.66,
+      "structure": "normal",
+      "from": "桂川PA",
+      "to": null
+    },
+    {
+      "id": "名神-下り-0-1495",
+      "grade": 28.86,
+      "structure": "normal",
+      "from": "桂川PA",
+      "to": null
+    },
+    {
+      "id": "名神-下り-0-1496",
+      "grade": 34.93,
+      "structure": "normal",
+      "from": "桂川PA",
+      "to": null
+    },
+    {
+      "id": "名神-下り-0-1497",
+      "grade": 60.39,
+      "structure": "normal",
+      "from": "桂川PA",
+      "to": null
+    },
+    {
+      "id": "名神-下り-0-1498",
+      "grade": 74.75,
+      "structure": "normal",
+      "from": "桂川PA",
+      "to": null
+    },
+    {
+      "id": "名神-下り-0-1500",
+      "grade": 12.05,
+      "structure": "normal",
+      "from": "桂川PA",
+      "to": null
+    },
+    {
+      "id": "名神-下り-0-1501",
+      "grade": 30.66,
+      "structure": "normal",
+      "from": "桂川PA",
+      "to": null
+    },
+    {
+      "id": "名神-下り-0-1504",
+      "grade": 23.14,
+      "structure": "normal",
+      "from": "桂川PA",
+      "to": null
+    },
+    {
+      "id": "名神-下り-0-1508",
+      "grade": -12.38,
+      "structure": "normal",
+      "from": "桂川PA",
+      "to": null
+    },
+    {
+      "id": "名神-下り-0-1509",
+      "grade": -13.2,
+      "structure": "normal",
+      "from": "桂川PA",
+      "to": null
+    },
+    {
+      "id": "名神-下り-0-1511",
+      "grade": -10.36,
+      "structure": "normal",
+      "from": "桂川PA",
+      "to": null
+    },
+    {
+      "id": "名神-下り-0-1512",
+      "grade": -10.36,
+      "structure": "normal",
+      "from": "桂川PA",
+      "to": null
+    },
+    {
+      "id": "名神-下り-0-1513",
+      "grade": -10.36,
+      "structure": "normal",
+      "from": "桂川PA",
+      "to": null
+    },
+    {
+      "id": "名神-下り-0-1514",
+      "grade": -10.36,
+      "structure": "tunnel",
+      "from": "桂川PA",
+      "to": null
+    },
+    {
+      "id": "名神-下り-0-1515",
+      "grade": -10.36,
+      "structure": "tunnel",
+      "from": "桂川PA",
+      "to": null
+    },
+    {
+      "id": "名神-下り-0-1516",
+      "grade": -10.36,
+      "structure": "tunnel",
+      "from": "桂川PA",
+      "to": null
+    },
+    {
+      "id": "名神-下り-0-1517",
+      "grade": -10.36,
+      "structure": "tunnel",
+      "from": "桂川PA",
+      "to": null
+    },
+    {
+      "id": "名神-下り-0-1518",
+      "grade": -10.36,
+      "structure": "tunnel",
+      "from": "桂川PA",
+      "to": null
+    },
+    {
+      "id": "名神-下り-0-1519",
+      "grade": -10.36,
+      "structure": "tunnel",
+      "from": "桂川PA",
+      "to": null
+    },
+    {
+      "id": "名神-下り-0-1520",
+      "grade": -10.36,
+      "structure": "tunnel",
+      "from": "桂川PA",
+      "to": null
+    },
+    {
+      "id": "名神-下り-0-1521",
+      "grade": -10.36,
+      "structure": "tunnel",
+      "from": "桂川PA",
+      "to": null
+    },
+    {
+      "id": "名神-下り-0-1522",
+      "grade": -10.36,
+      "structure": "tunnel",
+      "from": "桂川PA",
+      "to": null
+    },
+    {
+      "id": "名神-下り-0-1523",
+      "grade": -10.36,
+      "structure": "tunnel",
+      "from": "桂川PA",
+      "to": null
+    },
+    {
+      "id": "名神-下り-0-1524",
+      "grade": -10.36,
+      "structure": "tunnel",
+      "from": "桂川PA",
+      "to": null
+    },
+    {
+      "id": "名神-下り-0-1525",
+      "grade": -10.36,
+      "structure": "tunnel",
+      "from": "桂川PA",
+      "to": null
+    },
+    {
+      "id": "名神-下り-0-1526",
+      "grade": -10.36,
+      "structure": "tunnel",
+      "from": "桂川PA",
+      "to": null
+    },
+    {
+      "id": "名神-下り-0-1527",
+      "grade": -10.36,
+      "structure": "tunnel",
+      "from": "桂川PA",
+      "to": null
+    },
+    {
+      "id": "名神-下り-0-1528",
+      "grade": -10.36,
+      "structure": "tunnel",
+      "from": "桂川PA",
+      "to": null
+    },
+    {
+      "id": "名神-下り-0-1529",
+      "grade": -10.36,
+      "structure": "tunnel",
+      "from": "桂川PA",
+      "to": null
+    },
+    {
+      "id": "名神-下り-0-1530",
+      "grade": -10.36,
+      "structure": "tunnel",
+      "from": "桂川PA",
+      "to": null
+    },
+    {
+      "id": "名神-下り-0-1531",
+      "grade": -10.36,
+      "structure": "normal",
+      "from": "桂川PA",
+      "to": null
+    },
+    {
+      "id": "名神-下り-0-1532",
+      "grade": -10.36,
+      "structure": "normal",
+      "from": "桂川PA",
+      "to": null
+    },
+    {
+      "id": "名神-下り-0-1533",
+      "grade": -10.36,
+      "structure": "bridge",
+      "from": "桂川PA",
+      "to": null
+    },
+    {
+      "id": "名神-下り-0-1534",
+      "grade": -10.36,
+      "structure": "bridge",
+      "from": "桂川PA",
+      "to": null
+    },
+    {
+      "id": "名神-下り-0-1535",
+      "grade": -10.36,
+      "structure": "bridge",
+      "from": "桂川PA",
+      "to": null
+    },
+    {
+      "id": "名神-下り-0-1536",
+      "grade": -10.36,
+      "structure": "bridge",
+      "from": "桂川PA",
+      "to": null
+    },
+    {
+      "id": "名神-下り-0-1537",
+      "grade": -10.36,
+      "structure": "normal",
+      "from": "桂川PA",
+      "to": null
+    },
+    {
+      "id": "名神-下り-0-1538",
+      "grade": -10.36,
+      "structure": "normal",
+      "from": "桂川PA",
+      "to": null
+    },
+    {
+      "id": "名神-下り-1-472",
+      "grade": -20.35,
+      "structure": "normal",
+      "from": "岐阜羽島IC",
+      "to": "安八スマートIC"
+    },
+    {
+      "id": "名神-下り-1-525",
+      "grade": -7.42,
+      "structure": "normal",
+      "from": "安八スマートIC",
+      "to": "大垣IC"
+    },
+    {
+      "id": "名神-下り-1-526",
+      "grade": -9.29,
+      "structure": "normal",
+      "from": "安八スマートIC",
+      "to": "大垣IC"
+    },
+    {
+      "id": "名神-下り-1-1252",
+      "grade": 13.98,
+      "structure": "normal",
+      "from": "米原JCT",
+      "to": "彦根IC"
+    },
+    {
+      "id": "名神-下り-1-1253",
+      "grade": 33.83,
+      "structure": "normal",
+      "from": "米原JCT",
+      "to": "彦根IC"
+    },
+    {
+      "id": "名神-下り-1-1254",
+      "grade": 17.27,
+      "structure": "normal",
+      "from": "米原JCT",
+      "to": "彦根IC"
+    },
+    {
+      "id": "名神-下り-1-1255",
+      "grade": 30.4,
+      "structure": "normal",
+      "from": "米原JCT",
+      "to": "彦根IC"
+    },
+    {
+      "id": "名神-下り-1-1256",
+      "grade": 7.27,
+      "structure": "normal",
+      "from": "米原JCT",
+      "to": "彦根IC"
+    },
+    {
+      "id": "名神-下り-1-1259",
+      "grade": -9.42,
+      "structure": "normal",
+      "from": "米原JCT",
+      "to": "彦根IC"
+    },
+    {
+      "id": "名神-下り-1-1260",
+      "grade": -9.42,
+      "structure": "normal",
+      "from": "米原JCT",
+      "to": "彦根IC"
+    },
+    {
+      "id": "名神-下り-1-1261",
+      "grade": -9.42,
+      "structure": "tunnel",
+      "from": "米原JCT",
+      "to": "彦根IC"
+    },
+    {
+      "id": "名神-下り-1-1262",
+      "grade": -9.42,
+      "structure": "tunnel",
+      "from": "米原JCT",
+      "to": "彦根IC"
+    },
+    {
+      "id": "名神-下り-1-1263",
+      "grade": -9.42,
+      "structure": "tunnel",
+      "from": "米原JCT",
+      "to": "彦根IC"
+    },
+    {
+      "id": "名神-下り-1-1264",
+      "grade": -9.42,
+      "structure": "tunnel",
+      "from": "米原JCT",
+      "to": "彦根IC"
+    },
+    {
+      "id": "名神-下り-1-1265",
+      "grade": -9.42,
+      "structure": "normal",
+      "from": "米原JCT",
+      "to": "彦根IC"
+    },
+    {
+      "id": "名神-下り-1-1266",
+      "grade": -9.42,
+      "structure": "normal",
+      "from": "米原JCT",
+      "to": "彦根IC"
+    },
+    {
+      "id": "名神-下り-1-1267",
+      "grade": -9.42,
+      "structure": "normal",
+      "from": "米原JCT",
+      "to": "彦根IC"
+    },
+    {
+      "id": "名神-下り-1-1268",
+      "grade": -9.42,
+      "structure": "normal",
+      "from": "米原JCT",
+      "to": "彦根IC"
+    },
+    {
+      "id": "名神-下り-1-1269",
+      "grade": -9.42,
+      "structure": "normal",
+      "from": "米原JCT",
+      "to": "彦根IC"
+    },
+    {
+      "id": "名神-下り-1-1270",
+      "grade": -9.42,
+      "structure": "normal",
+      "from": "米原JCT",
+      "to": "彦根IC"
+    },
+    {
+      "id": "名神-下り-1-1271",
+      "grade": -9.42,
+      "structure": "normal",
+      "from": "米原JCT",
+      "to": "彦根IC"
+    },
+    {
+      "id": "名神-下り-1-1272",
+      "grade": -9.42,
+      "structure": "bridge",
+      "from": "米原JCT",
+      "to": "彦根IC"
+    },
+    {
+      "id": "名神-下り-1-1273",
+      "grade": -9.42,
+      "structure": "bridge",
+      "from": "米原JCT",
+      "to": "彦根IC"
+    },
+    {
+      "id": "名神-下り-1-1274",
+      "grade": -9.42,
+      "structure": "bridge",
+      "from": "米原JCT",
+      "to": "彦根IC"
+    },
+    {
+      "id": "名神-下り-1-1275",
+      "grade": -9.42,
+      "structure": "bridge",
+      "from": "米原JCT",
+      "to": "彦根IC"
+    },
+    {
+      "id": "名神-下り-1-1276",
+      "grade": -9.42,
+      "structure": "normal",
+      "from": "米原JCT",
+      "to": "彦根IC"
+    },
+    {
+      "id": "名神-下り-1-1277",
+      "grade": -9.42,
+      "structure": "normal",
+      "from": "米原JCT",
+      "to": "彦根IC"
+    },
+    {
+      "id": "名神-下り-1-1278",
+      "grade": -9.42,
+      "structure": "normal",
+      "from": "米原JCT",
+      "to": "彦根IC"
+    },
+    {
+      "id": "名神-下り-2-409",
+      "grade": -10.14,
+      "structure": "normal",
+      "from": "茨木IC",
+      "to": "吹田JCT"
+    },
+    {
+      "id": "名神-下り-2-412",
+      "grade": 14.75,
+      "structure": "normal",
+      "from": "吹田JCT",
+      "to": "吹田SA"
+    },
+    {
+      "id": "名神-下り-2-652",
+      "grade": -9.23,
+      "structure": "normal",
+      "from": "豊中IC",
+      "to": "尼崎IC"
+    },
+    {
+      "id": "名神-下り-2-722",
+      "grade": -9.13,
+      "structure": "normal",
+      "from": "尼崎IC",
+      "to": "西宮IC"
     }
   ],
-  "despiked_points": 53,
+  "despiked_points": 126,
   "reference_check": {
     "東名": {
       "published_max_grade_pct": "4%級",
@@ -4533,6 +9041,176 @@
           "max_grade": -64.13,
           "max_abs_grade": 64.13,
           "mean_abs_grade": 1.82
+        }
+      }
+    },
+    "東北道": {
+      "published_max_grade_pct": "未確認",
+      "computed": {
+        "下り": {
+          "segment_count": 13593,
+          "max_grade": 37.94,
+          "max_abs_grade": 37.94,
+          "mean_abs_grade": 1.12
+        },
+        "上り": {
+          "segment_count": 13583,
+          "max_grade": -17.55,
+          "max_abs_grade": 17.55,
+          "mean_abs_grade": 1.11
+        }
+      }
+    },
+    "常磐道": {
+      "published_max_grade_pct": "未確認",
+      "computed": {
+        "下り": {
+          "segment_count": 5937,
+          "max_grade": -35.44,
+          "max_abs_grade": 35.44,
+          "mean_abs_grade": 1.12
+        },
+        "上り": {
+          "segment_count": 5077,
+          "max_grade": -25.75,
+          "max_abs_grade": 25.75,
+          "mean_abs_grade": 1.05
+        }
+      }
+    },
+    "関越道": {
+      "published_max_grade_pct": "未確認",
+      "computed": {
+        "下り": {
+          "segment_count": 4817,
+          "max_grade": -28.68,
+          "max_abs_grade": 28.68,
+          "mean_abs_grade": 0.95
+        },
+        "上り": {
+          "segment_count": 4810,
+          "max_grade": -31.67,
+          "max_abs_grade": 31.67,
+          "mean_abs_grade": 0.93
+        }
+      }
+    },
+    "東関東道": {
+      "published_max_grade_pct": "未確認",
+      "computed": {
+        "上り": {
+          "segment_count": 1702,
+          "max_grade": -23.32,
+          "max_abs_grade": 23.32,
+          "mean_abs_grade": 0.64
+        },
+        "下り": {
+          "segment_count": 1793,
+          "max_grade": 22.62,
+          "max_abs_grade": 22.62,
+          "mean_abs_grade": 0.68
+        }
+      }
+    },
+    "圏央道": {
+      "published_max_grade_pct": "未確認",
+      "computed": {
+        "下り": {
+          "segment_count": 3303,
+          "max_grade": -32.96,
+          "max_abs_grade": 32.96,
+          "mean_abs_grade": 0.62
+        },
+        "上り": {
+          "segment_count": 3083,
+          "max_grade": -41.69,
+          "max_abs_grade": 41.69,
+          "mean_abs_grade": 0.66
+        }
+      }
+    },
+    "中央道": {
+      "published_max_grade_pct": "未確認",
+      "computed": {
+        "上り": {
+          "segment_count": 7230,
+          "max_grade": -31.21,
+          "max_abs_grade": 31.21,
+          "mean_abs_grade": 1.63
+        },
+        "下り": {
+          "segment_count": 7234,
+          "max_grade": -23.31,
+          "max_abs_grade": 23.31,
+          "mean_abs_grade": 1.61
+        }
+      }
+    },
+    "伊勢湾岸道": {
+      "published_max_grade_pct": "未確認",
+      "computed": {
+        "上り": {
+          "segment_count": 1002,
+          "max_grade": 14.55,
+          "max_abs_grade": 14.55,
+          "mean_abs_grade": 0.13
+        },
+        "下り": {
+          "segment_count": 1003,
+          "max_grade": -26.36,
+          "max_abs_grade": 26.36,
+          "mean_abs_grade": 0.16
+        }
+      }
+    },
+    "東海北陸道": {
+      "published_max_grade_pct": "未確認",
+      "computed": {
+        "上り": {
+          "segment_count": 3433,
+          "max_grade": 84.86,
+          "max_abs_grade": 84.86,
+          "mean_abs_grade": 1.64
+        },
+        "下り": {
+          "segment_count": 2958,
+          "max_grade": 96.39,
+          "max_abs_grade": 96.39,
+          "mean_abs_grade": 1.83
+        }
+      }
+    },
+    "名神": {
+      "published_max_grade_pct": "未確認",
+      "computed": {
+        "上り": {
+          "segment_count": 3928,
+          "max_grade": 58.87,
+          "max_abs_grade": 58.87,
+          "mean_abs_grade": 1.14
+        },
+        "下り": {
+          "segment_count": 3946,
+          "max_grade": 74.75,
+          "max_abs_grade": 74.75,
+          "mean_abs_grade": 1.19
+        }
+      }
+    },
+    "近畿道": {
+      "published_max_grade_pct": "未確認",
+      "computed": {
+        "上り": {
+          "segment_count": 535,
+          "max_grade": -0.39,
+          "max_abs_grade": 0.39,
+          "mean_abs_grade": 0.0
+        },
+        "下り": {
+          "segment_count": 542,
+          "max_grade": 0.94,
+          "max_abs_grade": 0.94,
+          "mean_abs_grade": 0.0
         }
       }
     }

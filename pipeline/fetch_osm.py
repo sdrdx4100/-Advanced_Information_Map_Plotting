@@ -68,6 +68,21 @@ ROUTE_DEFS = {
     "東名": {"slug": "tomei", "osm_name": "東名高速道路", "group": "NEXCO中日本", "default": True},
     "新東名": {"slug": "shin-tomei", "osm_name": "新東名高速道路", "group": "NEXCO中日本", "default": True},
     "新名神": {"slug": "shin-meishin", "osm_name": "新名神高速道路", "group": "NEXCO西日本", "default": False},
+    # 関東 (NEXCO東日本)
+    "東北道": {"slug": "tohoku", "osm_name": "東北自動車道", "group": "NEXCO東日本", "default": False},
+    "常磐道": {"slug": "joban", "osm_name": "常磐自動車道", "group": "NEXCO東日本", "default": False},
+    "関越道": {"slug": "kanetsu", "osm_name": "関越自動車道", "group": "NEXCO東日本", "default": False},
+    "東関東道": {"slug": "higashi-kanto", "osm_name": "東関東自動車道", "group": "NEXCO東日本", "default": False},
+    # 環状路線: TOKYO_WARD_REFへの距離だけでは上り/下りが安定しない可能性がある
+    # （build_pipeline.pyのTOKYO_WARD_REF周りのコメント参照）
+    "圏央道": {"slug": "ken-o", "osm_name": "首都圏中央連絡自動車道", "group": "NEXCO東日本", "default": False},
+    # 東海 (NEXCO中日本)
+    "中央道": {"slug": "chuo", "osm_name": "中央自動車道", "group": "NEXCO中日本", "default": False},
+    "伊勢湾岸道": {"slug": "isewangan", "osm_name": "伊勢湾岸自動車道", "group": "NEXCO中日本", "default": False},
+    "東海北陸道": {"slug": "tokai-hokuriku", "osm_name": "東海北陸自動車道", "group": "NEXCO中日本", "default": False},
+    # 関西 (NEXCO西日本)
+    "名神": {"slug": "meishin", "osm_name": "名神高速道路", "group": "NEXCO西日本", "default": False},
+    "近畿道": {"slug": "kinki", "osm_name": "近畿自動車道", "group": "NEXCO西日本", "default": False},
 }
 
 for _key, _def in ROUTE_DEFS.items():
@@ -191,6 +206,7 @@ def fetch_facilities(bbox: tuple[float, float, float, float]) -> dict:
     tiles = _tile_bbox(bbox)
     seen_ids = set()
     elements = []
+    failed_tiles = []
     for i, tile in enumerate(tiles):
         ts, tw, tn, te = tile
         q = f"""
@@ -203,14 +219,25 @@ def fetch_facilities(bbox: tuple[float, float, float, float]) -> dict:
         out center;
         """
         print(f"  facilities tile {i + 1}/{len(tiles)} {tile}", flush=True)
-        data = _query(q)
+        try:
+            data = _query(q)
+        except requests.exceptions.RequestException as exc:
+            # A single stubborn tile (all mirrors, all rounds) shouldn't sink
+            # a multi-hour, many-route batch run: that tile's IC/JCT/SA/PA
+            # facilities are missing for this route, but the road geometry
+            # and gradient calculation (the actual point of this pipeline)
+            # are untouched. Surfaced in the return value so it's visible
+            # rather than silently swallowed.
+            print(f"  tile {i + 1}/{len(tiles)} permanently failed, skipping ({exc})", flush=True)
+            failed_tiles.append(tile)
+            continue
         for el in data["elements"]:
             eid = (el["type"], el["id"])
             if eid not in seen_ids:
                 seen_ids.add(eid)
                 elements.append(el)
 
-    result = {"elements": elements}
+    result = {"elements": elements, "failed_tiles": failed_tiles}
     with open(cache_path, "w", encoding="utf-8") as f:
         json.dump(result, f, ensure_ascii=False, indent=1)
     return result

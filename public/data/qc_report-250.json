@@ -41,6 +41,146 @@
         "max_abs_grade": 16.29,
         "mean_abs_grade": 1.49
       }
+    },
+    "東北道": {
+      "下り": {
+        "segment_count": 2711,
+        "max_grade": 17.89,
+        "max_abs_grade": 17.89,
+        "mean_abs_grade": 1.09
+      },
+      "上り": {
+        "segment_count": 2709,
+        "max_grade": -6.66,
+        "max_abs_grade": 6.66,
+        "mean_abs_grade": 1.07
+      }
+    },
+    "常磐道": {
+      "下り": {
+        "segment_count": 1187,
+        "max_grade": 12.46,
+        "max_abs_grade": 12.46,
+        "mean_abs_grade": 1.04
+      },
+      "上り": {
+        "segment_count": 1010,
+        "max_grade": 8.45,
+        "max_abs_grade": 8.45,
+        "mean_abs_grade": 0.99
+      }
+    },
+    "関越道": {
+      "下り": {
+        "segment_count": 956,
+        "max_grade": 4.25,
+        "max_abs_grade": 4.25,
+        "mean_abs_grade": 0.93
+      },
+      "上り": {
+        "segment_count": 954,
+        "max_grade": -14.03,
+        "max_abs_grade": 14.03,
+        "mean_abs_grade": 0.92
+      }
+    },
+    "東関東道": {
+      "上り": {
+        "segment_count": 338,
+        "max_grade": 3.98,
+        "max_abs_grade": 3.98,
+        "mean_abs_grade": 0.53
+      },
+      "下り": {
+        "segment_count": 356,
+        "max_grade": 6.51,
+        "max_abs_grade": 6.51,
+        "mean_abs_grade": 0.6
+      }
+    },
+    "圏央道": {
+      "下り": {
+        "segment_count": 653,
+        "max_grade": 7.09,
+        "max_abs_grade": 7.09,
+        "mean_abs_grade": 0.43
+      },
+      "上り": {
+        "segment_count": 608,
+        "max_grade": 9.5,
+        "max_abs_grade": 9.5,
+        "mean_abs_grade": 0.48
+      }
+    },
+    "中央道": {
+      "上り": {
+        "segment_count": 1433,
+        "max_grade": -7.28,
+        "max_abs_grade": 7.28,
+        "mean_abs_grade": 1.6
+      },
+      "下り": {
+        "segment_count": 1435,
+        "max_grade": -18.13,
+        "max_abs_grade": 18.13,
+        "mean_abs_grade": 1.58
+      }
+    },
+    "伊勢湾岸道": {
+      "上り": {
+        "segment_count": 200,
+        "max_grade": 3.58,
+        "max_abs_grade": 3.58,
+        "mean_abs_grade": 0.11
+      },
+      "下り": {
+        "segment_count": 200,
+        "max_grade": -9.49,
+        "max_abs_grade": 9.49,
+        "mean_abs_grade": 0.16
+      }
+    },
+    "東海北陸道": {
+      "上り": {
+        "segment_count": 670,
+        "max_grade": -51.82,
+        "max_abs_grade": 51.82,
+        "mean_abs_grade": 1.49
+      },
+      "下り": {
+        "segment_count": 577,
+        "max_grade": 50.59,
+        "max_abs_grade": 50.59,
+        "mean_abs_grade": 1.74
+      }
+    },
+    "名神": {
+      "上り": {
+        "segment_count": 783,
+        "max_grade": 28.69,
+        "max_abs_grade": 28.69,
+        "mean_abs_grade": 1.1
+      },
+      "下り": {
+        "segment_count": 787,
+        "max_grade": 39.84,
+        "max_abs_grade": 39.84,
+        "mean_abs_grade": 1.15
+      }
+    },
+    "近畿道": {
+      "上り": {
+        "segment_count": 106,
+        "max_grade": -0.08,
+        "max_abs_grade": 0.08,
+        "mean_abs_grade": 0.0
+      },
+      "下り": {
+        "segment_count": 107,
+        "max_grade": 0.09,
+        "max_abs_grade": 0.09,
+        "mean_abs_grade": 0.0
+      }
     }
   },
   "anomalies": [
@@ -687,9 +827,499 @@
       "structure": "normal",
       "from": "茨木千提寺IC",
       "to": null
+    },
+    {
+      "id": "東北道-下り-0-497",
+      "grade": 17.89,
+      "structure": "normal",
+      "from": "一関IC",
+      "to": "中尊寺PA"
+    },
+    {
+      "id": "東北道-下り-0-498",
+      "grade": 12.97,
+      "structure": "normal",
+      "from": "一関IC",
+      "to": "中尊寺PA"
+    },
+    {
+      "id": "東北道-下り-0-500",
+      "grade": -9.79,
+      "structure": "tunnel",
+      "from": "一関IC",
+      "to": "中尊寺PA"
+    },
+    {
+      "id": "東北道-下り-0-501",
+      "grade": -9.79,
+      "structure": "tunnel",
+      "from": "一関IC",
+      "to": "中尊寺PA"
+    },
+    {
+      "id": "常磐道-下り-0-804",
+      "grade": -7.37,
+      "structure": "normal",
+      "from": "いわき四倉IC",
+      "to": "広野IC"
+    },
+    {
+      "id": "常磐道-下り-0-806",
+      "grade": 9.5,
+      "structure": "bridge",
+      "from": "いわき四倉IC",
+      "to": "広野IC"
+    },
+    {
+      "id": "常磐道-下り-1-58",
+      "grade": 12.46,
+      "structure": "normal",
+      "from": "相馬IC",
+      "to": "新地IC"
+    },
+    {
+      "id": "常磐道-上り-0-221",
+      "grade": 8.45,
+      "structure": "normal",
+      "from": "関本PA",
+      "to": "北茨城IC"
+    },
+    {
+      "id": "関越道-上り-10-7",
+      "grade": -14.03,
+      "structure": "normal",
+      "from": "越後川口ＩＣ、越後川口ＳＡ",
+      "to": null
+    },
+    {
+      "id": "圏央道-下り-1-53",
+      "grade": -7.02,
+      "structure": "normal",
+      "from": "稲敷ＩＣ",
+      "to": null
+    },
+    {
+      "id": "圏央道-下り-2-12",
+      "grade": 7.09,
+      "structure": "normal",
+      "from": "大栄JCT",
+      "to": "下総IC"
+    },
+    {
+      "id": "圏央道-上り-1-31",
+      "grade": 9.5,
+      "structure": "normal",
+      "from": "神崎ＩＣ",
+      "to": "下総IC"
+    },
+    {
+      "id": "圏央道-上り-1-35",
+      "grade": 7.33,
+      "structure": "normal",
+      "from": "神崎ＩＣ",
+      "to": "下総IC"
+    },
+    {
+      "id": "圏央道-上り-1-52",
+      "grade": -7.51,
+      "structure": "normal",
+      "from": "下総IC",
+      "to": null
+    },
+    {
+      "id": "圏央道-上り-12-0",
+      "grade": 7.73,
+      "structure": "normal",
+      "from": null,
+      "to": null
+    },
+    {
+      "id": "中央道-上り-0-323",
+      "grade": -7.28,
+      "structure": "normal",
+      "from": "園原IC",
+      "to": "阿智ＰＡ"
+    },
+    {
+      "id": "中央道-上り-2-106",
+      "grade": 7.01,
+      "structure": "normal",
+      "from": "八王子ＪＣＴ",
+      "to": "相模湖東ＩＣ"
+    },
+    {
+      "id": "中央道-下り-0-342",
+      "grade": -10.11,
+      "structure": "normal",
+      "from": "土岐IC",
+      "to": "虎渓山PA"
+    },
+    {
+      "id": "中央道-下り-0-343",
+      "grade": -18.13,
+      "structure": "tunnel",
+      "from": "土岐IC",
+      "to": "虎渓山PA"
+    },
+    {
+      "id": "伊勢湾岸道-下り-0-2",
+      "grade": -9.49,
+      "structure": "normal",
+      "from": "豊田東JCT",
+      "to": "豊田東IC"
+    },
+    {
+      "id": "東海北陸道-上り-1-66",
+      "grade": -7.05,
+      "structure": "normal",
+      "from": "郡上八幡IC",
+      "to": null
+    },
+    {
+      "id": "東海北陸道-上り-4-22",
+      "grade": 7.85,
+      "structure": "normal",
+      "from": null,
+      "to": "関IC"
+    },
+    {
+      "id": "東海北陸道-上り-4-23",
+      "grade": 13.38,
+      "structure": "normal",
+      "from": null,
+      "to": "関IC"
+    },
+    {
+      "id": "東海北陸道-上り-4-24",
+      "grade": 40.61,
+      "structure": "normal",
+      "from": null,
+      "to": "関IC"
+    },
+    {
+      "id": "東海北陸道-上り-4-25",
+      "grade": -7.99,
+      "structure": "normal",
+      "from": null,
+      "to": "関IC"
+    },
+    {
+      "id": "東海北陸道-上り-4-26",
+      "grade": 9.25,
+      "structure": "normal",
+      "from": null,
+      "to": "関IC"
+    },
+    {
+      "id": "東海北陸道-上り-4-27",
+      "grade": 25.79,
+      "structure": "normal",
+      "from": null,
+      "to": "関IC"
+    },
+    {
+      "id": "東海北陸道-上り-4-28",
+      "grade": -51.82,
+      "structure": "normal",
+      "from": null,
+      "to": "関IC"
+    },
+    {
+      "id": "東海北陸道-上り-4-30",
+      "grade": 14.02,
+      "structure": "normal",
+      "from": null,
+      "to": "関IC"
+    },
+    {
+      "id": "東海北陸道-上り-4-31",
+      "grade": 34.43,
+      "structure": "normal",
+      "from": null,
+      "to": "関IC"
+    },
+    {
+      "id": "東海北陸道-上り-4-32",
+      "grade": -44.0,
+      "structure": "normal",
+      "from": null,
+      "to": "関IC"
+    },
+    {
+      "id": "東海北陸道-上り-4-33",
+      "grade": 10.75,
+      "structure": "normal",
+      "from": null,
+      "to": "関IC"
+    },
+    {
+      "id": "東海北陸道-上り-4-34",
+      "grade": -11.48,
+      "structure": "tunnel",
+      "from": null,
+      "to": "関IC"
+    },
+    {
+      "id": "東海北陸道-上り-4-35",
+      "grade": -13.12,
+      "structure": "tunnel",
+      "from": null,
+      "to": "関IC"
+    },
+    {
+      "id": "東海北陸道-上り-7-31",
+      "grade": 27.95,
+      "structure": "normal",
+      "from": null,
+      "to": null
+    },
+    {
+      "id": "東海北陸道-上り-7-32",
+      "grade": 12.55,
+      "structure": "normal",
+      "from": null,
+      "to": null
+    },
+    {
+      "id": "東海北陸道-下り-1-0",
+      "grade": -8.68,
+      "structure": "normal",
+      "from": null,
+      "to": "郡上八幡IC"
+    },
+    {
+      "id": "東海北陸道-下り-4-12",
+      "grade": 25.59,
+      "structure": "normal",
+      "from": "関IC",
+      "to": null
+    },
+    {
+      "id": "東海北陸道-下り-4-13",
+      "grade": -15.8,
+      "structure": "normal",
+      "from": "関IC",
+      "to": null
+    },
+    {
+      "id": "東海北陸道-下り-4-14",
+      "grade": 50.59,
+      "structure": "normal",
+      "from": "関IC",
+      "to": null
+    },
+    {
+      "id": "東海北陸道-下り-4-15",
+      "grade": -24.98,
+      "structure": "normal",
+      "from": "関IC",
+      "to": null
+    },
+    {
+      "id": "東海北陸道-下り-4-16",
+      "grade": -28.98,
+      "structure": "normal",
+      "from": "関IC",
+      "to": null
+    },
+    {
+      "id": "東海北陸道-下り-4-18",
+      "grade": 33.17,
+      "structure": "normal",
+      "from": "関IC",
+      "to": null
+    },
+    {
+      "id": "東海北陸道-下り-4-19",
+      "grade": 20.94,
+      "structure": "normal",
+      "from": "関IC",
+      "to": null
+    },
+    {
+      "id": "東海北陸道-下り-4-20",
+      "grade": -32.73,
+      "structure": "normal",
+      "from": "関IC",
+      "to": null
+    },
+    {
+      "id": "東海北陸道-下り-4-21",
+      "grade": 19.22,
+      "structure": "normal",
+      "from": "関IC",
+      "to": null
+    },
+    {
+      "id": "東海北陸道-下り-4-22",
+      "grade": -43.67,
+      "structure": "normal",
+      "from": "関IC",
+      "to": null
+    },
+    {
+      "id": "東海北陸道-下り-4-23",
+      "grade": -19.37,
+      "structure": "normal",
+      "from": "関IC",
+      "to": null
+    },
+    {
+      "id": "名神-上り-1-12",
+      "grade": 28.69,
+      "structure": "normal",
+      "from": "彦根IC",
+      "to": "米原JCT"
+    },
+    {
+      "id": "名神-上り-1-13",
+      "grade": -13.72,
+      "structure": "normal",
+      "from": "彦根IC",
+      "to": "米原JCT"
+    },
+    {
+      "id": "名神-上り-1-14",
+      "grade": -7.98,
+      "structure": "tunnel",
+      "from": "彦根IC",
+      "to": "米原JCT"
+    },
+    {
+      "id": "名神-上り-2-138",
+      "grade": 25.35,
+      "structure": "normal",
+      "from": "高槻JCT",
+      "to": null
+    },
+    {
+      "id": "名神-上り-2-139",
+      "grade": 7.49,
+      "structure": "normal",
+      "from": "高槻JCT",
+      "to": null
+    },
+    {
+      "id": "名神-上り-2-140",
+      "grade": -9.39,
+      "structure": "normal",
+      "from": "高槻JCT",
+      "to": null
+    },
+    {
+      "id": "名神-上り-2-141",
+      "grade": -10.96,
+      "structure": "tunnel",
+      "from": "高槻JCT",
+      "to": null
+    },
+    {
+      "id": "名神-上り-2-142",
+      "grade": -10.96,
+      "structure": "tunnel",
+      "from": "高槻JCT",
+      "to": null
+    },
+    {
+      "id": "名神-下り-0-298",
+      "grade": 7.36,
+      "structure": "bridge",
+      "from": "桂川PA",
+      "to": null
+    },
+    {
+      "id": "名神-下り-0-299",
+      "grade": 39.84,
+      "structure": "normal",
+      "from": "桂川PA",
+      "to": null
+    },
+    {
+      "id": "名神-下り-0-300",
+      "grade": 13.03,
+      "structure": "normal",
+      "from": "桂川PA",
+      "to": null
+    },
+    {
+      "id": "名神-下り-0-302",
+      "grade": -8.29,
+      "structure": "tunnel",
+      "from": "桂川PA",
+      "to": null
+    },
+    {
+      "id": "名神-下り-0-303",
+      "grade": -10.36,
+      "structure": "tunnel",
+      "from": "桂川PA",
+      "to": null
+    },
+    {
+      "id": "名神-下り-0-304",
+      "grade": -10.36,
+      "structure": "tunnel",
+      "from": "桂川PA",
+      "to": null
+    },
+    {
+      "id": "名神-下り-0-305",
+      "grade": -10.36,
+      "structure": "tunnel",
+      "from": "桂川PA",
+      "to": null
+    },
+    {
+      "id": "名神-下り-0-306",
+      "grade": -10.36,
+      "structure": "tunnel",
+      "from": "桂川PA",
+      "to": null
+    },
+    {
+      "id": "名神-下り-0-307",
+      "grade": -9.34,
+      "structure": "bridge",
+      "from": "桂川PA",
+      "to": null
+    },
+    {
+      "id": "名神-下り-1-250",
+      "grade": 12.5,
+      "structure": "normal",
+      "from": "米原JCT",
+      "to": "彦根IC"
+    },
+    {
+      "id": "名神-下り-1-252",
+      "grade": -9.42,
+      "structure": "tunnel",
+      "from": "米原JCT",
+      "to": "彦根IC"
+    },
+    {
+      "id": "名神-下り-1-253",
+      "grade": -9.42,
+      "structure": "normal",
+      "from": "米原JCT",
+      "to": "彦根IC"
+    },
+    {
+      "id": "名神-下り-1-254",
+      "grade": -9.42,
+      "structure": "bridge",
+      "from": "米原JCT",
+      "to": "彦根IC"
+    },
+    {
+      "id": "名神-下り-1-255",
+      "grade": -7.62,
+      "structure": "bridge",
+      "from": "米原JCT",
+      "to": "彦根IC"
     }
   ],
-  "despiked_points": 53,
+  "despiked_points": 126,
   "reference_check": {
     "東名": {
       "published_max_grade_pct": "4%級",
@@ -739,6 +1369,176 @@
           "max_grade": -16.29,
           "max_abs_grade": 16.29,
           "mean_abs_grade": 1.49
+        }
+      }
+    },
+    "東北道": {
+      "published_max_grade_pct": "未確認",
+      "computed": {
+        "下り": {
+          "segment_count": 2711,
+          "max_grade": 17.89,
+          "max_abs_grade": 17.89,
+          "mean_abs_grade": 1.09
+        },
+        "上り": {
+          "segment_count": 2709,
+          "max_grade": -6.66,
+          "max_abs_grade": 6.66,
+          "mean_abs_grade": 1.07
+        }
+      }
+    },
+    "常磐道": {
+      "published_max_grade_pct": "未確認",
+      "computed": {
+        "下り": {
+          "segment_count": 1187,
+          "max_grade": 12.46,
+          "max_abs_grade": 12.46,
+          "mean_abs_grade": 1.04
+        },
+        "上り": {
+          "segment_count": 1010,
+          "max_grade": 8.45,
+          "max_abs_grade": 8.45,
+          "mean_abs_grade": 0.99
+        }
+      }
+    },
+    "関越道": {
+      "published_max_grade_pct": "未確認",
+      "computed": {
+        "下り": {
+          "segment_count": 956,
+          "max_grade": 4.25,
+          "max_abs_grade": 4.25,
+          "mean_abs_grade": 0.93
+        },
+        "上り": {
+          "segment_count": 954,
+          "max_grade": -14.03,
+          "max_abs_grade": 14.03,
+          "mean_abs_grade": 0.92
+        }
+      }
+    },
+    "東関東道": {
+      "published_max_grade_pct": "未確認",
+      "computed": {
+        "上り": {
+          "segment_count": 338,
+          "max_grade": 3.98,
+          "max_abs_grade": 3.98,
+          "mean_abs_grade": 0.53
+        },
+        "下り": {
+          "segment_count": 356,
+          "max_grade": 6.51,
+          "max_abs_grade": 6.51,
+          "mean_abs_grade": 0.6
+        }
+      }
+    },
+    "圏央道": {
+      "published_max_grade_pct": "未確認",
+      "computed": {
+        "下り": {
+          "segment_count": 653,
+          "max_grade": 7.09,
+          "max_abs_grade": 7.09,
+          "mean_abs_grade": 0.43
+        },
+        "上り": {
+          "segment_count": 608,
+          "max_grade": 9.5,
+          "max_abs_grade": 9.5,
+          "mean_abs_grade": 0.48
+        }
+      }
+    },
+    "中央道": {
+      "published_max_grade_pct": "未確認",
+      "computed": {
+        "上り": {
+          "segment_count": 1433,
+          "max_grade": -7.28,
+          "max_abs_grade": 7.28,
+          "mean_abs_grade": 1.6
+        },
+        "下り": {
+          "segment_count": 1435,
+          "max_grade": -18.13,
+          "max_abs_grade": 18.13,
+          "mean_abs_grade": 1.58
+        }
+      }
+    },
+    "伊勢湾岸道": {
+      "published_max_grade_pct": "未確認",
+      "computed": {
+        "上り": {
+          "segment_count": 200,
+          "max_grade": 3.58,
+          "max_abs_grade": 3.58,
+          "mean_abs_grade": 0.11
+        },
+        "下り": {
+          "segment_count": 200,
+          "max_grade": -9.49,
+          "max_abs_grade": 9.49,
+          "mean_abs_grade": 0.16
+        }
+      }
+    },
+    "東海北陸道": {
+      "published_max_grade_pct": "未確認",
+      "computed": {
+        "上り": {
+          "segment_count": 670,
+          "max_grade": -51.82,
+          "max_abs_grade": 51.82,
+          "mean_abs_grade": 1.49
+        },
+        "下り": {
+          "segment_count": 577,
+          "max_grade": 50.59,
+          "max_abs_grade": 50.59,
+          "mean_abs_grade": 1.74
+        }
+      }
+    },
+    "名神": {
+      "published_max_grade_pct": "未確認",
+      "computed": {
+        "上り": {
+          "segment_count": 783,
+          "max_grade": 28.69,
+          "max_abs_grade": 28.69,
+          "mean_abs_grade": 1.1
+        },
+        "下り": {
+          "segment_count": 787,
+          "max_grade": 39.84,
+          "max_abs_grade": 39.84,
+          "mean_abs_grade": 1.15
+        }
+      }
+    },
+    "近畿道": {
+      "published_max_grade_pct": "未確認",
+      "computed": {
+        "上り": {
+          "segment_count": 106,
+          "max_grade": -0.08,
+          "max_abs_grade": 0.08,
+          "mean_abs_grade": 0.0
+        },
+        "下り": {
+          "segment_count": 107,
+          "max_grade": 0.09,
+          "max_abs_grade": 0.09,
+          "mean_abs_grade": 0.0
         }
       }
     }
