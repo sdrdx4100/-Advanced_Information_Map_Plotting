@@ -238,7 +238,7 @@ export function RoadGradientMap() {
           setPanelOpen(true);
           new Popup({ closeButton: false, offset: 10 })
             .setLngLat(event.lngLat)
-            .setHTML(`<strong>${item.route}高速道路</strong><br><span>${item.direction} ${item.grade > 0 ? "+" : ""}${item.grade.toFixed(1)}%</span>`)
+            .setHTML(`<strong>${item.route}</strong><br><span>${item.direction} ${item.grade > 0 ? "+" : ""}${item.grade.toFixed(1)}%</span>`)
             .addTo(map);
         }
       });
@@ -345,7 +345,7 @@ export function RoadGradientMap() {
                     <label key={r.key} className={`route-row ${selectedRoutes.has(r.key) ? "active" : ""}`}>
                       <input type="checkbox" checked={selectedRoutes.has(r.key)} onChange={() => toggleRoute(r.key)} />
                       <RouteIcon route={r.key} color={r.color} />
-                      <span className="name">{r.key}高速道路</span>
+                      <span className="name">{r.key}</span>
                       <span className="meta">
                         {loadingRoutes.has(r.key)
                           ? "読込中…"
@@ -373,7 +373,7 @@ export function RoadGradientMap() {
           {selected && (
             <article className="segment-card">
               <button className="card-close" aria-label="詳細を閉じる" onClick={() => setSelected(null)}>×</button>
-              <div className="segment-title"><RouteIcon route={selected.route} color={routeColor(selected.route)} /><div><small>{selected.route}高速道路・{selected.direction}</small><h2>{selected.from ?? "—"} <span>→</span> {selected.to ?? "—"}</h2></div></div>
+              <div className="segment-title"><RouteIcon route={selected.route} color={routeColor(selected.route)} /><div><small>{selected.route}・{selected.direction}</small><h2>{selected.from ?? "—"} <span>→</span> {selected.to ?? "—"}</h2></div></div>
               <div className="metric-grid">
                 <div><small>平均勾配</small><strong style={{ color: gradeColor(selected.grade) }}>{selected.grade > 0 ? "+" : ""}{selected.grade.toFixed(1)}<span>%</span></strong><em>{selected.grade >= 0 ? "上り勾配" : "下り勾配"}</em></div>
                 <div><small>道路標高</small><strong>{selected.elevation_start.toFixed(0)}<span>m</span> <i>→</i> {selected.elevation_end.toFixed(0)}<span>m</span></strong><em>{windowSize}m 区間</em></div>
@@ -389,7 +389,7 @@ export function RoadGradientMap() {
       </section>
       <section className="profile-panel">
         <div className="profile-head">
-          <div><RouteIcon route={selected?.route ?? routes[0]?.key ?? "—"} color={selected ? routeColor(selected.route) : routes[0]?.color ?? "#297a58"} /><span><b>{selected?.route ?? "—"}高速道路・{selected?.direction ?? ""}</b><small>{profile ? `OSM連結区間 約${profile.length_km}km` : "区間を選択してください"}</small></span></div>
+          <div><RouteIcon route={selected?.route ?? routes[0]?.key ?? "—"} color={selected ? routeColor(selected.route) : routes[0]?.color ?? "#297a58"} /><span><b>{selected?.route ?? "—"}・{selected?.direction ?? ""}</b><small>{profile ? `OSM連結区間 約${profile.length_km}km` : "区間を選択してください"}</small></span></div>
           <div className="segmented profile-toggle"><button className={profileMode === "elevation" ? "active" : ""} onClick={() => setProfileMode("elevation")}>標高プロファイル</button><button className={profileMode === "grade" ? "active" : ""} onClick={() => setProfileMode("grade")}>勾配グラフ</button></div>
         </div>
         {routeProfile.length > 1 ? (

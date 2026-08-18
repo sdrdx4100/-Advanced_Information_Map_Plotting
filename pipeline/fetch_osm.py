@@ -68,14 +68,34 @@ ROUTE_DEFS = {
     "東名": {"slug": "tomei", "osm_name": "東名高速道路", "group": "NEXCO中日本", "default": True},
     "新東名": {"slug": "shin-tomei", "osm_name": "新東名高速道路", "group": "NEXCO中日本", "default": True},
     "新名神": {"slug": "shin-meishin", "osm_name": "新名神高速道路", "group": "NEXCO西日本", "default": False},
-    # 関東 (NEXCO東日本)
-    "東北道": {"slug": "tohoku", "osm_name": "東北自動車道", "group": "NEXCO東日本", "default": False},
-    "常磐道": {"slug": "joban", "osm_name": "常磐自動車道", "group": "NEXCO東日本", "default": False},
-    "関越道": {"slug": "kanetsu", "osm_name": "関越自動車道", "group": "NEXCO東日本", "default": False},
-    "東関東道": {"slug": "higashi-kanto", "osm_name": "東関東自動車道", "group": "NEXCO東日本", "default": False},
+    # 北関東・信越 (NEXCO東日本)
+    "東北道": {"slug": "tohoku", "osm_name": "東北自動車道", "group": "NEXCO東日本・北関東/信越", "default": False},
+    "常磐道": {"slug": "joban", "osm_name": "常磐自動車道", "group": "NEXCO東日本・北関東/信越", "default": False},
+    "関越道": {"slug": "kanetsu", "osm_name": "関越自動車道", "group": "NEXCO東日本・北関東/信越", "default": False},
+    "北関東道": {"slug": "kita-kanto", "osm_name": "北関東自動車道", "group": "NEXCO東日本・北関東/信越", "default": False},
+    "上信越道": {"slug": "joshinetsu", "osm_name": "上信越自動車道", "group": "NEXCO東日本・北関東/信越", "default": False},
+    # 南関東 (NEXCO東日本)
+    "東関東道": {"slug": "higashi-kanto", "osm_name": "東関東自動車道", "group": "NEXCO東日本・関東", "default": False},
     # 環状路線: TOKYO_WARD_REFへの距離だけでは上り/下りが安定しない可能性がある
     # （build_pipeline.pyのTOKYO_WARD_REF周りのコメント参照）
-    "圏央道": {"slug": "ken-o", "osm_name": "首都圏中央連絡自動車道", "group": "NEXCO東日本", "default": False},
+    "圏央道": {"slug": "ken-o", "osm_name": "首都圏中央連絡自動車道", "group": "NEXCO東日本・関東", "default": False},
+    "東京外環道": {"slug": "tokyo-gaikan", "osm_name": "東京外環自動車道", "group": "NEXCO東日本・関東", "default": False},
+    "京葉道路": {"slug": "keiyo", "osm_name": "京葉道路", "group": "NEXCO東日本・関東", "default": False},
+    "館山道": {"slug": "tateyama", "osm_name": "館山自動車道", "group": "NEXCO東日本・関東", "default": False},
+    "千葉東金道路": {"slug": "chiba-togane", "osm_name": "千葉東金道路", "group": "NEXCO東日本・関東", "default": False},
+    "東京湾アクアライン": {
+        "slug": "aqua-line",
+        "osm_name": "東京湾アクアライン",
+        "osm_names": [
+            "東京湾アクアライン;東京湾横断・木更津東金道路",
+            "東京湾アクアライン連絡道",
+            "東京湾アクアライン連絡道;東京湾横断・木更津東金道路",
+        ],
+        "group": "NEXCO東日本・関東",
+        "default": False,
+    },
+    "横浜横須賀道路": {"slug": "yokohama-yokosuka", "osm_name": "横浜横須賀道路", "group": "NEXCO東日本・関東", "default": False},
+    "富津館山道路": {"slug": "futtsu-tateyama", "osm_name": "富津館山道路", "group": "NEXCO東日本・関東", "default": False},
     # 東海 (NEXCO中日本)
     "中央道": {"slug": "chuo", "osm_name": "中央自動車道", "group": "NEXCO中日本", "default": False},
     "伊勢湾岸道": {"slug": "isewangan", "osm_name": "伊勢湾岸自動車道", "group": "NEXCO中日本", "default": False},
@@ -120,7 +140,12 @@ def _cached(name: str, query: str) -> dict:
     path = os.path.join(RAW_DIR, name)
     if os.path.exists(path):
         with open(path, "r", encoding="utf-8") as f:
-            return json.load(f)
+            cached = json.load(f)
+        # A previous exact-name lookup may legitimately return zero elements
+        # when OSM uses a composite route name. Do not make that failed lookup
+        # permanent after the route definition is corrected.
+        if cached.get("elements"):
+            return cached
     data = _query(query)
     with open(path, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=1)
@@ -128,11 +153,17 @@ def _cached(name: str, query: str) -> dict:
 
 
 def fetch_ways(route_key: str) -> dict:
-    osm_name = ROUTE_DEFS[route_key]["osm_name"]
+    route_def = ROUTE_DEFS[route_key]
+    osm_names = route_def.get("osm_names", [route_def["osm_name"]])
     slug = ROUTE_DEFS[route_key]["slug"]
+    selectors = "\n".join(
+        f'      way["highway"="motorway"]["name"="{name}"];' for name in osm_names
+    )
     q = f"""
     [out:json][timeout:300];
-    way["highway"="motorway"]["name"="{osm_name}"];
+    (
+{selectors}
+    );
     out geom;
     """
     return _cached(f"ways_{slug}.json", q)

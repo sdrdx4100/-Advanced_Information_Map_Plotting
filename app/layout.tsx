@@ -10,9 +10,9 @@ export async function generateMetadata(): Promise<Metadata> {
   const requestHeaders = await headers();
   const host = requestHeaders.get("host") ?? "localhost:3000";
   const protocol = requestHeaders.get("x-forwarded-proto") ?? (host.startsWith("localhost") ? "http" : "https");
-  const image = `${protocol}://${host}/og.png`;
-  const title = "ROAD SLOPE｜東名・新東名 道路勾配マップ";
-  const description = "東名高速道路・新東名高速道路の道路縦断勾配を比較できるインタラクティブマップ。";
+  const image = `${protocol}://${host}/og-kanto.png`;
+  const title = "ROAD SLOPE｜高速道路 勾配マップ";
+  const description = "東名・新東名から関東・北関東の主要高速道路まで、道路縦断勾配を比較できるインタラクティブマップ。";
   return {
     title,
     description,

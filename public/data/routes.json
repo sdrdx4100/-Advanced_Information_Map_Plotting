@@ -24,35 +24,98 @@
     "key": "東北道",
     "slug": "tohoku",
     "color": "#358d6a",
-    "group": "NEXCO東日本",
+    "group": "NEXCO東日本・北関東/信越",
     "default": false
   },
   {
     "key": "常磐道",
     "slug": "joban",
     "color": "#8d3554",
-    "group": "NEXCO東日本",
+    "group": "NEXCO東日本・北関東/信越",
     "default": false
   },
   {
     "key": "関越道",
     "slug": "kanetsu",
     "color": "#8d6835",
-    "group": "NEXCO東日本",
+    "group": "NEXCO東日本・北関東/信越",
+    "default": false
+  },
+  {
+    "key": "北関東道",
+    "slug": "kita-kanto",
+    "color": "#8d3588",
+    "group": "NEXCO東日本・北関東/信越",
+    "default": false
+  },
+  {
+    "key": "上信越道",
+    "slug": "joshinetsu",
+    "color": "#8d354f",
+    "group": "NEXCO東日本・北関東/信越",
     "default": false
   },
   {
     "key": "東関東道",
     "slug": "higashi-kanto",
     "color": "#8d3557",
-    "group": "NEXCO東日本",
+    "group": "NEXCO東日本・関東",
     "default": false
   },
   {
     "key": "圏央道",
     "slug": "ken-o",
     "color": "#7e8d35",
-    "group": "NEXCO東日本",
+    "group": "NEXCO東日本・関東",
+    "default": false
+  },
+  {
+    "key": "東京外環道",
+    "slug": "tokyo-gaikan",
+    "color": "#358d3e",
+    "group": "NEXCO東日本・関東",
+    "default": false
+  },
+  {
+    "key": "京葉道路",
+    "slug": "keiyo",
+    "color": "#8d4f35",
+    "group": "NEXCO東日本・関東",
+    "default": false
+  },
+  {
+    "key": "館山道",
+    "slug": "tateyama",
+    "color": "#358d6e",
+    "group": "NEXCO東日本・関東",
+    "default": false
+  },
+  {
+    "key": "千葉東金道路",
+    "slug": "chiba-togane",
+    "color": "#358d42",
+    "group": "NEXCO東日本・関東",
+    "default": false
+  },
+  {
+    "key": "東京湾アクアライン",
+    "slug": "aqua-line",
+    "color": "#358d3b",
+    "group": "NEXCO東日本・関東",
+    "default": false
+  },
+  {
+    "key": "横浜横須賀道路",
+    "slug": "yokohama-yokosuka",
+    "color": "#7d8d35",
+    "group": "NEXCO東日本・関東",
+    "default": false
+  },
+  {
+    "key": "富津館山道路",
+    "slug": "futtsu-tateyama",
+    "color": "#358d6e",
+    "group": "NEXCO東日本・関東",
     "default": false
   },
   {

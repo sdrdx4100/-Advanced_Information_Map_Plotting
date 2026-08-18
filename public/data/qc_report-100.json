@@ -84,6 +84,34 @@
         "mean_abs_grade": 0.92
       }
     },
+    "北関東道": {
+      "下り": {
+        "segment_count": 1344,
+        "max_grade": 22.06,
+        "max_abs_grade": 22.06,
+        "mean_abs_grade": 0.76
+      },
+      "上り": {
+        "segment_count": 1336,
+        "max_grade": 19.41,
+        "max_abs_grade": 19.41,
+        "mean_abs_grade": 0.75
+      }
+    },
+    "上信越道": {
+      "上り": {
+        "segment_count": 2020,
+        "max_grade": 51.64,
+        "max_abs_grade": 51.64,
+        "mean_abs_grade": 1.46
+      },
+      "下り": {
+        "segment_count": 2029,
+        "max_grade": -83.88,
+        "max_abs_grade": 83.88,
+        "mean_abs_grade": 2.22
+      }
+    },
     "東関東道": {
       "上り": {
         "segment_count": 850,
@@ -110,6 +138,104 @@
         "max_grade": -21.72,
         "max_abs_grade": 21.72,
         "mean_abs_grade": 0.63
+      }
+    },
+    "東京外環道": {
+      "下り": {
+        "segment_count": 476,
+        "max_grade": -2.01,
+        "max_abs_grade": 2.01,
+        "mean_abs_grade": 0.01
+      },
+      "上り": {
+        "segment_count": 484,
+        "max_grade": -0.47,
+        "max_abs_grade": 0.47,
+        "mean_abs_grade": 0.0
+      }
+    },
+    "京葉道路": {
+      "下り": {
+        "segment_count": 341,
+        "max_grade": 10.91,
+        "max_abs_grade": 10.91,
+        "mean_abs_grade": 0.53
+      },
+      "上り": {
+        "segment_count": 340,
+        "max_grade": -9.0,
+        "max_abs_grade": 9.0,
+        "mean_abs_grade": 0.51
+      }
+    },
+    "館山道": {
+      "上り": {
+        "segment_count": 552,
+        "max_grade": -5.47,
+        "max_abs_grade": 5.47,
+        "mean_abs_grade": 0.93
+      },
+      "下り": {
+        "segment_count": 550,
+        "max_grade": -7.36,
+        "max_abs_grade": 7.36,
+        "mean_abs_grade": 0.99
+      }
+    },
+    "千葉東金道路": {
+      "下り": {
+        "segment_count": 145,
+        "max_grade": 11.41,
+        "max_abs_grade": 11.41,
+        "mean_abs_grade": 1.1
+      },
+      "上り": {
+        "segment_count": 149,
+        "max_grade": -11.33,
+        "max_abs_grade": 11.33,
+        "mean_abs_grade": 1.13
+      }
+    },
+    "東京湾アクアライン": {
+      "上り": {
+        "segment_count": 237,
+        "max_grade": -2.52,
+        "max_abs_grade": 2.52,
+        "mean_abs_grade": 0.18
+      },
+      "下り": {
+        "segment_count": 237,
+        "max_grade": -3.97,
+        "max_abs_grade": 3.97,
+        "mean_abs_grade": 0.24
+      }
+    },
+    "横浜横須賀道路": {
+      "下り": {
+        "segment_count": 335,
+        "max_grade": 24.46,
+        "max_abs_grade": 24.46,
+        "mean_abs_grade": 1.16
+      },
+      "上り": {
+        "segment_count": 337,
+        "max_grade": -29.76,
+        "max_abs_grade": 29.76,
+        "mean_abs_grade": 1.3
+      }
+    },
+    "富津館山道路": {
+      "上り": {
+        "segment_count": 86,
+        "max_grade": -2.88,
+        "max_abs_grade": 2.88,
+        "mean_abs_grade": 0.39
+      },
+      "下り": {
+        "segment_count": 125,
+        "max_grade": -7.74,
+        "max_abs_grade": 7.74,
+        "mean_abs_grade": 0.66
       }
     },
     "中央道": {
@@ -2915,6 +3041,594 @@
       "to": null
     },
     {
+      "id": "北関東道-下り-0-123",
+      "grade": 22.06,
+      "structure": "normal",
+      "from": "桜川筑西IC",
+      "to": "笠間西IC"
+    },
+    {
+      "id": "北関東道-下り-0-125",
+      "grade": -15.05,
+      "structure": "normal",
+      "from": "桜川筑西IC",
+      "to": "笠間西IC"
+    },
+    {
+      "id": "北関東道-下り-0-187",
+      "grade": 10.34,
+      "structure": "normal",
+      "from": "笠間西IC",
+      "to": "笠間PA（東行き）"
+    },
+    {
+      "id": "北関東道-下り-0-189",
+      "grade": -13.3,
+      "structure": "normal",
+      "from": "笠間西IC",
+      "to": "笠間PA（東行き）"
+    },
+    {
+      "id": "北関東道-下り-0-206",
+      "grade": -13.31,
+      "structure": "normal",
+      "from": "笠間西IC",
+      "to": "笠間PA（東行き）"
+    },
+    {
+      "id": "北関東道-下り-6-24",
+      "grade": 8.54,
+      "structure": "normal",
+      "from": null,
+      "to": null
+    },
+    {
+      "id": "北関東道-下り-6-47",
+      "grade": -7.73,
+      "structure": "normal",
+      "from": null,
+      "to": null
+    },
+    {
+      "id": "北関東道-下り-7-5",
+      "grade": -10.9,
+      "structure": "normal",
+      "from": null,
+      "to": null
+    },
+    {
+      "id": "北関東道-上り-0-240",
+      "grade": 11.97,
+      "structure": "normal",
+      "from": "笠間PA（東行き）",
+      "to": "笠間西IC"
+    },
+    {
+      "id": "北関東道-上り-0-257",
+      "grade": 16.51,
+      "structure": "normal",
+      "from": "笠間PA（東行き）",
+      "to": "笠間西IC"
+    },
+    {
+      "id": "北関東道-上り-0-259",
+      "grade": -9.7,
+      "structure": "normal",
+      "from": "笠間PA（東行き）",
+      "to": "笠間西IC"
+    },
+    {
+      "id": "北関東道-上り-0-321",
+      "grade": 19.41,
+      "structure": "normal",
+      "from": "笠間西IC",
+      "to": "桜川筑西IC"
+    },
+    {
+      "id": "北関東道-上り-0-322",
+      "grade": -10.37,
+      "structure": "normal",
+      "from": "笠間西IC",
+      "to": "桜川筑西IC"
+    },
+    {
+      "id": "北関東道-上り-0-323",
+      "grade": -17.42,
+      "structure": "normal",
+      "from": "笠間西IC",
+      "to": "桜川筑西IC"
+    },
+    {
+      "id": "北関東道-上り-1-159",
+      "grade": -8.77,
+      "structure": "normal",
+      "from": "壬生PA（東行き）",
+      "to": "都賀IC"
+    },
+    {
+      "id": "北関東道-上り-4-56",
+      "grade": -7.73,
+      "structure": "normal",
+      "from": null,
+      "to": null
+    },
+    {
+      "id": "上信越道-上り-1-196",
+      "grade": -7.14,
+      "structure": "normal",
+      "from": "小布施ＰＡ（ハイウェイオアシス）",
+      "to": "須坂長野東ＩＣ"
+    },
+    {
+      "id": "上信越道-上り-3-120",
+      "grade": -24.54,
+      "structure": "normal",
+      "from": "松井田妙義IC",
+      "to": "下仁田IC"
+    },
+    {
+      "id": "上信越道-上り-3-122",
+      "grade": 8.48,
+      "structure": "normal",
+      "from": "松井田妙義IC",
+      "to": "下仁田IC"
+    },
+    {
+      "id": "上信越道-上り-3-123",
+      "grade": 8.48,
+      "structure": "bridge",
+      "from": "松井田妙義IC",
+      "to": "下仁田IC"
+    },
+    {
+      "id": "上信越道-上り-3-124",
+      "grade": 8.48,
+      "structure": "bridge",
+      "from": "松井田妙義IC",
+      "to": "下仁田IC"
+    },
+    {
+      "id": "上信越道-上り-3-125",
+      "grade": 8.48,
+      "structure": "normal",
+      "from": "松井田妙義IC",
+      "to": "下仁田IC"
+    },
+    {
+      "id": "上信越道-上り-26-2",
+      "grade": 32.87,
+      "structure": "normal",
+      "from": null,
+      "to": null
+    },
+    {
+      "id": "上信越道-上り-26-3",
+      "grade": 51.64,
+      "structure": "normal",
+      "from": null,
+      "to": null
+    },
+    {
+      "id": "上信越道-上り-26-4",
+      "grade": 11.47,
+      "structure": "normal",
+      "from": null,
+      "to": null
+    },
+    {
+      "id": "上信越道-下り-0-186",
+      "grade": 13.16,
+      "structure": "normal",
+      "from": "佐久小諸JCT",
+      "to": "小諸IC"
+    },
+    {
+      "id": "上信越道-下り-0-187",
+      "grade": 27.13,
+      "structure": "normal",
+      "from": "佐久小諸JCT",
+      "to": "小諸IC"
+    },
+    {
+      "id": "上信越道-下り-0-188",
+      "grade": 12.33,
+      "structure": "normal",
+      "from": "佐久小諸JCT",
+      "to": "小諸IC"
+    },
+    {
+      "id": "上信越道-下り-0-189",
+      "grade": -13.65,
+      "structure": "normal",
+      "from": "佐久小諸JCT",
+      "to": "小諸IC"
+    },
+    {
+      "id": "上信越道-下り-0-190",
+      "grade": -8.89,
+      "structure": "normal",
+      "from": "佐久小諸JCT",
+      "to": "小諸IC"
+    },
+    {
+      "id": "上信越道-下り-0-191",
+      "grade": -8.89,
+      "structure": "tunnel",
+      "from": "佐久小諸JCT",
+      "to": "小諸IC"
+    },
+    {
+      "id": "上信越道-下り-0-192",
+      "grade": -8.89,
+      "structure": "normal",
+      "from": "佐久小諸JCT",
+      "to": "小諸IC"
+    },
+    {
+      "id": "上信越道-下り-0-193",
+      "grade": -8.89,
+      "structure": "bridge",
+      "from": "佐久小諸JCT",
+      "to": "小諸IC"
+    },
+    {
+      "id": "上信越道-下り-0-194",
+      "grade": -8.89,
+      "structure": "bridge",
+      "from": "佐久小諸JCT",
+      "to": "小諸IC"
+    },
+    {
+      "id": "上信越道-下り-0-195",
+      "grade": -8.89,
+      "structure": "bridge",
+      "from": "佐久小諸JCT",
+      "to": "小諸IC"
+    },
+    {
+      "id": "上信越道-下り-0-196",
+      "grade": -8.89,
+      "structure": "bridge",
+      "from": "佐久小諸JCT",
+      "to": "小諸IC"
+    },
+    {
+      "id": "上信越道-下り-0-357",
+      "grade": 50.08,
+      "structure": "normal",
+      "from": "上田菅平IC",
+      "to": "坂城IC"
+    },
+    {
+      "id": "上信越道-下り-0-460",
+      "grade": 31.69,
+      "structure": "normal",
+      "from": "千曲川さかきPA",
+      "to": "更埴JCT"
+    },
+    {
+      "id": "上信越道-下り-0-461",
+      "grade": 15.01,
+      "structure": "normal",
+      "from": "千曲川さかきPA",
+      "to": "更埴JCT"
+    },
+    {
+      "id": "上信越道-下り-0-462",
+      "grade": 7.93,
+      "structure": "normal",
+      "from": "千曲川さかきPA",
+      "to": "更埴JCT"
+    },
+    {
+      "id": "上信越道-下り-0-470",
+      "grade": 27.02,
+      "structure": "normal",
+      "from": "千曲川さかきPA",
+      "to": "更埴JCT"
+    },
+    {
+      "id": "上信越道-下り-0-471",
+      "grade": 11.96,
+      "structure": "normal",
+      "from": "千曲川さかきPA",
+      "to": "更埴JCT"
+    },
+    {
+      "id": "上信越道-下り-0-472",
+      "grade": 42.14,
+      "structure": "normal",
+      "from": "千曲川さかきPA",
+      "to": "更埴JCT"
+    },
+    {
+      "id": "上信越道-下り-0-473",
+      "grade": 42.13,
+      "structure": "normal",
+      "from": "千曲川さかきPA",
+      "to": "更埴JCT"
+    },
+    {
+      "id": "上信越道-下り-0-474",
+      "grade": 25.94,
+      "structure": "normal",
+      "from": "千曲川さかきPA",
+      "to": "更埴JCT"
+    },
+    {
+      "id": "上信越道-下り-0-475",
+      "grade": 46.83,
+      "structure": "normal",
+      "from": "千曲川さかきPA",
+      "to": "更埴JCT"
+    },
+    {
+      "id": "上信越道-下り-0-476",
+      "grade": 45.97,
+      "structure": "normal",
+      "from": "千曲川さかきPA",
+      "to": "更埴JCT"
+    },
+    {
+      "id": "上信越道-下り-0-477",
+      "grade": 47.8,
+      "structure": "normal",
+      "from": "千曲川さかきPA",
+      "to": "更埴JCT"
+    },
+    {
+      "id": "上信越道-下り-0-478",
+      "grade": 69.54,
+      "structure": "normal",
+      "from": "千曲川さかきPA",
+      "to": "更埴JCT"
+    },
+    {
+      "id": "上信越道-下り-0-479",
+      "grade": 44.67,
+      "structure": "normal",
+      "from": "千曲川さかきPA",
+      "to": "更埴JCT"
+    },
+    {
+      "id": "上信越道-下り-0-480",
+      "grade": -42.83,
+      "structure": "normal",
+      "from": "千曲川さかきPA",
+      "to": "更埴JCT"
+    },
+    {
+      "id": "上信越道-下り-0-481",
+      "grade": -83.88,
+      "structure": "normal",
+      "from": "千曲川さかきPA",
+      "to": "更埴JCT"
+    },
+    {
+      "id": "上信越道-下り-0-482",
+      "grade": -39.39,
+      "structure": "normal",
+      "from": "千曲川さかきPA",
+      "to": "更埴JCT"
+    },
+    {
+      "id": "上信越道-下り-0-483",
+      "grade": -25.93,
+      "structure": "normal",
+      "from": "千曲川さかきPA",
+      "to": "更埴JCT"
+    },
+    {
+      "id": "上信越道-下り-0-484",
+      "grade": -56.27,
+      "structure": "normal",
+      "from": "千曲川さかきPA",
+      "to": "更埴JCT"
+    },
+    {
+      "id": "上信越道-下り-0-485",
+      "grade": -15.48,
+      "structure": "normal",
+      "from": "千曲川さかきPA",
+      "to": "更埴JCT"
+    },
+    {
+      "id": "上信越道-下り-0-486",
+      "grade": 64.67,
+      "structure": "normal",
+      "from": "千曲川さかきPA",
+      "to": "更埴JCT"
+    },
+    {
+      "id": "上信越道-下り-0-487",
+      "grade": 27.14,
+      "structure": "normal",
+      "from": "千曲川さかきPA",
+      "to": "更埴JCT"
+    },
+    {
+      "id": "上信越道-下り-0-488",
+      "grade": -53.21,
+      "structure": "normal",
+      "from": "千曲川さかきPA",
+      "to": "更埴JCT"
+    },
+    {
+      "id": "上信越道-下り-0-490",
+      "grade": -61.42,
+      "structure": "normal",
+      "from": "千曲川さかきPA",
+      "to": "更埴JCT"
+    },
+    {
+      "id": "上信越道-下り-0-491",
+      "grade": -28.05,
+      "structure": "normal",
+      "from": "千曲川さかきPA",
+      "to": "更埴JCT"
+    },
+    {
+      "id": "上信越道-下り-0-492",
+      "grade": 56.51,
+      "structure": "normal",
+      "from": "千曲川さかきPA",
+      "to": "更埴JCT"
+    },
+    {
+      "id": "上信越道-下り-0-493",
+      "grade": -53.05,
+      "structure": "normal",
+      "from": "千曲川さかきPA",
+      "to": "更埴JCT"
+    },
+    {
+      "id": "上信越道-下り-0-494",
+      "grade": 27.78,
+      "structure": "normal",
+      "from": "千曲川さかきPA",
+      "to": "更埴JCT"
+    },
+    {
+      "id": "上信越道-下り-0-495",
+      "grade": -9.88,
+      "structure": "normal",
+      "from": "千曲川さかきPA",
+      "to": "更埴JCT"
+    },
+    {
+      "id": "上信越道-下り-0-496",
+      "grade": -59.43,
+      "structure": "normal",
+      "from": "千曲川さかきPA",
+      "to": "更埴JCT"
+    },
+    {
+      "id": "上信越道-下り-0-498",
+      "grade": -14.81,
+      "structure": "normal",
+      "from": "千曲川さかきPA",
+      "to": "更埴JCT"
+    },
+    {
+      "id": "上信越道-下り-0-499",
+      "grade": -14.81,
+      "structure": "tunnel",
+      "from": "千曲川さかきPA",
+      "to": "更埴JCT"
+    },
+    {
+      "id": "上信越道-下り-0-500",
+      "grade": -14.81,
+      "structure": "tunnel",
+      "from": "千曲川さかきPA",
+      "to": "更埴JCT"
+    },
+    {
+      "id": "上信越道-下り-0-501",
+      "grade": -14.81,
+      "structure": "tunnel",
+      "from": "千曲川さかきPA",
+      "to": "更埴JCT"
+    },
+    {
+      "id": "上信越道-下り-0-502",
+      "grade": -14.81,
+      "structure": "tunnel",
+      "from": "千曲川さかきPA",
+      "to": "更埴JCT"
+    },
+    {
+      "id": "上信越道-下り-0-503",
+      "grade": -14.81,
+      "structure": "tunnel",
+      "from": "千曲川さかきPA",
+      "to": "更埴JCT"
+    },
+    {
+      "id": "上信越道-下り-0-504",
+      "grade": -14.81,
+      "structure": "tunnel",
+      "from": "千曲川さかきPA",
+      "to": "更埴JCT"
+    },
+    {
+      "id": "上信越道-下り-0-505",
+      "grade": -14.81,
+      "structure": "tunnel",
+      "from": "千曲川さかきPA",
+      "to": "更埴JCT"
+    },
+    {
+      "id": "上信越道-下り-0-506",
+      "grade": -14.81,
+      "structure": "tunnel",
+      "from": "千曲川さかきPA",
+      "to": "更埴JCT"
+    },
+    {
+      "id": "上信越道-下り-0-507",
+      "grade": -14.81,
+      "structure": "tunnel",
+      "from": "千曲川さかきPA",
+      "to": "更埴JCT"
+    },
+    {
+      "id": "上信越道-下り-0-508",
+      "grade": -14.81,
+      "structure": "tunnel",
+      "from": "千曲川さかきPA",
+      "to": "更埴JCT"
+    },
+    {
+      "id": "上信越道-下り-0-509",
+      "grade": -14.81,
+      "structure": "tunnel",
+      "from": "千曲川さかきPA",
+      "to": "更埴JCT"
+    },
+    {
+      "id": "上信越道-下り-0-510",
+      "grade": -14.81,
+      "structure": "tunnel",
+      "from": "千曲川さかきPA",
+      "to": "更埴JCT"
+    },
+    {
+      "id": "上信越道-下り-0-511",
+      "grade": -14.81,
+      "structure": "tunnel",
+      "from": "千曲川さかきPA",
+      "to": "更埴JCT"
+    },
+    {
+      "id": "上信越道-下り-0-512",
+      "grade": -14.81,
+      "structure": "normal",
+      "from": "千曲川さかきPA",
+      "to": "更埴JCT"
+    },
+    {
+      "id": "上信越道-下り-1-279",
+      "grade": 15.26,
+      "structure": "normal",
+      "from": "豊田飯山ＩＣ",
+      "to": null
+    },
+    {
+      "id": "上信越道-下り-6-40",
+      "grade": -7.23,
+      "structure": "normal",
+      "from": "碓氷軽井沢ＩＣ",
+      "to": null
+    },
+    {
+      "id": "上信越道-下り-16-17",
+      "grade": 18.18,
+      "structure": "normal",
+      "from": null,
+      "to": null
+    },
+    {
       "id": "東関東道-上り-0-565",
       "grade": 7.19,
       "structure": "normal",
@@ -3204,6 +3918,153 @@
     {
       "id": "圏央道-上り-12-1",
       "grade": 17.95,
+      "structure": "normal",
+      "from": null,
+      "to": null
+    },
+    {
+      "id": "京葉道路-下り-1-38",
+      "grade": -10.8,
+      "structure": "normal",
+      "from": "蘇我IC",
+      "to": "松ヶ丘IC"
+    },
+    {
+      "id": "京葉道路-下り-1-40",
+      "grade": 10.91,
+      "structure": "normal",
+      "from": "松ヶ丘IC",
+      "to": "松ヶ丘ＩＣ"
+    },
+    {
+      "id": "京葉道路-上り-1-29",
+      "grade": -9.0,
+      "structure": "normal",
+      "from": "松ヶ丘ＩＣ",
+      "to": "松ヶ丘IC"
+    },
+    {
+      "id": "館山道-下り-0-261",
+      "grade": -7.36,
+      "structure": "normal",
+      "from": "木更津北ＩＣ",
+      "to": "姉崎袖ケ浦ＩＣ"
+    },
+    {
+      "id": "千葉東金道路-下り-0-82",
+      "grade": -9.38,
+      "structure": "normal",
+      "from": "野呂PA",
+      "to": "中野ＩＣ"
+    },
+    {
+      "id": "千葉東金道路-下り-0-83",
+      "grade": 11.41,
+      "structure": "normal",
+      "from": "野呂PA",
+      "to": "中野ＩＣ"
+    },
+    {
+      "id": "千葉東金道路-上り-0-61",
+      "grade": -11.33,
+      "structure": "normal",
+      "from": "中野ＩＣ",
+      "to": "野呂PA"
+    },
+    {
+      "id": "千葉東金道路-上り-0-62",
+      "grade": 9.14,
+      "structure": "normal",
+      "from": "中野ＩＣ",
+      "to": "野呂PA"
+    },
+    {
+      "id": "横浜横須賀道路-下り-0-70",
+      "grade": -16.87,
+      "structure": "normal",
+      "from": "逗子ＩＣ",
+      "to": "横須賀ＩＣ"
+    },
+    {
+      "id": "横浜横須賀道路-下り-0-72",
+      "grade": 24.46,
+      "structure": "normal",
+      "from": "逗子ＩＣ",
+      "to": "横須賀ＩＣ"
+    },
+    {
+      "id": "横浜横須賀道路-下り-0-74",
+      "grade": -23.0,
+      "structure": "normal",
+      "from": "横須賀ＩＣ",
+      "to": "横須賀"
+    },
+    {
+      "id": "横浜横須賀道路-下り-0-75",
+      "grade": 8.29,
+      "structure": "normal",
+      "from": "横須賀ＩＣ",
+      "to": "横須賀"
+    },
+    {
+      "id": "横浜横須賀道路-下り-0-76",
+      "grade": 22.46,
+      "structure": "normal",
+      "from": "横須賀ＩＣ",
+      "to": "横須賀"
+    },
+    {
+      "id": "横浜横須賀道路-上り-0-115",
+      "grade": -12.01,
+      "structure": "normal",
+      "from": "横須賀",
+      "to": "横須賀ＩＣ"
+    },
+    {
+      "id": "横浜横須賀道路-上り-0-116",
+      "grade": -9.75,
+      "structure": "normal",
+      "from": "横須賀",
+      "to": "横須賀ＩＣ"
+    },
+    {
+      "id": "横浜横須賀道路-上り-0-117",
+      "grade": 14.82,
+      "structure": "normal",
+      "from": "横須賀",
+      "to": "横須賀ＩＣ"
+    },
+    {
+      "id": "横浜横須賀道路-上り-0-118",
+      "grade": -7.38,
+      "structure": "normal",
+      "from": "横須賀ＩＣ",
+      "to": "逗子ＩＣ"
+    },
+    {
+      "id": "横浜横須賀道路-上り-0-120",
+      "grade": -29.76,
+      "structure": "normal",
+      "from": "横須賀ＩＣ",
+      "to": "逗子ＩＣ"
+    },
+    {
+      "id": "横浜横須賀道路-上り-0-121",
+      "grade": 20.24,
+      "structure": "normal",
+      "from": "横須賀ＩＣ",
+      "to": "逗子ＩＣ"
+    },
+    {
+      "id": "横浜横須賀道路-上り-0-122",
+      "grade": -13.06,
+      "structure": "normal",
+      "from": "横須賀ＩＣ",
+      "to": "逗子ＩＣ"
+    },
+    {
+      "id": "富津館山道路-下り-1-16",
+      "grade": -7.74,
       "structure": "normal",
       "from": null,
       "to": null
@@ -4231,7 +5092,7 @@
       "to": "吹田SA"
     }
   ],
-  "despiked_points": 126,
+  "despiked_points": 155,
   "reference_check": {
     "東名": {
       "published_max_grade_pct": "4%級",
@@ -4335,6 +5196,40 @@
         }
       }
     },
+    "北関東道": {
+      "published_max_grade_pct": "未確認",
+      "computed": {
+        "下り": {
+          "segment_count": 1344,
+          "max_grade": 22.06,
+          "max_abs_grade": 22.06,
+          "mean_abs_grade": 0.76
+        },
+        "上り": {
+          "segment_count": 1336,
+          "max_grade": 19.41,
+          "max_abs_grade": 19.41,
+          "mean_abs_grade": 0.75
+        }
+      }
+    },
+    "上信越道": {
+      "published_max_grade_pct": "未確認",
+      "computed": {
+        "上り": {
+          "segment_count": 2020,
+          "max_grade": 51.64,
+          "max_abs_grade": 51.64,
+          "mean_abs_grade": 1.46
+        },
+        "下り": {
+          "segment_count": 2029,
+          "max_grade": -83.88,
+          "max_abs_grade": 83.88,
+          "mean_abs_grade": 2.22
+        }
+      }
+    },
     "東関東道": {
       "published_max_grade_pct": "未確認",
       "computed": {
@@ -4366,6 +5261,125 @@
           "max_grade": -21.72,
           "max_abs_grade": 21.72,
           "mean_abs_grade": 0.63
+        }
+      }
+    },
+    "東京外環道": {
+      "published_max_grade_pct": "未確認",
+      "computed": {
+        "下り": {
+          "segment_count": 476,
+          "max_grade": -2.01,
+          "max_abs_grade": 2.01,
+          "mean_abs_grade": 0.01
+        },
+        "上り": {
+          "segment_count": 484,
+          "max_grade": -0.47,
+          "max_abs_grade": 0.47,
+          "mean_abs_grade": 0.0
+        }
+      }
+    },
+    "京葉道路": {
+      "published_max_grade_pct": "未確認",
+      "computed": {
+        "下り": {
+          "segment_count": 341,
+          "max_grade": 10.91,
+          "max_abs_grade": 10.91,
+          "mean_abs_grade": 0.53
+        },
+        "上り": {
+          "segment_count": 340,
+          "max_grade": -9.0,
+          "max_abs_grade": 9.0,
+          "mean_abs_grade": 0.51
+        }
+      }
+    },
+    "館山道": {
+      "published_max_grade_pct": "未確認",
+      "computed": {
+        "上り": {
+          "segment_count": 552,
+          "max_grade": -5.47,
+          "max_abs_grade": 5.47,
+          "mean_abs_grade": 0.93
+        },
+        "下り": {
+          "segment_count": 550,
+          "max_grade": -7.36,
+          "max_abs_grade": 7.36,
+          "mean_abs_grade": 0.99
+        }
+      }
+    },
+    "千葉東金道路": {
+      "published_max_grade_pct": "未確認",
+      "computed": {
+        "下り": {
+          "segment_count": 145,
+          "max_grade": 11.41,
+          "max_abs_grade": 11.41,
+          "mean_abs_grade": 1.1
+        },
+        "上り": {
+          "segment_count": 149,
+          "max_grade": -11.33,
+          "max_abs_grade": 11.33,
+          "mean_abs_grade": 1.13
+        }
+      }
+    },
+    "東京湾アクアライン": {
+      "published_max_grade_pct": "未確認",
+      "computed": {
+        "上り": {
+          "segment_count": 237,
+          "max_grade": -2.52,
+          "max_abs_grade": 2.52,
+          "mean_abs_grade": 0.18
+        },
+        "下り": {
+          "segment_count": 237,
+          "max_grade": -3.97,
+          "max_abs_grade": 3.97,
+          "mean_abs_grade": 0.24
+        }
+      }
+    },
+    "横浜横須賀道路": {
+      "published_max_grade_pct": "未確認",
+      "computed": {
+        "下り": {
+          "segment_count": 335,
+          "max_grade": 24.46,
+          "max_abs_grade": 24.46,
+          "mean_abs_grade": 1.16
+        },
+        "上り": {
+          "segment_count": 337,
+          "max_grade": -29.76,
+          "max_abs_grade": 29.76,
+          "mean_abs_grade": 1.3
+        }
+      }
+    },
+    "富津館山道路": {
+      "published_max_grade_pct": "未確認",
+      "computed": {
+        "上り": {
+          "segment_count": 86,
+          "max_grade": -2.88,
+          "max_abs_grade": 2.88,
+          "mean_abs_grade": 0.39
+        },
+        "下り": {
+          "segment_count": 125,
+          "max_grade": -7.74,
+          "max_abs_grade": 7.74,
+          "mean_abs_grade": 0.66
         }
       }
     },
