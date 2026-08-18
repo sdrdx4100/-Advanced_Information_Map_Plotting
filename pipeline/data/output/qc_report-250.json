@@ -1,0 +1,113 @@
+{
+  "routes": {
+    "東名": {
+      "下り": {
+        "segment_count": 390,
+        "max_grade": -3.56,
+        "max_abs_grade": 3.56,
+        "mean_abs_grade": 0.85
+      },
+      "上り": {
+        "segment_count": 407,
+        "max_grade": 3.12,
+        "max_abs_grade": 3.12,
+        "mean_abs_grade": 0.84
+      }
+    },
+    "新東名": {
+      "下り": {
+        "segment_count": 497,
+        "max_grade": -19.91,
+        "max_abs_grade": 19.91,
+        "mean_abs_grade": 1.19
+      },
+      "上り": {
+        "segment_count": 498,
+        "max_grade": 7.41,
+        "max_abs_grade": 7.41,
+        "mean_abs_grade": 1.09
+      }
+    }
+  },
+  "anomalies": [
+    {
+      "id": "新東名-下り-0-299",
+      "grade": 10.63,
+      "structure": "bridge",
+      "from": "藤枝岡部ＩＣ",
+      "to": "藤枝ＰＡ"
+    },
+    {
+      "id": "新東名-下り-0-300",
+      "grade": 11.1,
+      "structure": "bridge",
+      "from": "藤枝岡部ＩＣ",
+      "to": "藤枝ＰＡ"
+    },
+    {
+      "id": "新東名-下り-0-301",
+      "grade": -7.82,
+      "structure": "normal",
+      "from": "藤枝岡部ＩＣ",
+      "to": "藤枝ＰＡ"
+    },
+    {
+      "id": "新東名-下り-1-35",
+      "grade": 12.29,
+      "structure": "normal",
+      "from": "浜松いなさJCT",
+      "to": null
+    },
+    {
+      "id": "新東名-下り-1-65",
+      "grade": -19.91,
+      "structure": "normal",
+      "from": "浜松いなさJCT",
+      "to": null
+    },
+    {
+      "id": "新東名-上り-1-35",
+      "grade": 7.41,
+      "structure": "normal",
+      "from": null,
+      "to": "浜松いなさJCT"
+    }
+  ],
+  "despiked_points": 14,
+  "reference_check": {
+    "東名": {
+      "published_max_grade_pct": "4%級",
+      "computed_max_abs_grade": {
+        "下り": {
+          "segment_count": 390,
+          "max_grade": -3.56,
+          "max_abs_grade": 3.56,
+          "mean_abs_grade": 0.85
+        },
+        "上り": {
+          "segment_count": 407,
+          "max_grade": 3.12,
+          "max_abs_grade": 3.12,
+          "mean_abs_grade": 0.84
+        }
+      }
+    },
+    "新東名": {
+      "published_max_grade_pct_shizuoka": "約2%",
+      "computed_max_abs_grade": {
+        "下り": {
+          "segment_count": 497,
+          "max_grade": -19.91,
+          "max_abs_grade": 19.91,
+          "mean_abs_grade": 1.19
+        },
+        "上り": {
+          "segment_count": 498,
+          "max_grade": 7.41,
+          "max_abs_grade": 7.41,
+          "mean_abs_grade": 1.09
+        }
+      }
+    }
+  }
+}

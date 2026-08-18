@@ -1,0 +1,519 @@
+{
+  "routes": {
+    "東名": {
+      "下り": {
+        "segment_count": 1970,
+        "max_grade": 12.95,
+        "max_abs_grade": 12.95,
+        "mean_abs_grade": 0.88
+      },
+      "上り": {
+        "segment_count": 2050,
+        "max_grade": -13.15,
+        "max_abs_grade": 13.15,
+        "mean_abs_grade": 0.88
+      }
+    },
+    "新東名": {
+      "下り": {
+        "segment_count": 2493,
+        "max_grade": -44.3,
+        "max_abs_grade": 44.3,
+        "mean_abs_grade": 1.29
+      },
+      "上り": {
+        "segment_count": 2498,
+        "max_grade": 37.38,
+        "max_abs_grade": 37.38,
+        "mean_abs_grade": 1.16
+      }
+    }
+  },
+  "anomalies": [
+    {
+      "id": "東名-下り-1-118",
+      "grade": 10.83,
+      "structure": "normal",
+      "from": "清水ＩＣ",
+      "to": "鳥坂I.C"
+    },
+    {
+      "id": "東名-下り-1-265",
+      "grade": 10.66,
+      "structure": "normal",
+      "from": "日本平久能山スマートIC",
+      "to": "静岡ＩＣ"
+    },
+    {
+      "id": "東名-下り-1-502",
+      "grade": 12.95,
+      "structure": "normal",
+      "from": "静岡ＩＣ",
+      "to": "日本坂ＰＡ"
+    },
+    {
+      "id": "東名-下り-1-509",
+      "grade": -7.57,
+      "structure": "normal",
+      "from": "日本坂PA",
+      "to": "焼津ＩＣ"
+    },
+    {
+      "id": "東名-下り-1-512",
+      "grade": 8.02,
+      "structure": "normal",
+      "from": "日本坂PA",
+      "to": "焼津ＩＣ"
+    },
+    {
+      "id": "東名-上り-1-311",
+      "grade": -11.28,
+      "structure": "normal",
+      "from": "鳥坂I.C",
+      "to": "清水ＩＣ"
+    },
+    {
+      "id": "東名-上り-2-54",
+      "grade": 7.35,
+      "structure": "normal",
+      "from": null,
+      "to": "由比PA"
+    },
+    {
+      "id": "東名-上り-2-301",
+      "grade": -8.44,
+      "structure": "normal",
+      "from": "蒲原西IC",
+      "to": null
+    },
+    {
+      "id": "東名-上り-3-130",
+      "grade": -8.08,
+      "structure": "normal",
+      "from": "焼津ＩＣ",
+      "to": "日本坂ＰＡ"
+    },
+    {
+      "id": "東名-上り-3-133",
+      "grade": 8.3,
+      "structure": "normal",
+      "from": "焼津ＩＣ",
+      "to": "日本坂ＰＡ"
+    },
+    {
+      "id": "東名-上り-3-140",
+      "grade": -13.15,
+      "structure": "normal",
+      "from": "日本坂PA",
+      "to": null
+    },
+    {
+      "id": "新東名-下り-0-1164",
+      "grade": -7.5,
+      "structure": "normal",
+      "from": "新静岡ＩＣ",
+      "to": "静岡SA/スマートIC（下り線）"
+    },
+    {
+      "id": "新東名-下り-0-1496",
+      "grade": 8.03,
+      "structure": "normal",
+      "from": "藤枝岡部ＩＣ",
+      "to": "藤枝ＰＡ"
+    },
+    {
+      "id": "新東名-下り-0-1497",
+      "grade": 15.26,
+      "structure": "normal",
+      "from": "藤枝岡部ＩＣ",
+      "to": "藤枝ＰＡ"
+    },
+    {
+      "id": "新東名-下り-0-1498",
+      "grade": 15.26,
+      "structure": "normal",
+      "from": "藤枝岡部ＩＣ",
+      "to": "藤枝ＰＡ"
+    },
+    {
+      "id": "新東名-下り-0-1499",
+      "grade": 15.26,
+      "structure": "bridge",
+      "from": "藤枝岡部ＩＣ",
+      "to": "藤枝ＰＡ"
+    },
+    {
+      "id": "新東名-下り-0-1500",
+      "grade": 15.26,
+      "structure": "bridge",
+      "from": "藤枝岡部ＩＣ",
+      "to": "藤枝ＰＡ"
+    },
+    {
+      "id": "新東名-下り-0-1501",
+      "grade": 15.26,
+      "structure": "normal",
+      "from": "藤枝岡部ＩＣ",
+      "to": "藤枝ＰＡ"
+    },
+    {
+      "id": "新東名-下り-0-1502",
+      "grade": 15.26,
+      "structure": "normal",
+      "from": "藤枝岡部ＩＣ",
+      "to": "藤枝ＰＡ"
+    },
+    {
+      "id": "新東名-下り-0-1503",
+      "grade": 8.43,
+      "structure": "normal",
+      "from": "藤枝岡部ＩＣ",
+      "to": "藤枝ＰＡ"
+    },
+    {
+      "id": "新東名-下り-0-1507",
+      "grade": -11.58,
+      "structure": "normal",
+      "from": "藤枝岡部ＩＣ",
+      "to": "藤枝ＰＡ"
+    },
+    {
+      "id": "新東名-下り-0-1509",
+      "grade": -18.85,
+      "structure": "normal",
+      "from": "藤枝岡部ＩＣ",
+      "to": "藤枝ＰＡ"
+    },
+    {
+      "id": "新東名-下り-0-1569",
+      "grade": 7.07,
+      "structure": "normal",
+      "from": "藤枝PA",
+      "to": "島田金谷ＩＣ"
+    },
+    {
+      "id": "新東名-下り-0-1573",
+      "grade": 19.36,
+      "structure": "normal",
+      "from": "藤枝PA",
+      "to": "島田金谷ＩＣ"
+    },
+    {
+      "id": "新東名-下り-0-1575",
+      "grade": -11.29,
+      "structure": "normal",
+      "from": "藤枝PA",
+      "to": "島田金谷ＩＣ"
+    },
+    {
+      "id": "新東名-下り-1-178",
+      "grade": 25.27,
+      "structure": "normal",
+      "from": "浜松いなさJCT",
+      "to": null
+    },
+    {
+      "id": "新東名-下り-1-179",
+      "grade": 34.74,
+      "structure": "normal",
+      "from": "浜松いなさJCT",
+      "to": null
+    },
+    {
+      "id": "新東名-下り-1-181",
+      "grade": -11.26,
+      "structure": "normal",
+      "from": "浜松いなさJCT",
+      "to": null
+    },
+    {
+      "id": "新東名-下り-1-182",
+      "grade": -12.47,
+      "structure": "normal",
+      "from": "浜松いなさJCT",
+      "to": null
+    },
+    {
+      "id": "新東名-下り-1-184",
+      "grade": 12.99,
+      "structure": "normal",
+      "from": "浜松いなさJCT",
+      "to": null
+    },
+    {
+      "id": "新東名-下り-1-185",
+      "grade": -12.63,
+      "structure": "normal",
+      "from": "浜松いなさJCT",
+      "to": null
+    },
+    {
+      "id": "新東名-下り-1-186",
+      "grade": -35.1,
+      "structure": "normal",
+      "from": "浜松いなさJCT",
+      "to": null
+    },
+    {
+      "id": "新東名-下り-1-187",
+      "grade": -14.63,
+      "structure": "normal",
+      "from": "浜松いなさJCT",
+      "to": null
+    },
+    {
+      "id": "新東名-下り-1-188",
+      "grade": 28.59,
+      "structure": "normal",
+      "from": "浜松いなさJCT",
+      "to": null
+    },
+    {
+      "id": "新東名-下り-1-321",
+      "grade": 13.62,
+      "structure": "normal",
+      "from": "浜松いなさJCT",
+      "to": null
+    },
+    {
+      "id": "新東名-下り-1-322",
+      "grade": 23.96,
+      "structure": "normal",
+      "from": "浜松いなさJCT",
+      "to": null
+    },
+    {
+      "id": "新東名-下り-1-324",
+      "grade": -44.3,
+      "structure": "normal",
+      "from": "浜松いなさJCT",
+      "to": null
+    },
+    {
+      "id": "新東名-下り-1-325",
+      "grade": -23.48,
+      "structure": "normal",
+      "from": "浜松いなさJCT",
+      "to": null
+    },
+    {
+      "id": "新東名-下り-1-326",
+      "grade": -43.47,
+      "structure": "normal",
+      "from": "浜松いなさJCT",
+      "to": null
+    },
+    {
+      "id": "新東名-下り-1-327",
+      "grade": -23.53,
+      "structure": "normal",
+      "from": "浜松いなさJCT",
+      "to": null
+    },
+    {
+      "id": "新東名-下り-1-328",
+      "grade": -7.3,
+      "structure": "normal",
+      "from": "浜松いなさJCT",
+      "to": null
+    },
+    {
+      "id": "新東名-下り-2-15",
+      "grade": 8.13,
+      "structure": "normal",
+      "from": null,
+      "to": "御殿場JCT"
+    },
+    {
+      "id": "新東名-下り-2-16",
+      "grade": 8.42,
+      "structure": "normal",
+      "from": null,
+      "to": "御殿場JCT"
+    },
+    {
+      "id": "新東名-下り-2-17",
+      "grade": -9.81,
+      "structure": "normal",
+      "from": null,
+      "to": "御殿場JCT"
+    },
+    {
+      "id": "新東名-下り-2-18",
+      "grade": -29.76,
+      "structure": "normal",
+      "from": null,
+      "to": "御殿場JCT"
+    },
+    {
+      "id": "新東名-上り-0-208",
+      "grade": -7.69,
+      "structure": "normal",
+      "from": "島田金谷ＩＣ",
+      "to": "藤枝PA"
+    },
+    {
+      "id": "新東名-上り-0-282",
+      "grade": 9.48,
+      "structure": "normal",
+      "from": "藤枝ＰＡ",
+      "to": "藤枝岡部ＩＣ"
+    },
+    {
+      "id": "新東名-上り-0-1924",
+      "grade": -15.51,
+      "structure": "normal",
+      "from": "長泉沼津ＩＣ",
+      "to": "駒門PA/SIC"
+    },
+    {
+      "id": "新東名-上り-0-2029",
+      "grade": 9.09,
+      "structure": "normal",
+      "from": "御殿場JCT",
+      "to": null
+    },
+    {
+      "id": "新東名-上り-0-2030",
+      "grade": 29.9,
+      "structure": "normal",
+      "from": "御殿場JCT",
+      "to": null
+    },
+    {
+      "id": "新東名-上り-0-2031",
+      "grade": 9.96,
+      "structure": "normal",
+      "from": "御殿場JCT",
+      "to": null
+    },
+    {
+      "id": "新東名-上り-0-2032",
+      "grade": -9.41,
+      "structure": "normal",
+      "from": "御殿場JCT",
+      "to": null
+    },
+    {
+      "id": "新東名-上り-0-2035",
+      "grade": 11.47,
+      "structure": "normal",
+      "from": "御殿場JCT",
+      "to": null
+    },
+    {
+      "id": "新東名-上り-0-2036",
+      "grade": 10.09,
+      "structure": "normal",
+      "from": "御殿場JCT",
+      "to": null
+    },
+    {
+      "id": "新東名-上り-1-174",
+      "grade": 16.77,
+      "structure": "normal",
+      "from": null,
+      "to": "浜松いなさJCT"
+    },
+    {
+      "id": "新東名-上り-1-175",
+      "grade": 37.38,
+      "structure": "normal",
+      "from": null,
+      "to": "浜松いなさJCT"
+    },
+    {
+      "id": "新東名-上り-1-176",
+      "grade": 9.69,
+      "structure": "normal",
+      "from": null,
+      "to": "浜松いなさJCT"
+    },
+    {
+      "id": "新東名-上り-1-177",
+      "grade": -15.82,
+      "structure": "normal",
+      "from": null,
+      "to": "浜松いなさJCT"
+    },
+    {
+      "id": "新東名-上り-1-179",
+      "grade": 8.74,
+      "structure": "normal",
+      "from": null,
+      "to": "浜松いなさJCT"
+    },
+    {
+      "id": "新東名-上り-1-180",
+      "grade": 27.37,
+      "structure": "normal",
+      "from": null,
+      "to": "浜松いなさJCT"
+    },
+    {
+      "id": "新東名-上り-1-181",
+      "grade": 10.26,
+      "structure": "normal",
+      "from": null,
+      "to": "浜松いなさJCT"
+    },
+    {
+      "id": "新東名-上り-1-182",
+      "grade": -26.61,
+      "structure": "normal",
+      "from": null,
+      "to": "浜松いなさJCT"
+    },
+    {
+      "id": "新東名-上り-1-183",
+      "grade": -22.86,
+      "structure": "normal",
+      "from": null,
+      "to": "浜松いなさJCT"
+    },
+    {
+      "id": "新東名-上り-1-184",
+      "grade": -16.14,
+      "structure": "normal",
+      "from": null,
+      "to": "浜松いなさJCT"
+    }
+  ],
+  "despiked_points": 14,
+  "reference_check": {
+    "東名": {
+      "published_max_grade_pct": "4%級",
+      "computed_max_abs_grade": {
+        "下り": {
+          "segment_count": 1970,
+          "max_grade": 12.95,
+          "max_abs_grade": 12.95,
+          "mean_abs_grade": 0.88
+        },
+        "上り": {
+          "segment_count": 2050,
+          "max_grade": -13.15,
+          "max_abs_grade": 13.15,
+          "mean_abs_grade": 0.88
+        }
+      }
+    },
+    "新東名": {
+      "published_max_grade_pct_shizuoka": "約2%",
+      "computed_max_abs_grade": {
+        "下り": {
+          "segment_count": 2493,
+          "max_grade": -44.3,
+          "max_abs_grade": 44.3,
+          "mean_abs_grade": 1.29
+        },
+        "上り": {
+          "segment_count": 2498,
+          "max_grade": 37.38,
+          "max_abs_grade": 37.38,
+          "mean_abs_grade": 1.16
+        }
+      }
+    }
+  }
+}

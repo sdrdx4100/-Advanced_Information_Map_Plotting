@@ -39,3 +39,10 @@ yarn-error.log*
 /.wrangler/
 /outputs/
 /work/
+*.tsbuildinfo
+
+# data pipeline
+/pipeline/.venv/
+/pipeline/__pycache__/
+/pipeline/data/raw/
+/pipeline/data/dem_cache/

@@ -47,6 +47,10 @@ export default defineConfig(async () => {
     server: isCodexSeatbeltSandbox
       ? { watch: { useFsEvents: false, usePolling: true } }
       : undefined,
+    // maplibre-gl ships its own web worker; Vite's esbuild dep pre-bundler
+    // mishandles that worker sub-chunk (404s at runtime), so it must be
+    // served as native ESM instead of pre-optimized.
+    optimizeDeps: { exclude: ["maplibre-gl"] },
     plugins: [
       vinext(),
       sites(),
