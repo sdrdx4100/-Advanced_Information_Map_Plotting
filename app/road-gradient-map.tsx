@@ -9,7 +9,7 @@ type Quality = "measured" | "estimated";
 type Structure = "normal" | "bridge" | "tunnel";
 type WindowSize = 50 | 100 | 250;
 
-type RouteInfo = { key: string; slug: string; color: string; default: boolean };
+type RouteInfo = { key: string; slug: string; color: string; group: string; default: boolean };
 
 type RoadSegment = {
   id: string; route: string; direction: Direction; from: string | null; to: string | null;
@@ -80,6 +80,7 @@ export function RoadGradientMap() {
   const fetchedFacilityKeysRef = useRef<Set<string>>(new Set());
 
   const [routes, setRoutes] = useState<RouteInfo[]>([]);
+  const [routeSearch, setRouteSearch] = useState("");
   const [selectedRoutes, setSelectedRoutes] = useState<Set<string>>(new Set());
   const [direction, setDirection] = useState<"両方" | Direction>("両方");
   const [threshold, setThreshold] = useState(0);
@@ -277,6 +278,18 @@ export function RoadGradientMap() {
     if (!bounds.isEmpty()) map.fitBounds(bounds, { padding: 60, maxZoom: 10, duration: 800 });
   }, [selectedRoutes, segmentsByRoute, mapReady]);
 
+  const groupedRoutes = useMemo(() => {
+    const q = routeSearch.trim();
+    const pool = q ? routes.filter((r) => r.key.includes(q) || (r.group ?? "").includes(q)) : routes;
+    const byGroup = new Map<string, RouteInfo[]>();
+    for (const r of pool) {
+      const group = r.group || "その他";
+      if (!byGroup.has(group)) byGroup.set(group, []);
+      byGroup.get(group)!.push(r);
+    }
+    return [...byGroup.entries()];
+  }, [routes, routeSearch]);
+
   const routeColor = (key: string) => routes.find((r) => r.key === key)?.color ?? "#297a58";
   const profile = selected ? profilesByRoute[`${selected.route}_${selected.direction}`] : undefined;
   const routeProfile = profile ? downsample(profile.elevation_m, 400) : [];
@@ -300,29 +313,36 @@ export function RoadGradientMap() {
         <aside className={`sidebar ${panelOpen ? "open" : ""}`}>
           <div className="sidebar-head"><span>表示条件</span><button onClick={() => setPanelOpen(false)} aria-label="パネルを閉じる">×</button></div>
           <div className="control-group">
-            <label>路線（クリックで切り替え）</label>
-            <div className="segmented" style={{ gridTemplateColumns: `repeat(${Math.max(routes.length, 1)}, 1fr)` }}>
-              {routes.map((r) => (
-                <button key={r.key} className={selectedRoutes.has(r.key) ? "active" : ""} onClick={() => toggleRoute(r.key)}>
-                  {r.key}{loadingRoutes.has(r.key) ? "…" : ""}
-                </button>
+            <label><span>路線</span><strong>{selectedRoutes.size} / {routes.length}</strong></label>
+            <input
+              type="text"
+              className="route-search"
+              placeholder="路線名・NEXCO会社名で検索…"
+              value={routeSearch}
+              onChange={(e) => setRouteSearch(e.target.value)}
+            />
+            <div className="route-list">
+              {groupedRoutes.map(([group, items]) => (
+                <div className="route-group" key={group}>
+                  <div className="route-group-label">{group}</div>
+                  {items.map((r) => (
+                    <label key={r.key} className={`route-row ${selectedRoutes.has(r.key) ? "active" : ""}`}>
+                      <input type="checkbox" checked={selectedRoutes.has(r.key)} onChange={() => toggleRoute(r.key)} />
+                      <RouteIcon route={r.key} color={r.color} />
+                      <span className="name">{r.key}高速道路</span>
+                      <span className="meta">
+                        {loadingRoutes.has(r.key)
+                          ? "読込中…"
+                          : selectedRoutes.has(r.key)
+                            ? `${profilesByRoute[`${r.key}_上り`]?.length_km ?? "—"}km`
+                            : "未取得"}
+                      </span>
+                    </label>
+                  ))}
+                </div>
               ))}
+              {groupedRoutes.length === 0 && <p className="hint">該当する路線がありません</p>}
             </div>
-          </div>
-          <div className="route-summary">
-            {routes.map((r) => (
-              <div key={r.key}>
-                <RouteIcon route={r.key} color={r.color} />
-                <span>
-                  <b>{r.key}高速道路</b>
-                  <small>
-                    {selectedRoutes.has(r.key)
-                      ? `OSM連結区間 約${profilesByRoute[`${r.key}_上り`]?.length_km ?? "—"}km`
-                      : "非表示（クリックで読み込み）"}
-                  </small>
-                </span>
-              </div>
-            ))}
           </div>
           <div className="control-group"><label>方向</label><div className="segmented three">{(["両方", "上り", "下り"] as const).map((item) => <button key={item} className={direction === item ? "active" : ""} onClick={() => setDirection(item)}>{item === "上り" ? "上り ↗" : item === "下り" ? "下り ↙" : item}</button>)}</div></div>
           <div className="control-group range-control"><label><span>勾配しきい値</span><strong>{threshold === 0 ? "すべて表示" : `${threshold}% 以上`}</strong></label><input aria-label="勾配しきい値" type="range" min="0" max="4" step="1" value={threshold} onChange={(e) => setThreshold(Number(e.target.value))} /><div className="ticks"><span>0%</span><span>1</span><span>2</span><span>3</span><span>4%+</span></div></div>

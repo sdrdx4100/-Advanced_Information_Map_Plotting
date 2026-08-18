@@ -17,7 +17,7 @@ from pyproj import Geod
 
 sys.path.insert(0, os.path.dirname(__file__))
 from gsi_dem import sample_elevation  # noqa: E402
-from fetch_osm import ROUTE_DEFS, fetch_facilities  # noqa: E402
+from fetch_osm import ROUTE_DEFS, fetch_facilities, route_bbox  # noqa: E402
 
 GEOD = Geod(ellps="WGS84")
 HERE = os.path.dirname(__file__)
@@ -460,7 +460,7 @@ def main():
         for w in ways:
             by_dir[w["direction"]].append(w)
 
-        bbox = ROUTE_DEFS[route]["bbox"]
+        bbox = route_bbox(route)
         if bbox not in fac_cache:
             fac_cache[bbox] = load_facilities(bbox)
         facilities = fac_cache[bbox]
@@ -543,7 +543,7 @@ def main():
         # (assign_facility_chainage checked real proximity to resampled road
         # points); the raw bbox query also picks up junctions on unrelated
         # roads (e.g. the Chuo expressway near Iida) inside the same box.
-        bbox = ROUTE_DEFS[route]["bbox"]
+        bbox = route_bbox(route)
         route_facilities = [
             f for f in fac_cache[bbox] if (f["name"], f["kind"]) in matched_facility_names_by_route[route]
         ]
@@ -604,7 +604,8 @@ def main():
                 {
                     "key": route,
                     "slug": ROUTE_DEFS[route]["slug"],
-                    "color": ROUTE_DEFS[route].get("color", "#297a58"),
+                    "color": ROUTE_DEFS[route]["color"],
+                    "group": ROUTE_DEFS[route].get("group", "その他"),
                     "default": ROUTE_DEFS[route].get("default", False),
                 }
                 for route in ROUTES

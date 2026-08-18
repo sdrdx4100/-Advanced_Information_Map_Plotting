@@ -2,19 +2,22 @@
   {
     "key": "東名",
     "slug": "tomei",
-    "color": "#297a58",
+    "color": "#8d5e35",
+    "group": "NEXCO中日本",
     "default": true
   },
   {
     "key": "新東名",
     "slug": "shin-tomei",
-    "color": "#5558a9",
+    "color": "#7e8d35",
+    "group": "NEXCO中日本",
     "default": true
   },
   {
     "key": "新名神",
     "slug": "shin-meishin",
-    "color": "#a15a2e",
+    "color": "#6a358d",
+    "group": "NEXCO西日本",
     "default": false
   }
 ]

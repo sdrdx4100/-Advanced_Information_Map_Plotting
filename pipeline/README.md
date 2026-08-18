@@ -18,6 +18,11 @@
   橋梁名付き）、IC/JCT/SA/PA名称まで実データを持っており、即座にスクリプトから
   取得できることを確認済み。ルート判定は`ref`ではなく`name`で行う（東名/名神が
   ともに`ref=E1`、新東名/新名神がともに`ref=E1A`のため、ref単独では区別できない）。
+- 道路のway取得はbboxを指定せず`name`のみで全国検索する。10〜20路線規模まで
+  想定すると、路線ごとにbboxを人間が目視で決めるのは非効率・ミスの元になる
+  ため。IC/JCT/SA/PA取得は空間範囲が必須なので、取得したwayの座標から
+  自動算出したbboxを使う（`fetch_osm.route_bbox()`、`data/raw/bbox_{slug}.json`
+  にキャッシュ）。
 
 本番運用では国交省データが使えるならそちらを優先すべきだが、試作としては
 OSMの方が現実的だった。公開時はOSMのODbLライセンス表記が必要。
@@ -30,8 +35,11 @@ OSMの方が現実的だった。公開時はOSMのODbLライセンス表記が�
 ## 処理フロー
 
 ```
-fetch_osm.py       OSM Overpass API から各路線の way（ジオメトリ+タグ）と
-                    IC/JCT/SA/PAノードを路線ごとのbboxで取得し data/raw/ にキャッシュ
+fetch_osm.py       OSM Overpass API から各路線の way（ジオメトリ+タグ、bboxなし
+                    name一致検索）と、そこから自動算出したbboxでIC/JCT/SA/PA
+                    ノードを取得し data/raw/ にキャッシュ。取得先はミラー複数を
+                    順に試す（本家overpass-api.deは無bboxの全国検索だと数十秒
+                    〜504タイムアウトになることがある）
        ↓
 build_pipeline.py
   1. 上り/下り判定      端点と東京方面基準点(TOKYO_WARD_REF)との測地距離を比較する
@@ -98,26 +106,54 @@ data/output/
 
 ## 路線を追加するには
 
-1. `fetch_osm.py` の `ROUTE_DEFS` に `{osm_name, bbox, color}` を追加
-   （`osm_name`はOSMの`name`タグと完全一致させる。`bbox`は路線の実際の
-   マッピング範囲を軽く覆う程度でよい。広すぎるとOverpassのタイムアウト
-   リスクが上がる）
-2. `.venv/Scripts/python.exe fetch_osm.py` でデータ取得
-3. `.venv/Scripts/python.exe build_pipeline.py`（`GRADE_WINDOW_M`環境変数で
-   50/100/250を切り替えて3回）で `data/output/` に生成
-4. `public/data/` に出力をコピー
+10〜20路線規模を見込んで、路線登録は`fetch_osm.py`の`ROUTE_DEFS`に
+`{slug, osm_name, group}`を追加するだけで済むようにしてある。bboxと色は
+自動生成・自動算出されるため手入力不要：
+
+```python
+"中央道": {"slug": "chuo", "osm_name": "中央自動車道", "group": "NEXCO中日本", "default": False},
+```
+
+- `slug`: 出力ファイル名に使うASCII識別子（重複しなければ何でもよい）
+- `osm_name`: OSMの`name`タグと完全一致させる
+- `group`: フロントの路線ピッカーでの見出し（NEXCO東/中/西日本など、大まかな
+  区分でよい）
+- `color`/`bbox`は省略可（省略時はslugのハッシュから色を自動生成、bboxは
+  取得したwayの座標から自動算出）
+
+追加したら `run_all.py` を実行するだけ：
+
+```bash
+cd pipeline
+.venv/Scripts/python.exe run_all.py
+```
+
+`fetch_osm.py`→`build_pipeline.py`(50/100/250m)→`public/data/`への同期まで
+一括で行う。既存路線のキャッシュ（`data/raw/`, `data/dem_cache/`）は再利用
+されるので、1路線追加するだけなら実質その路線分のOverpass/DEM取得だけで済む。
+
+オプション:
+- `--no-fetch`: OSM取得をスキップしキャッシュのみで再ビルド（勾配計算ロジック
+  を変えたときなど）
+- `--windows 100`: 特定の窓サイズだけ再生成
+- `--no-sync`: `public/data/`への同期をスキップ
 
 東京中心の放射状路線（東名・中央道・東北道など）は上り/下り判定の基準点を
 そのまま流用できる。環状路線（圏央道など）や東京を基準にしない路線
 （山陽道など）は`TOKYO_WARD_REF`だけでは判定が崩れる可能性があるため、
-別途検証が必要。
+別途検証が必要（`build_pipeline.py`の`TOKYO_WARD_REF`を路線ごとに上書き
+できる仕組みは未実装）。
 
 ## 実行方法
 
 ```bash
 cd pipeline
-.venv/Scripts/python.exe fetch_osm.py                        # 初回のみ（Overpass APIキャッシュ）
-GRADE_WINDOW_M=50  .venv/Scripts/python.exe build_pipeline.py
-GRADE_WINDOW_M=100 .venv/Scripts/python.exe build_pipeline.py
-GRADE_WINDOW_M=250 .venv/Scripts/python.exe build_pipeline.py
+.venv/Scripts/python.exe run_all.py
+```
+
+個別に叩きたい場合:
+
+```bash
+.venv/Scripts/python.exe fetch_osm.py                        # OSM取得のみ
+GRADE_WINDOW_M=100 .venv/Scripts/python.exe build_pipeline.py # 特定窓サイズのみ
 ```

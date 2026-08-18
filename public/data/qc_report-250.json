@@ -2,30 +2,30 @@
   "routes": {
     "東名": {
       "下り": {
-        "segment_count": 390,
-        "max_grade": -3.56,
-        "max_abs_grade": 3.56,
-        "mean_abs_grade": 0.85
+        "segment_count": 1376,
+        "max_grade": -4.92,
+        "max_abs_grade": 4.92,
+        "mean_abs_grade": 0.99
       },
       "上り": {
-        "segment_count": 407,
-        "max_grade": 3.12,
-        "max_abs_grade": 3.12,
-        "mean_abs_grade": 0.84
+        "segment_count": 1327,
+        "max_grade": 5.03,
+        "max_abs_grade": 5.03,
+        "mean_abs_grade": 0.96
       }
     },
     "新東名": {
       "下り": {
-        "segment_count": 497,
-        "max_grade": -19.91,
-        "max_abs_grade": 19.91,
-        "mean_abs_grade": 1.19
+        "segment_count": 900,
+        "max_grade": -39.35,
+        "max_abs_grade": 39.35,
+        "mean_abs_grade": 1.82
       },
       "上り": {
-        "segment_count": 498,
-        "max_grade": 7.41,
-        "max_abs_grade": 7.41,
-        "mean_abs_grade": 1.09
+        "segment_count": 903,
+        "max_grade": 26.11,
+        "max_abs_grade": 26.11,
+        "mean_abs_grade": 1.45
       }
     },
     "新名神": {
@@ -45,46 +45,466 @@
   },
   "anomalies": [
     {
-      "id": "新東名-下り-0-299",
-      "grade": 10.63,
+      "id": "新東名-下り-0-175",
+      "grade": 8.66,
+      "structure": "normal",
+      "from": "藤枝岡部ＩＣ",
+      "to": "藤枝ＰＡ"
+    },
+    {
+      "id": "新東名-下り-0-176",
+      "grade": 13.12,
       "structure": "bridge",
       "from": "藤枝岡部ＩＣ",
       "to": "藤枝ＰＡ"
     },
     {
-      "id": "新東名-下り-0-300",
-      "grade": 11.1,
+      "id": "新東名-下り-0-377",
+      "grade": -13.2,
+      "structure": "normal",
+      "from": "浜松SA",
+      "to": null
+    },
+    {
+      "id": "新東名-下り-1-116",
+      "grade": -9.61,
       "structure": "bridge",
-      "from": "藤枝岡部ＩＣ",
-      "to": "藤枝ＰＡ"
+      "from": "駿河湾沼津ＳＡ、スマートIC",
+      "to": "新富士ＩＣ"
     },
     {
-      "id": "新東名-下り-0-301",
-      "grade": -7.82,
+      "id": "新東名-下り-1-117",
+      "grade": 8.06,
       "structure": "normal",
-      "from": "藤枝岡部ＩＣ",
-      "to": "藤枝ＰＡ"
+      "from": "駿河湾沼津ＳＡ、スマートIC",
+      "to": "新富士ＩＣ"
     },
     {
-      "id": "新東名-下り-1-35",
-      "grade": 12.29,
+      "id": "新東名-下り-2-12",
+      "grade": -8.83,
       "structure": "normal",
       "from": "浜松いなさJCT",
+      "to": "新城IC"
+    },
+    {
+      "id": "新東名-下り-2-40",
+      "grade": -26.39,
+      "structure": "normal",
+      "from": "浜松いなさJCT",
+      "to": "新城IC"
+    },
+    {
+      "id": "新東名-下り-2-60",
+      "grade": 9.58,
+      "structure": "bridge",
+      "from": "新城IC",
+      "to": "長篠設楽原PA"
+    },
+    {
+      "id": "新東名-下り-2-64",
+      "grade": -8.47,
+      "structure": "normal",
+      "from": "長篠設楽原ＰＡ",
+      "to": "岡崎東ＩＣ"
+    },
+    {
+      "id": "新東名-下り-2-65",
+      "grade": 7.34,
+      "structure": "bridge",
+      "from": "長篠設楽原ＰＡ",
+      "to": "岡崎東ＩＣ"
+    },
+    {
+      "id": "新東名-下り-2-70",
+      "grade": -9.09,
+      "structure": "normal",
+      "from": "長篠設楽原ＰＡ",
+      "to": "岡崎東ＩＣ"
+    },
+    {
+      "id": "新東名-下り-2-85",
+      "grade": -14.96,
+      "structure": "normal",
+      "from": "長篠設楽原ＰＡ",
+      "to": "岡崎東ＩＣ"
+    },
+    {
+      "id": "新東名-下り-2-87",
+      "grade": 20.38,
+      "structure": "bridge",
+      "from": "長篠設楽原ＰＡ",
+      "to": "岡崎東ＩＣ"
+    },
+    {
+      "id": "新東名-下り-2-88",
+      "grade": 28.48,
+      "structure": "normal",
+      "from": "長篠設楽原ＰＡ",
+      "to": "岡崎東ＩＣ"
+    },
+    {
+      "id": "新東名-下り-2-89",
+      "grade": -39.35,
+      "structure": "normal",
+      "from": "長篠設楽原ＰＡ",
+      "to": "岡崎東ＩＣ"
+    },
+    {
+      "id": "新東名-下り-2-90",
+      "grade": -12.47,
+      "structure": "normal",
+      "from": "長篠設楽原ＰＡ",
+      "to": "岡崎東ＩＣ"
+    },
+    {
+      "id": "新東名-下り-2-129",
+      "grade": 10.03,
+      "structure": "bridge",
+      "from": "長篠設楽原ＰＡ",
+      "to": "岡崎東ＩＣ"
+    },
+    {
+      "id": "新東名-下り-2-130",
+      "grade": 13.9,
+      "structure": "normal",
+      "from": "長篠設楽原ＰＡ",
+      "to": "岡崎東ＩＣ"
+    },
+    {
+      "id": "新東名-下り-2-131",
+      "grade": 14.52,
+      "structure": "normal",
+      "from": "長篠設楽原ＰＡ",
+      "to": "岡崎東ＩＣ"
+    },
+    {
+      "id": "新東名-下り-2-136",
+      "grade": 21.91,
+      "structure": "normal",
+      "from": "長篠設楽原ＰＡ",
+      "to": "岡崎東ＩＣ"
+    },
+    {
+      "id": "新東名-下り-2-137",
+      "grade": 38.86,
+      "structure": "normal",
+      "from": "長篠設楽原ＰＡ",
+      "to": "岡崎東ＩＣ"
+    },
+    {
+      "id": "新東名-下り-2-138",
+      "grade": -29.27,
+      "structure": "normal",
+      "from": "長篠設楽原ＰＡ",
+      "to": "岡崎東ＩＣ"
+    },
+    {
+      "id": "新東名-下り-2-139",
+      "grade": -26.14,
+      "structure": "normal",
+      "from": "長篠設楽原ＰＡ",
+      "to": "岡崎東ＩＣ"
+    },
+    {
+      "id": "新東名-下り-2-140",
+      "grade": -20.37,
+      "structure": "normal",
+      "from": "長篠設楽原ＰＡ",
+      "to": "岡崎東ＩＣ"
+    },
+    {
+      "id": "新東名-下り-2-144",
+      "grade": -18.73,
+      "structure": "normal",
+      "from": "長篠設楽原ＰＡ",
+      "to": "岡崎東ＩＣ"
+    },
+    {
+      "id": "新東名-下り-2-146",
+      "grade": 10.71,
+      "structure": "normal",
+      "from": "長篠設楽原ＰＡ",
+      "to": "岡崎東ＩＣ"
+    },
+    {
+      "id": "新東名-下り-2-148",
+      "grade": -11.68,
+      "structure": "normal",
+      "from": "長篠設楽原ＰＡ",
+      "to": "岡崎東ＩＣ"
+    },
+    {
+      "id": "新東名-下り-2-151",
+      "grade": -8.99,
+      "structure": "normal",
+      "from": "長篠設楽原ＰＡ",
+      "to": "岡崎東ＩＣ"
+    },
+    {
+      "id": "新東名-下り-2-157",
+      "grade": 9.05,
+      "structure": "normal",
+      "from": "岡崎東ＩＣ",
       "to": null
     },
     {
-      "id": "新東名-下り-1-65",
-      "grade": -19.91,
+      "id": "新東名-下り-2-158",
+      "grade": -13.96,
       "structure": "normal",
-      "from": "浜松いなさJCT",
+      "from": "岡崎東ＩＣ",
       "to": null
     },
     {
-      "id": "新東名-上り-1-35",
-      "grade": 7.41,
+      "id": "新東名-下り-2-159",
+      "grade": -7.53,
+      "structure": "normal",
+      "from": "岡崎東ＩＣ",
+      "to": null
+    },
+    {
+      "id": "新東名-下り-2-163",
+      "grade": 14.69,
+      "structure": "normal",
+      "from": "岡崎東ＩＣ",
+      "to": null
+    },
+    {
+      "id": "新東名-下り-2-164",
+      "grade": -15.66,
+      "structure": "normal",
+      "from": "岡崎東ＩＣ",
+      "to": null
+    },
+    {
+      "id": "新東名-下り-4-11",
+      "grade": -7.47,
       "structure": "normal",
       "from": null,
+      "to": null
+    },
+    {
+      "id": "新東名-下り-4-13",
+      "grade": 18.45,
+      "structure": "normal",
+      "from": null,
+      "to": null
+    },
+    {
+      "id": "新東名-下り-4-16",
+      "grade": -8.82,
+      "structure": "normal",
+      "from": null,
+      "to": null
+    },
+    {
+      "id": "新東名-下り-4-21",
+      "grade": -12.15,
+      "structure": "normal",
+      "from": null,
+      "to": null
+    },
+    {
+      "id": "新東名-下り-5-3",
+      "grade": -13.1,
+      "structure": "normal",
+      "from": null,
+      "to": "岡崎SA"
+    },
+    {
+      "id": "新東名-下り-8-0",
+      "grade": 15.44,
+      "structure": "normal",
+      "from": null,
+      "to": null
+    },
+    {
+      "id": "新東名-下り-8-3",
+      "grade": 8.76,
+      "structure": "normal",
+      "from": null,
+      "to": null
+    },
+    {
+      "id": "新東名-上り-0-0",
+      "grade": -7.91,
+      "structure": "normal",
+      "from": null,
+      "to": "岡崎東ＩＣ"
+    },
+    {
+      "id": "新東名-上り-0-6",
+      "grade": 13.11,
+      "structure": "normal",
+      "from": null,
+      "to": "岡崎東ＩＣ"
+    },
+    {
+      "id": "新東名-上り-0-7",
+      "grade": -12.11,
+      "structure": "normal",
+      "from": null,
+      "to": "岡崎東ＩＣ"
+    },
+    {
+      "id": "新東名-上り-0-11",
+      "grade": 13.62,
+      "structure": "normal",
+      "from": null,
+      "to": "岡崎東ＩＣ"
+    },
+    {
+      "id": "新東名-上り-0-12",
+      "grade": 10.97,
+      "structure": "normal",
+      "from": null,
+      "to": "岡崎東ＩＣ"
+    },
+    {
+      "id": "新東名-上り-0-13",
+      "grade": -14.65,
+      "structure": "normal",
+      "from": null,
+      "to": "岡崎東ＩＣ"
+    },
+    {
+      "id": "新東名-上り-0-19",
+      "grade": 9.65,
+      "structure": "normal",
+      "from": "岡崎東ＩＣ",
+      "to": "長篠設楽原ＰＡ"
+    },
+    {
+      "id": "新東名-上り-0-21",
+      "grade": 10.32,
+      "structure": "normal",
+      "from": "岡崎東ＩＣ",
+      "to": "長篠設楽原ＰＡ"
+    },
+    {
+      "id": "新東名-上り-0-25",
+      "grade": 7.39,
+      "structure": "normal",
+      "from": "岡崎東ＩＣ",
+      "to": "長篠設楽原ＰＡ"
+    },
+    {
+      "id": "新東名-上り-0-68",
+      "grade": -9.6,
+      "structure": "normal",
+      "from": "岡崎東ＩＣ",
+      "to": "長篠設楽原ＰＡ"
+    },
+    {
+      "id": "新東名-上り-0-99",
+      "grade": 12.24,
+      "structure": "normal",
+      "from": "岡崎東ＩＣ",
+      "to": "長篠設楽原ＰＡ"
+    },
+    {
+      "id": "新東名-上り-0-102",
+      "grade": -9.4,
+      "structure": "bridge",
+      "from": "岡崎東ＩＣ",
+      "to": "長篠設楽原ＰＡ"
+    },
+    {
+      "id": "新東名-上り-0-109",
+      "grade": -10.81,
+      "structure": "bridge",
+      "from": "長篠設楽原PA",
+      "to": "新城IC"
+    },
+    {
+      "id": "新東名-上り-0-110",
+      "grade": -7.99,
+      "structure": "bridge",
+      "from": "長篠設楽原PA",
+      "to": "新城IC"
+    },
+    {
+      "id": "新東名-上り-0-159",
+      "grade": -9.11,
+      "structure": "normal",
+      "from": "新城IC",
       "to": "浜松いなさJCT"
+    },
+    {
+      "id": "新東名-上り-0-752",
+      "grade": 10.46,
+      "structure": "normal",
+      "from": "御殿場JCT",
+      "to": null
+    },
+    {
+      "id": "新東名-上り-2-3",
+      "grade": 8.12,
+      "structure": "normal",
+      "from": null,
+      "to": null
+    },
+    {
+      "id": "新東名-上り-2-9",
+      "grade": 11.73,
+      "structure": "normal",
+      "from": null,
+      "to": null
+    },
+    {
+      "id": "新東名-上り-2-11",
+      "grade": -14.68,
+      "structure": "normal",
+      "from": null,
+      "to": null
+    },
+    {
+      "id": "新東名-上り-2-12",
+      "grade": -12.07,
+      "structure": "normal",
+      "from": null,
+      "to": null
+    },
+    {
+      "id": "新東名-上り-2-13",
+      "grade": 12.92,
+      "structure": "normal",
+      "from": null,
+      "to": null
+    },
+    {
+      "id": "新東名-上り-3-11",
+      "grade": -11.91,
+      "structure": "normal",
+      "from": "岡崎SA",
+      "to": null
+    },
+    {
+      "id": "新東名-上り-3-13",
+      "grade": 11.53,
+      "structure": "normal",
+      "from": "岡崎SA",
+      "to": null
+    },
+    {
+      "id": "新東名-上り-6-0",
+      "grade": 26.11,
+      "structure": "normal",
+      "from": null,
+      "to": null
+    },
+    {
+      "id": "新東名-上り-6-1",
+      "grade": -19.05,
+      "structure": "normal",
+      "from": null,
+      "to": null
+    },
+    {
+      "id": "新東名-上り-6-2",
+      "grade": 13.1,
+      "structure": "normal",
+      "from": null,
+      "to": null
     },
     {
       "id": "新名神-下り-0-35",
@@ -269,22 +689,22 @@
       "to": null
     }
   ],
-  "despiked_points": 22,
+  "despiked_points": 53,
   "reference_check": {
     "東名": {
       "published_max_grade_pct": "4%級",
       "computed": {
         "下り": {
-          "segment_count": 390,
-          "max_grade": -3.56,
-          "max_abs_grade": 3.56,
-          "mean_abs_grade": 0.85
+          "segment_count": 1376,
+          "max_grade": -4.92,
+          "max_abs_grade": 4.92,
+          "mean_abs_grade": 0.99
         },
         "上り": {
-          "segment_count": 407,
-          "max_grade": 3.12,
-          "max_abs_grade": 3.12,
-          "mean_abs_grade": 0.84
+          "segment_count": 1327,
+          "max_grade": 5.03,
+          "max_abs_grade": 5.03,
+          "mean_abs_grade": 0.96
         }
       }
     },
@@ -292,16 +712,16 @@
       "published_max_grade_pct": "静岡区間で約2%",
       "computed": {
         "下り": {
-          "segment_count": 497,
-          "max_grade": -19.91,
-          "max_abs_grade": 19.91,
-          "mean_abs_grade": 1.19
+          "segment_count": 900,
+          "max_grade": -39.35,
+          "max_abs_grade": 39.35,
+          "mean_abs_grade": 1.82
         },
         "上り": {
-          "segment_count": 498,
-          "max_grade": 7.41,
-          "max_abs_grade": 7.41,
-          "mean_abs_grade": 1.09
+          "segment_count": 903,
+          "max_grade": 26.11,
+          "max_abs_grade": 26.11,
+          "mean_abs_grade": 1.45
         }
       }
     },
