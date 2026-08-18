@@ -2,6 +2,14 @@
 
 # dependencies
 /node_modules
+
+# Not committed: a lockfile generated on Windows omits Linux-only optional
+# dependencies (sharp's platform-specific binaries, pulled in transitively
+# via miniflare <- wrangler/@cloudflare/vite-plugin), which makes Cloudflare
+# Workers Builds' `npm ci` (strict, no self-healing) fail in CI even though
+# it's correct for local use. Untracked so that platform's install step
+# falls back to `npm install`, which resolves fine without a lockfile.
+package-lock.json
 /.pnp
 .pnp.*
 .yarn/*
