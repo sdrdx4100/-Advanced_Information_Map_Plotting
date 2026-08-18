@@ -1,8 +1,24 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
-import { AttributionControl, LngLatBounds, Map as MapLibreMap, NavigationControl, Popup, type GeoJSONSource } from "maplibre-gl";
+import { AttributionControl, LngLatBounds, Map as MapLibreMap, NavigationControl, Popup, setWorkerUrl, type GeoJSONSource } from "maplibre-gl";
 import "maplibre-gl/dist/maplibre-gl.css";
+
+// The production (Rollup) build doesn't emit maplibre-gl's worker chunk the
+// way Vite's dev-mode esbuild pre-bundler does, so the map silently fails to
+// render (canvas sizes correctly, style/sprite/tile requests all succeed,
+// but nothing draws) because the worker that parses vector tiles into
+// renderable geometry never loads.
+//
+// Pointing setWorkerUrl at a `?url` import of maplibre-gl-worker.mjs gets
+// the worker file itself emitted, but that file has its own internal
+// `import ... from "./maplibre-gl-shared.mjs"`, and Vite's `?url` treats the
+// worker as an opaque static asset rather than a module, so it never
+// discovers or emits that sibling dependency — the worker then 404s on it
+// at runtime. Copying both files into public/maplibre/ verbatim (same
+// filenames, same directory, unprocessed) keeps that relative import
+// resolvable via plain static serving, sidestepping the bundler entirely.
+setWorkerUrl("/maplibre/maplibre-gl-worker.mjs");
 
 type Direction = "上り" | "下り";
 type Quality = "measured" | "estimated";
