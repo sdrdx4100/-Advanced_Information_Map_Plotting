@@ -22,11 +22,78 @@ positioning reference).
 from __future__ import annotations
 
 import json
+import math
 import os
 
 HERE = os.path.dirname(__file__)
 PUBLIC_DATA_DIR = os.path.join(HERE, "..", "public", "data")
 OUT_PATH = os.path.join(HERE, "local_only", "geometry_bundle.json")
+
+
+MAX_MERGE_GAP_M = 15000.0
+
+
+def _dist_m(p1, p2):
+    lat_avg = math.radians((p1[1] + p2[1]) / 2)
+    dx = math.radians(p2[0] - p1[0]) * math.cos(lat_avg)
+    dy = math.radians(p2[1] - p1[1])
+    return math.sqrt(dx * dx + dy * dy) * 6371000.0
+
+
+def merge_fragments(fragments, max_gap_m=MAX_MERGE_GAP_M):
+    """Way-stitching (in the main pipeline) often leaves a direction split
+    into several disconnected chains — small node mismatches, a short
+    differently-tagged stretch, etc. For chainage lookups over a long IC-to-IC
+    span, both ICs need to land on the *same* chain, so greedily reconnect
+    fragments end-to-end by nearest endpoint (trying both orientations),
+    rebuilding one continuous cum_dist per merged chain. Fragments with no
+    neighbor within max_gap_m stay separate rather than being joined wrong."""
+    remaining = [[list(p) for p in f] for f in fragments if len(f) >= 2]
+    if not remaining:
+        return []
+    remaining.sort(key=lambda f: f[-1][2], reverse=True)
+
+    merged = []
+    while remaining:
+        spine = remaining.pop(0)
+        changed = True
+        while changed and remaining:
+            changed = False
+            best = None  # (list_index, attach_at, reverse, gap)
+            s_start, s_end = spine[0], spine[-1]
+            for i, frag in enumerate(remaining):
+                f_start, f_end = frag[0], frag[-1]
+                for attach_at, reverse, gap in (
+                    ("end", False, _dist_m(s_end, f_start)),
+                    ("end", True, _dist_m(s_end, f_end)),
+                    ("start", False, _dist_m(s_start, f_end)),
+                    ("start", True, _dist_m(s_start, f_start)),
+                ):
+                    if best is None or gap < best[3]:
+                        best = (i, attach_at, reverse, gap)
+            if best is None or best[3] > max_gap_m:
+                break
+            i, attach_at, reverse, gap = best
+            frag = [list(p) for p in remaining.pop(i)]
+            if reverse:
+                total = frag[-1][2]
+                frag.reverse()
+                for p in frag:
+                    p[2] = total - p[2]
+            if attach_at == "end":
+                offset = spine[-1][2] + gap
+                for p in frag:
+                    p[2] += offset
+                spine.extend(frag)
+            else:
+                frag_len = frag[-1][2]
+                shift = frag_len + gap
+                for p in spine:
+                    p[2] += shift
+                spine = frag + spine
+            changed = True
+        merged.append(spine)
+    return merged
 
 
 def build_chains_for_route(slug: str):
@@ -59,6 +126,9 @@ def build_chains_for_route(slug: str):
                     continue
                 points.append([round(lon, 6), round(lat, 6), round(cd, 1)])
         by_direction.setdefault(direction, []).append(points)
+
+    for direction in by_direction:
+        by_direction[direction] = merge_fragments(by_direction[direction])
     return by_direction
 
 
