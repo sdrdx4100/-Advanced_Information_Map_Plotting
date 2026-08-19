@@ -38,6 +38,14 @@ OSMの方が現実的だった。公開時はOSMのODbLライセンス表記が�
 `dem5a`（5mメッシュLiDAR、高精度だがカバレッジ限定）→ `dem`（旧統合10m/50m
 メッシュ、ほぼ全国）の順にフォールバック。
 
+## セットアップ（初回のみ）
+
+```bash
+cd pipeline
+python -m venv .venv
+.venv/Scripts/python.exe -m pip install -r requirements.txt
+```
+
 ## 処理フロー
 
 ```

@@ -54,3 +54,9 @@ yarn-error.log*
 /pipeline/__pycache__/
 /pipeline/data/raw/
 /pipeline/data/dem_cache/
+
+# Confidential gradient CSVs (IC-to-IC distance/grade data) and anything
+# derived from them. Local-use only — must never reach GitHub or the
+# Cloudflare deployment. Keep all such input/output under this prefix.
+/pipeline/local_only/
+/public/data/local/
