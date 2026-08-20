@@ -74,6 +74,7 @@ ROUTE_DEFS = {
     "関越道": {"slug": "kanetsu", "osm_name": "関越自動車道", "group": "NEXCO東日本・北関東/信越", "default": False},
     "北関東道": {"slug": "kita-kanto", "osm_name": "北関東自動車道", "group": "NEXCO東日本・北関東/信越", "default": False},
     "上信越道": {"slug": "joshinetsu", "osm_name": "上信越自動車道", "group": "NEXCO東日本・北関東/信越", "default": False},
+    "磐越道": {"slug": "banetsu", "osm_name": "磐越自動車道", "group": "NEXCO東日本・北関東/信越", "default": False},
     # 南関東 (NEXCO東日本)
     "東関東道": {"slug": "higashi-kanto", "osm_name": "東関東自動車道", "group": "NEXCO東日本・関東", "default": False},
     # 環状路線: TOKYO_WARD_REFへの距離だけでは上り/下りが安定しない可能性がある
