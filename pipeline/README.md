@@ -46,6 +46,9 @@ python -m venv .venv
 .venv/Scripts/python.exe -m pip install -r requirements.txt
 ```
 
+Windowsなら `run_pipeline.bat` をダブルクリックするだけでよい。venvが無ければ
+作成して依存パッケージを入れ、そのまま実行まで進む。
+
 ## 処理フロー
 
 ```
@@ -163,9 +166,20 @@ cd pipeline
 そのまま流用できる。環状路線（圏央道など）や東京を基準にしない路線
 （山陽道など）は`TOKYO_WARD_REF`だけでは判定が崩れる可能性があるため、
 別途検証が必要（`build_pipeline.py`の`TOKYO_WARD_REF`を路線ごとに上書き
-できる仕組みは未実装）。
+できる仕組みは未実装）。磐越道はいわき⇔新潟の東西路線で両端とも東京から
+遠く、距離差だけで向きを決めるこのヒューリスティックの前提から外れている。
+公式にはいわき方面が上りなので、生成後に上り/下りがそれと一致しているか
+確認すること。
 
 ## 実行方法
+
+Windowsは `run_pipeline.bat` をダブルクリック。`run_all.py` に渡す引数は
+そのまま素通しするので `run_pipeline.bat --no-fetch` のようにも呼べる。
+`run_all.py` の後に `export_local_geometry.py` まで走るので、local_onlyビューア用の
+`local_only/geometry_bundle.json` と `local_only/facility_definitions.json` も
+同時に出力される（ビューア側リポジトリの `update_geometry.bat` がこの2つを拾う）。
+
+手で叩く場合:
 
 ```bash
 cd pipeline
